@@ -8,6 +8,11 @@ on:
         required: true
         default: 'machine learning, AI agents, large language models'
         type: string
+      force:
+        description: 'Clear seen papers and regenerate fresh'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -26,6 +31,10 @@ jobs:
       - name: Install dependencies
         run: |
           pip install "daily-research-digest[openai] @ git+https://github.com/LevRoz630/daily-research-digest.git"
+
+      - name: Clear seen papers (if force)
+        if: ${{ inputs.force }}
+        run: echo '{"arxiv_ids":[]}' > seen_papers.json
 
       - name: Generate digest
         env:

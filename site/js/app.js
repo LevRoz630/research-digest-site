@@ -436,7 +436,8 @@ const Pages = {
 
       try {
         await GitHub.triggerWorkflow('generate-digest.yml', {
-          interests: interests
+          interests: interests,
+          force: 'true'
         });
         regenerateStatus.textContent = 'Digest regeneration triggered! Check GitHub Actions for progress.';
         regenerateStatus.className = 'status success';
