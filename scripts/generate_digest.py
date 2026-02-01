@@ -57,7 +57,7 @@ When ranking, also consider:
         top_n=25,
         llm_provider=llm_provider,
         openai_api_key=os.environ.get("OPENAI_API_KEY"),
-        sources=["arxiv", "huggingface", "semantic_scholar"],  # All sources
+        sources=["semantic_scholar"],
         date_filter=DateFilter(
             published_after=month_ago.strftime("%Y-%m-%d"),
             published_before=now.strftime("%Y-%m-%d"),
@@ -97,7 +97,7 @@ When ranking, also consider:
     with open(digest_file, "w") as f:
         json.dump(digest, f, indent=2)
 
-    print(f"Saved {len(new_papers)} new papers to {digest_file}")
+    print(f"Saved {len(papers)} papers to {digest_file}")
     return 0
 
 
