@@ -7,6 +7,24 @@ import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+# Track seen papers to avoid duplicates
+SEEN_FILE = Path(__file__).parent.parent / "seen_papers.json"
+
+
+def load_seen_papers() -> set[str]:
+    """Load previously seen paper IDs."""
+    if SEEN_FILE.exists():
+        with open(SEEN_FILE) as f:
+            data = json.load(f)
+            return set(data.get("arxiv_ids", []))
+    return set()
+
+
+def save_seen_papers(seen: set[str]) -> None:
+    """Save seen paper IDs."""
+    with open(SEEN_FILE, "w") as f:
+        json.dump({"arxiv_ids": list(seen)}, f)
+
 
 async def main():
     from daily_research_digest.digest import DigestGenerator
@@ -19,9 +37,9 @@ async def main():
     interests = os.environ.get("DIGEST_INTERESTS", "machine learning, AI agents")
     llm_provider = os.environ.get("LLM_PROVIDER", "openai")
 
-    # Time window: last 7 days (some categories don't have daily papers)
+    # Time window: last 30 days
     now = datetime.now(timezone.utc)
-    week_ago = now - timedelta(days=7)
+    month_ago = now - timedelta(days=30)
 
     config = DigestConfig(
         categories=categories,
@@ -31,7 +49,7 @@ async def main():
         llm_provider=llm_provider,
         openai_api_key=os.environ.get("OPENAI_API_KEY"),
         date_filter=DateFilter(
-            published_after=week_ago.strftime("%Y-%m-%d"),
+            published_after=month_ago.strftime("%Y-%m-%d"),
             published_before=now.strftime("%Y-%m-%d"),
         ),
     )
@@ -45,7 +63,7 @@ async def main():
 
     print(f"Generating digest for categories: {categories}")
     print(f"Interests: {interests}")
-    print(f"Date range: {week_ago.strftime('%Y-%m-%d')} to {now.strftime('%Y-%m-%d')}")
+    print(f"Date range: {month_ago.strftime('%Y-%m-%d')} to {now.strftime('%Y-%m-%d')}")
 
     result = await generator.generate(config)
 
@@ -55,7 +73,24 @@ async def main():
 
     digest = result.get("digest", {})
     papers = digest.get("papers", [])
-    print(f"Generated digest with {len(papers)} papers")
+
+    # Filter out previously seen papers
+    seen = load_seen_papers()
+    new_papers = [p for p in papers if p.get("arxiv_id") not in seen]
+
+    print(f"Fetched {len(papers)} papers, {len(new_papers)} are new")
+
+    if not new_papers:
+        print("No new papers to add")
+        return 0
+
+    # Update seen papers
+    for p in new_papers:
+        seen.add(p.get("arxiv_id"))
+    save_seen_papers(seen)
+
+    # Update digest with only new papers
+    digest["papers"] = new_papers
 
     # Save to dated JSON file
     date_str = now.strftime("%Y-%m-%d")
@@ -64,7 +99,7 @@ async def main():
     with open(digest_file, "w") as f:
         json.dump(digest, f, indent=2)
 
-    print(f"Saved to {digest_file}")
+    print(f"Saved {len(new_papers)} new papers to {digest_file}")
     return 0
 
 
