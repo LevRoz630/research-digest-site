@@ -54,7 +54,7 @@ When ranking, also consider:
         categories=categories,
         interests=enhanced_interests,
         max_papers=150,
-        top_n=25,
+        top_n=15,
         llm_provider=llm_provider,
         openai_api_key=os.environ.get("OPENAI_API_KEY"),
         semantic_scholar_api_key=os.environ.get("SEMANTIC_SCHOLAR_API_KEY"),
