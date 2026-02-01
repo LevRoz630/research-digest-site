@@ -244,10 +244,9 @@ const UI = {
       ? `<div class="categories">${categories.map(c => `<span>${this.escapeHtml(c)}</span>`).join('')}</div>`
       : '';
 
-    // Abstract (collapsed by default)
+    // Abstract (shown by default)
     const abstractHtml = paper.abstract
-      ? `<div class="abstract collapsed" data-arxiv="${paper.arxiv_id}">${this.escapeHtml(paper.abstract)}</div>
-         <button class="btn-toggle toggle-abstract" data-arxiv="${paper.arxiv_id}">Show more</button>`
+      ? `<div class="abstract" data-arxiv="${paper.arxiv_id}">${this.escapeHtml(paper.abstract)}</div>`
       : '';
 
     let actionsHtml = '';
@@ -334,21 +333,6 @@ const Pages = {
       }
 
       container.innerHTML = digest.papers.map(p => UI.renderPaperCard(p, { showSaveButton: true })).join('');
-
-      // Toggle abstract expand/collapse
-      container.querySelectorAll('.toggle-abstract').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          const arxivId = e.target.dataset.arxiv;
-          const abstract = container.querySelector(`.abstract[data-arxiv="${arxivId}"]`);
-          if (abstract.classList.contains('collapsed')) {
-            abstract.classList.remove('collapsed');
-            btn.textContent = 'Show less';
-          } else {
-            abstract.classList.add('collapsed');
-            btn.textContent = 'Show more';
-          }
-        });
-      });
 
       // Event listeners for save buttons
       container.querySelectorAll('.save-btn').forEach(btn => {

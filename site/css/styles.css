@@ -177,28 +177,11 @@ a:hover {
 .paper-card .abstract {
   font-size: 14px;
   color: #444;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 16px;
   padding: 16px;
-  background: #fafafa;
+  background: #f8f9fa;
   border-radius: 6px;
-  border-left: 3px solid #e5e5e5;
-}
-
-.paper-card .abstract.collapsed {
-  max-height: 80px;
-  overflow: hidden;
-  position: relative;
-}
-
-.paper-card .abstract.collapsed::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40px;
-  background: linear-gradient(transparent, #fafafa);
 }
 
 .paper-card .reason {
