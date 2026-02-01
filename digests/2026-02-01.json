@@ -1,6 +1,6 @@
 {
   "date": "2026-02-01",
-  "generated_at": "2026-02-01T19:18:19.781062+00:00",
+  "generated_at": "2026-02-01T19:19:41.567040+00:00",
   "categories": [
     "q-fin.CP"
   ],
@@ -8,65 +8,40 @@
   "total_papers_fetched": 31,
   "papers": [
     {
-      "arxiv_id": "2601.18686v1",
-      "title": "Optimal strategy and deep hedging for share repurchase programs",
-      "abstract": "In recent decades, companies have frequently adopted share repurchase programs to return capital to shareholders or for other strategic purposes, instructing investment banks to rapidly buy back shares on their behalf. When the executing institution is allowed to hedge its exposure, it encounters several challenges due to the intrinsic features of the product. Moreover, contractual clauses or market regulations on trading activity may make it infeasible to rely on Greeks. In this work, we address the hedging of these products by developing a machine-learning framework that determines the optimal execution of the buyback while explicitly accounting for the bank's actual trading capabilities. This unified treatment of execution and hedging yields substantial performance improvements, resulting in an optimized policy that provides a feasible and realistic hedging approach. The pricing of these programs can be framed in terms of the discount that banks offer to the client on the price at which the shares are delivered. Since, in our framework, risk measures serve as objective functions, we exploit the concept of indifference pricing to compute this discount, thereby capturing the actual execution performance.",
+      "arxiv_id": "2601.05716v1",
+      "title": "When the Rules Change: Adaptive Signal Extraction via Kalman Filtering and Markov-Switching Regimes",
+      "abstract": "Static linear models of order flow assume constant parameters, failing precisely when they are needed most: during periods of market stress and structural change. This paper proposes a dynamic, state-dependent framework for order flow signal extraction that adapts to shifting market conditions in the Korean stock market. Using daily transaction data from 2020--2024 covering 2,439 stocks and 2.79 million stock-day observations, we implement three complementary methodologies: (1) an Adaptive Kalman Filter where measurement noise variance is explicitly coupled to market volatility; (2) a three-state Markov-Switching model identifying Bull, Normal, and Crisis regimes; and (3) an Asymmetric Response Function capturing differential investor reactions to positive versus negative shocks. We find that foreign investor predictive power increases 8.9-fold during crisis periods relative to bull markets ($\u03b2_{crisis}=0.00204$ vs. $\u03b2_{bull}=0.00023$), while individual investors exhibit momentum-chasing behavior with 6.3 times stronger response to positive shocks. The integrated ``All-Weather'' strategy provides modest drawdown reduction during extreme market events, though challenges remain in the post-COVID high-rate environment.",
       "authors": [
-        "Stefano Corti",
-        "Roberto Daluiso",
-        "Andrea Pallavicini"
+        "Sungwoo Kang"
       ],
       "categories": [
-        "q-fin.PR",
         "q-fin.CP"
       ],
-      "published": "2026-01-26T17:01:54Z",
-      "updated": "2026-01-26T17:01:54Z",
-      "link": "https://arxiv.org/abs/2601.18686v1",
+      "published": "2026-01-09T11:00:57Z",
+      "updated": "2026-01-09T11:00:57Z",
+      "link": "https://arxiv.org/abs/2601.05716v1",
       "relevance_score": 9.0,
-      "relevance_reason": "The paper addresses the optimal execution and hedging of share repurchase programs, which directly relates to the interests of a researcher in Limit Order Book Modelling."
+      "relevance_reason": "Highly relevant as it discusses adaptive signal extraction in the context of market stress and structural change, which is important in limit order book modeling."
     },
     {
-      "arxiv_id": "2601.01642v1",
-      "title": "Wasserstein Distributionally Robust Rare-Event Simulation",
-      "abstract": "Standard rare-event simulation techniques require exact distributional specifications, which limits their effectiveness in the presence of distributional uncertainty. To address this, we develop a novel framework for estimating rare-event probabilities subject to such distributional model risk. Specifically, we focus on computing worst-case rare-event probabilities, defined as a distributionally robust bound against a Wasserstein ambiguity set centered at a specific nominal distribution. By exploiting a dual characterization of this bound, we propose Distributionally Robust Importance Sampling (DRIS), a computationally tractable methodology designed to substantially reduce the variance associated with estimating the dual components. The proposed method is simple to implement and requires low sampling costs. Most importantly, it achieves vanishing relative error, the strongest efficiency guarantee that is notoriously difficult to establish in rare-event simulation. Our numerical studies confirm the superior performance of DRIS against existing benchmarks.",
+      "arxiv_id": "2601.16446v1",
+      "title": "Brownian ReLU(Br-ReLU): A New Activation Function for a Long-Short Term Memory (LSTM) Network",
+      "abstract": "Deep learning models are effective for sequential data modeling, yet commonly used activation functions such as ReLU, LeakyReLU, and PReLU often exhibit gradient instability when applied to noisy, non-stationary financial time series. This study introduces BrownianReLU, a stochastic activation function induced by Brownian motion that enhances gradient propagation and learning stability in Long Short-Term Memory (LSTM) networks. Using Monte Carlo simulation, BrownianReLU provides a smooth, adaptive response for negative inputs, mitigating the dying ReLU problem. The proposed activation is evaluated on financial time series from Apple, GCB, and the S&P 500, as well as LendingClub loan data for classification. Results show consistently lower Mean Squared Error and higher $R^2$ values, indicating improved predictive accuracy and generalization. Although ROC-AUC metric is limited in classification tasks, activation choice significantly affects the trade-off between accuracy and sensitivity, with Brownian ReLU and the selected activation functions yielding practically meaningful performance.",
       "authors": [
-        "Dohyun Ahn",
-        "Huiyi Chen",
-        "Lewen Zheng"
+        "George Awiakye-Marfo",
+        "Elijah Agbosu",
+        "Victoria Mawuena Barns",
+        "Samuel Asante Gyamerah"
       ],
       "categories": [
-        "stat.ME",
-        "q-fin.CP",
-        "stat.CO"
-      ],
-      "published": "2026-01-04T19:15:22Z",
-      "updated": "2026-01-04T19:15:22Z",
-      "link": "https://arxiv.org/abs/2601.01642v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "This paper directly addresses rare-event simulation techniques in the presence of distributional uncertainty, which is highly relevant to a researcher interested in Limit Order Book Modelling."
-    },
-    {
-      "arxiv_id": "2601.00738v1",
-      "title": "Second Thoughts: How 1-second subslots transform CEX-DEX Arbitrage on Ethereum",
-      "abstract": "This paper examines the impact of reducing Ethereum slot time on decentralized exchange activity, with a focus on CEX-DEX arbitrage behavior. We develop a trading model where the agent's DEX transaction is not guaranteed to land, and the agent explicitly accounts for this execution risk when deciding whether to pursue arbitrage opportunities. We compare agent behavior under Ethereum's default 12-second slot time environment with a faster regime that offers 1-second subslot execution. The simulations, calibrated to Binance and Uniswap v3 data from July to September 2025, show that faster slot times increase arbitrage transaction count by 535% and trading volume by 203% on average. The increase in CEX-DEX arbitrage activity under 1-second subslots is driven by the reduction in variance of both successful and failed trade outcomes, increasing the risk-adjusted returns and making CEX-DEX arbitrage more appealing.",
-      "authors": [
-        "Aleksei Adadurov",
-        "Sergey Barseghyan",
-        "Anton Chtepine",
-        "Antero Eloranta",
-        "Andrei Sebyakin",
-        "Arsenii Valitov"
-      ],
-      "categories": [
-        "q-fin.TR",
+        "cs.LG",
         "q-fin.CP"
       ],
-      "published": "2026-01-02T16:39:25Z",
-      "updated": "2026-01-02T16:39:25Z",
-      "link": "https://arxiv.org/abs/2601.00738v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "This paper directly discusses the impact of slot time reduction on decentralized exchange activity, specifically focusing on CEX-DEX arbitrage behavior, which aligns closely with the researcher's interest in limit order book modelling."
+      "published": "2026-01-23T04:53:16Z",
+      "updated": "2026-01-23T04:53:16Z",
+      "link": "https://arxiv.org/abs/2601.16446v1",
+      "relevance_score": 8.0,
+      "relevance_reason": "This paper is relevant as it discusses the creation of a new activation function for LSTM networks, which can be beneficial in modelling limit order books and dealing with noisy financial time series data."
     }
   ]
 }
