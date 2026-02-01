@@ -1,0 +1,45 @@
+{
+  "date": "2024-01-15",
+  "generated_at": "2024-01-15T06:00:00Z",
+  "categories": ["cs.AI", "cs.CL", "cs.LG"],
+  "interests": "machine learning, AI agents, large language models",
+  "total_papers_fetched": 50,
+  "papers": [
+    {
+      "arxiv_id": "2401.12345",
+      "title": "Advances in Large Language Model Reasoning",
+      "abstract": "We present novel techniques for improving reasoning capabilities in large language models...",
+      "authors": ["Alice Smith", "Bob Johnson", "Carol Williams"],
+      "categories": ["cs.CL", "cs.AI"],
+      "published": "2024-01-14",
+      "updated": "2024-01-14",
+      "link": "https://arxiv.org/abs/2401.12345",
+      "relevance_score": 9.2,
+      "relevance_reason": "Directly addresses LLM reasoning improvements, highly relevant to AI agents research."
+    },
+    {
+      "arxiv_id": "2401.12346",
+      "title": "Efficient Training Methods for Vision Transformers",
+      "abstract": "This paper proposes new training methodologies that reduce computational requirements...",
+      "authors": ["David Brown", "Eve Davis"],
+      "categories": ["cs.CV", "cs.LG"],
+      "published": "2024-01-14",
+      "updated": "2024-01-14",
+      "link": "https://arxiv.org/abs/2401.12346",
+      "relevance_score": 7.5,
+      "relevance_reason": "Relevant to machine learning efficiency, applicable to LLM training."
+    },
+    {
+      "arxiv_id": "2401.12347",
+      "title": "Multi-Agent Coordination in Complex Environments",
+      "abstract": "We study how multiple AI agents can coordinate their actions in dynamic environments...",
+      "authors": ["Frank Miller", "Grace Lee", "Henry Chen", "Ivy Taylor"],
+      "categories": ["cs.AI", "cs.MA"],
+      "published": "2024-01-14",
+      "updated": "2024-01-14",
+      "link": "https://arxiv.org/abs/2401.12347",
+      "relevance_score": 8.8,
+      "relevance_reason": "Core AI agents research with multi-agent coordination focus."
+    }
+  ]
+}
