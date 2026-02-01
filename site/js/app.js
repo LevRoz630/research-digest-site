@@ -238,11 +238,23 @@ const UI = {
     const authors = paper.authors?.slice(0, 3).join(', ') || '';
     const moreAuthors = paper.authors?.length > 3 ? ` +${paper.authors.length - 3} more` : '';
 
+    // Categories
+    const categories = paper.categories || [];
+    const categoriesHtml = categories.length > 0
+      ? `<div class="categories">${categories.map(c => `<span>${this.escapeHtml(c)}</span>`).join('')}</div>`
+      : '';
+
+    // Abstract (collapsed by default)
+    const abstractHtml = paper.abstract
+      ? `<div class="abstract collapsed" data-arxiv="${paper.arxiv_id}">${this.escapeHtml(paper.abstract)}</div>
+         <button class="btn-toggle toggle-abstract" data-arxiv="${paper.arxiv_id}">Show more</button>`
+      : '';
+
     let actionsHtml = '';
     if (showSaveButton && !isSaved) {
       actionsHtml += `<button class="btn btn-primary save-btn" data-arxiv="${paper.arxiv_id}">Save</button>`;
     } else if (showSaveButton && isSaved) {
-      actionsHtml += `<span style="color: #28a745; font-size: 13px;">Saved</span>`;
+      actionsHtml += `<span class="saved-indicator">Saved</span>`;
     }
     if (showRemoveButton) {
       actionsHtml += `<button class="btn btn-danger remove-btn" data-arxiv="${paper.arxiv_id}">Remove</button>`;
@@ -257,10 +269,12 @@ const UI = {
     }
 
     return `
-      <div class="paper-card score-${scoreClass}" data-arxiv="${paper.arxiv_id}">
+      <div class="paper-card" data-arxiv="${paper.arxiv_id}">
         <span class="score-badge ${scoreClass}">${paper.relevance_score?.toFixed(1) || '?'}/10</span>
         <h3><a href="${paper.link}" target="_blank">${this.escapeHtml(paper.title)}</a></h3>
         <p class="authors">${this.escapeHtml(authors)}${moreAuthors}</p>
+        ${categoriesHtml}
+        ${abstractHtml}
         ${paper.relevance_reason ? `<p class="reason">${this.escapeHtml(paper.relevance_reason)}</p>` : ''}
         ${noteHtml}
         <div class="actions">${actionsHtml}</div>
@@ -320,6 +334,21 @@ const Pages = {
       }
 
       container.innerHTML = digest.papers.map(p => UI.renderPaperCard(p, { showSaveButton: true })).join('');
+
+      // Toggle abstract expand/collapse
+      container.querySelectorAll('.toggle-abstract').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const arxivId = e.target.dataset.arxiv;
+          const abstract = container.querySelector(`.abstract[data-arxiv="${arxivId}"]`);
+          if (abstract.classList.contains('collapsed')) {
+            abstract.classList.remove('collapsed');
+            btn.textContent = 'Show less';
+          } else {
+            abstract.classList.add('collapsed');
+            btn.textContent = 'Show more';
+          }
+        });
+      });
 
       // Event listeners for save buttons
       container.querySelectorAll('.save-btn').forEach(btn => {
@@ -415,7 +444,7 @@ const Pages = {
       regenerateStatus.textContent = '';
 
       try {
-        await GitHub.triggerWorkflow('digest.yml', {
+        await GitHub.triggerWorkflow('generate-digest.yml', {
           categories: categories,
           interests: interests
         });
