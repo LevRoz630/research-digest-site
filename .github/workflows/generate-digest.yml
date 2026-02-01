@@ -47,3 +47,8 @@ jobs:
           git add digests/ seen_papers.json
           git diff --staged --quiet || git commit -m "Add digest for $(date +%Y-%m-%d)"
           git push
+
+      - name: Trigger deploy
+        run: gh workflow run deploy.yml
+        env:
+          GH_TOKEN: ${{ github.token }}
