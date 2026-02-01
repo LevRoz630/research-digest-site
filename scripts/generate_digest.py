@@ -19,19 +19,19 @@ async def main():
     interests = os.environ.get("DIGEST_INTERESTS", "machine learning, AI agents")
     llm_provider = os.environ.get("LLM_PROVIDER", "openai")
 
-    # Time window: last 24 hours
+    # Time window: last 7 days (some categories don't have daily papers)
     now = datetime.now(timezone.utc)
-    yesterday = now - timedelta(days=1)
+    week_ago = now - timedelta(days=7)
 
     config = DigestConfig(
         categories=categories,
         interests=interests,
-        max_papers=50,
-        top_n=15,
+        max_papers=100,
+        top_n=20,
         llm_provider=llm_provider,
         openai_api_key=os.environ.get("OPENAI_API_KEY"),
         date_filter=DateFilter(
-            published_after=yesterday.strftime("%Y-%m-%d"),
+            published_after=week_ago.strftime("%Y-%m-%d"),
             published_before=now.strftime("%Y-%m-%d"),
         ),
     )
@@ -45,6 +45,7 @@ async def main():
 
     print(f"Generating digest for categories: {categories}")
     print(f"Interests: {interests}")
+    print(f"Date range: {week_ago.strftime('%Y-%m-%d')} to {now.strftime('%Y-%m-%d')}")
 
     result = await generator.generate(config)
 
