@@ -1,6 +1,6 @@
 {
   "date": "2026-02-01",
-  "generated_at": "2026-02-01T19:17:08.436225+00:00",
+  "generated_at": "2026-02-01T19:18:19.781062+00:00",
   "categories": [
     "q-fin.CP"
   ],
@@ -8,392 +8,65 @@
   "total_papers_fetched": 31,
   "papers": [
     {
-      "arxiv_id": "2601.22119v1",
-      "title": "Alpha Discovery via Grammar-Guided Learning and Search",
-      "abstract": "Automatically discovering formulaic alpha factors is a central problem in quantitative finance. Existing methods often ignore syntactic and semantic constraints, relying on exhaustive search over unstructured and unbounded spaces. We present AlphaCFG, a grammar-based framework for defining and discovering alpha factors that are syntactically valid, financially interpretable, and computationally efficient. AlphaCFG uses an alpha-oriented context-free grammar to define a tree-structured, size-controlled search space, and formulates alpha discovery as a tree-structured linguistic Markov decision process, which is then solved using a grammar-aware Monte Carlo Tree Search guided by syntax-sensitive value and policy networks. Experiments on Chinese and U.S. stock market datasets show that AlphaCFG outperforms state-of-the-art baselines in both search efficiency and trading profitability. Beyond trading strategies, AlphaCFG serves as a general framework for symbolic factor discovery and refinement across quantitative finance, including asset pricing and portfolio construction.",
+      "arxiv_id": "2601.18686v1",
+      "title": "Optimal strategy and deep hedging for share repurchase programs",
+      "abstract": "In recent decades, companies have frequently adopted share repurchase programs to return capital to shareholders or for other strategic purposes, instructing investment banks to rapidly buy back shares on their behalf. When the executing institution is allowed to hedge its exposure, it encounters several challenges due to the intrinsic features of the product. Moreover, contractual clauses or market regulations on trading activity may make it infeasible to rely on Greeks. In this work, we address the hedging of these products by developing a machine-learning framework that determines the optimal execution of the buyback while explicitly accounting for the bank's actual trading capabilities. This unified treatment of execution and hedging yields substantial performance improvements, resulting in an optimized policy that provides a feasible and realistic hedging approach. The pricing of these programs can be framed in terms of the discount that banks offer to the client on the price at which the shares are delivered. Since, in our framework, risk measures serve as objective functions, we exploit the concept of indifference pricing to compute this discount, thereby capturing the actual execution performance.",
       "authors": [
-        "Han Yang",
-        "Dong Hao",
-        "Zhuohan Wang",
-        "Qi Shi",
-        "Xingtong Li"
+        "Stefano Corti",
+        "Roberto Daluiso",
+        "Andrea Pallavicini"
       ],
       "categories": [
-        "q-fin.CP",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "published": "2026-01-29T18:46:15Z",
-      "updated": "2026-01-29T18:46:15Z",
-      "link": "https://arxiv.org/abs/2601.22119v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "This paper is highly relevant to a researcher interested in Limit Order Book Modelling as it presents a novel approach for automatically discovering alpha factors in quantitative finance, which can be applied to asset pricing and portfolio construction."
-    },
-    {
-      "arxiv_id": "2601.18634v1",
-      "title": "The Compounded BSDE method: A fully-forward method for option pricing and optimal stopping problems in finance",
-      "abstract": "We propose the Compound BSDE method, a fully forward, deep-learning-based approach for solving a broad class of problems in financial mathematics, including optimal stopping. The method is based on a reformulation of option pricing problems in terms of a system of backward stochastic differential equations (BSDEs), which offers a new perspective on the numerical treatment of compound options and optimal stopping problems such as Bermudan option pricing. Building on the classical deep BSDE method for a single BSDE, we develop an algorithm for compound BSDEs and establish its convergence properties. In particular, we derive an \\emph{a posteriori} error estimate for the proposed method. Numerical experiments demonstrate the accuracy and computational efficiency of the approach, and illustrate its effectiveness for high-dimensional option pricing and optimal stopping problems.",
-      "authors": [
-        "Zhipeng Huang",
-        "Cornelis W. Oosterlee"
-      ],
-      "categories": [
-        "q-fin.CP",
-        "math.NA",
-        "q-fin.PR"
-      ],
-      "published": "2026-01-26T16:07:02Z",
-      "updated": "2026-01-26T16:07:02Z",
-      "link": "https://arxiv.org/abs/2601.18634v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "Directly addresses the researcher's interests in option pricing and optimal stopping problems in finance, with a focus on compound options and BSDEs."
-    },
-    {
-      "arxiv_id": "2601.18811v2",
-      "title": "Variational Quantum Circuit-Based Reinforcement Learning for Dynamic Portfolio Optimization",
-      "abstract": "This paper presents a Quantum Reinforcement Learning (QRL) solution to the dynamic portfolio optimization problem based on Variational Quantum Circuits. The implemented QRL approaches are quantum analogues of the classical neural-network-based Deep Deterministic Policy Gradient and Deep Q-Network algorithms. Through an empirical evaluation on real-world financial data, we show that our quantum agents achieve risk-adjusted performance comparable to, and in some cases exceeding, that of classical Deep RL models with several orders of magnitude more parameters. However, while quantum circuit execution is inherently fast at the hardware level, practical deployment on cloud-based quantum systems introduces substantial latency, making end-to-end runtime currently dominated by infrastructural overhead and limiting practical applicability. Taken together, our results suggest that QRL is theoretically competitive with state-of-the-art classical reinforcement learning and may become practically advantageous as deployment overheads diminish. This positions QRL as a promising paradigm for dynamic decision-making in complex, high-dimensional, and non-stationary environments such as financial markets. The complete codebase is released as open source at: https://github.com/VincentGurgul/qrl-dpo-public",
-      "authors": [
-        "Vincent Gurgul",
-        "Ying Chen",
-        "Stefan Lessmann"
-      ],
-      "categories": [
-        "cs.LG",
-        "q-fin.CP",
-        "q-fin.PM",
-        "quant-ph"
-      ],
-      "published": "2026-01-20T15:17:24Z",
-      "updated": "2026-01-28T11:57:38Z",
-      "link": "https://arxiv.org/abs/2601.18811v2",
-      "relevance_score": 9.0,
-      "relevance_reason": "This paper directly addresses the topic of dynamic portfolio optimization, which is highly relevant to a researcher interested in Limit Order Book Modelling. The use of Quantum Reinforcement Learning and Variational Quantum Circuits adds a novel and potentially advantageous approach to the field."
-    },
-    {
-      "arxiv_id": "2601.13770v1",
-      "title": "Look-Ahead-Bench: a Standardized Benchmark of Look-ahead Bias in Point-in-Time LLMs for Finance",
-      "abstract": "We introduce Look-Ahead-Bench, a standardized benchmark measuring look-ahead bias in Point-in-Time (PiT) Large Language Models (LLMs) within realistic and practical financial workflows. Unlike most existing approaches that primarily test inner lookahead knowledge via Q\\\\&A, our benchmark evaluates model behavior in practical scenarios. To distinguish genuine predictive capability from memorization-based performance, we analyze performance decay across temporally distinct market regimes, incorporating several quantitative baselines to establish performance thresholds. We evaluate prominent open-source LLMs -- Llama 3.1 (8B and 70B) and DeepSeek 3.2 -- against a family of Point-in-Time LLMs (Pitinf-Small, Pitinf-Medium, and frontier-level model Pitinf-Large) from PiT-Inference. Results reveal significant lookahead bias in standard LLMs, as measured with alpha decay, unlike Pitinf models, which demonstrate improved generalization and reasoning abilities as they scale in size. This work establishes a foundation for the standardized evaluation of temporal bias in financial LLMs and provides a practical framework for identifying models suitable for real-world deployment. Code is available on GitHub: https://github.com/benstaf/lookaheadbench",
-      "authors": [
-        "Mostapha Benhenda"
-      ],
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "q-fin.CP",
-        "q-fin.GN"
-      ],
-      "published": "2026-01-20T09:23:51Z",
-      "updated": "2026-01-20T09:23:51Z",
-      "link": "https://arxiv.org/abs/2601.13770v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "This paper is highly relevant as it focuses on evaluating look-ahead bias in Point-in-Time Large Language Models within the context of financial workflows, which aligns closely with the researcher's interest in Limit Order Book Modelling."
-    },
-    {
-      "arxiv_id": "2601.13435v1",
-      "title": "A Learnable Wavelet Transformer for Long-Short Equity Trading and Risk-Adjusted Return Optimization",
-      "abstract": "Learning profitable intraday trading policies from financial time series is challenging due to heavy noise, non-stationarity, and strong cross-sectional dependence among related assets. We propose \\emph{WaveLSFormer}, a learnable wavelet-based long-short Transformer that jointly performs multi-scale decomposition and return-oriented decision learning. Specifically, a learnable wavelet front-end generates low-/high-frequency components via an end-to-end trained filter bank, guided by spectral regularizers that encourage stable and well-separated frequency bands. To fuse multi-scale information, we introduce a low-guided high-frequency injection (LGHI) module that refines low-frequency representations with high-frequency cues while controlling training stability. The model outputs a portfolio of long/short positions that is rescaled to satisfy a fixed risk budget, and is optimized directly with a trading objective and risk-aware regularization. Extensive experiments on five years of hourly data across six industry groups, evaluated over ten random seeds, demonstrate that WaveLSFormer consistently outperforms MLP, LSTM and Transformer backbones, with and without fixed discrete wavelet front-ends. On average in all industries, WaveLSFormer achieves a cumulative overall strategy return of $0.607 \\pm 0.045$ and a Sharpe ratio of $2.157 \\pm 0.166$, substantially improving both profitability and risk-adjusted returns over the strongest baselines.",
-      "authors": [
-        "Shuozhe Li",
-        "Du Cheng",
-        "Leqi Liu"
-      ],
-      "categories": [
-        "cs.LG",
-        "cs.AI",
+        "q-fin.PR",
         "q-fin.CP"
       ],
-      "published": "2026-01-19T22:41:31Z",
-      "updated": "2026-01-19T22:41:31Z",
-      "link": "https://arxiv.org/abs/2601.13435v1",
+      "published": "2026-01-26T17:01:54Z",
+      "updated": "2026-01-26T17:01:54Z",
+      "link": "https://arxiv.org/abs/2601.18686v1",
       "relevance_score": 9.0,
-      "relevance_reason": "Direct application of machine learning and trading strategies on financial time series data, which is highly relevant to limit order book modelling research interests."
+      "relevance_reason": "The paper addresses the optimal execution and hedging of share repurchase programs, which directly relates to the interests of a researcher in Limit Order Book Modelling."
     },
     {
-      "arxiv_id": "2601.11209v2",
-      "title": "SANOS Smooth strictly Arbitrage-free Non-parametric Option Surfaces",
-      "abstract": "We present a simple, numerically efficient but highly flexible non-parametric method to construct representations of option price surfaces which are both smooth and strictly arbitrage-free across time and strike. The method can be viewed as a smooth generalization of the widely-known linear interpolation scheme, and retains the simplicity and transparency of that baseline. Calibration of the model to observed market quotes is formulated as a linear program, allowing bid-ask spreads to be incorporated directly via linear penalties or inequalities, and delivering materially lower computational cost than most of the currently available implied-volatility surface fitting routines. As a further contribution, we derive an equivalent parameterization of the proposed surface in terms of strictly positive \"discrete local volatility\" variables. This yields, to our knowledge, the first construction of smooth, strictly arbitrage-free option price surfaces while requiring only trivial parameter constraints (positivity). We illustrate the approach using S&P 500 index options",
+      "arxiv_id": "2601.01642v1",
+      "title": "Wasserstein Distributionally Robust Rare-Event Simulation",
+      "abstract": "Standard rare-event simulation techniques require exact distributional specifications, which limits their effectiveness in the presence of distributional uncertainty. To address this, we develop a novel framework for estimating rare-event probabilities subject to such distributional model risk. Specifically, we focus on computing worst-case rare-event probabilities, defined as a distributionally robust bound against a Wasserstein ambiguity set centered at a specific nominal distribution. By exploiting a dual characterization of this bound, we propose Distributionally Robust Importance Sampling (DRIS), a computationally tractable methodology designed to substantially reduce the variance associated with estimating the dual components. The proposed method is simple to implement and requires low sampling costs. Most importantly, it achieves vanishing relative error, the strongest efficiency guarantee that is notoriously difficult to establish in rare-event simulation. Our numerical studies confirm the superior performance of DRIS against existing benchmarks.",
       "authors": [
-        "Hans Buehler",
-        "Blanka Horvath",
-        "Anastasis Kratsios",
-        "Yannick Limmer",
-        "Raeid Saqur"
+        "Dohyun Ahn",
+        "Huiyi Chen",
+        "Lewen Zheng"
       ],
       "categories": [
+        "stat.ME",
         "q-fin.CP",
-        "q-fin.MF"
+        "stat.CO"
       ],
-      "published": "2026-01-16T11:33:39Z",
-      "updated": "2026-01-19T23:36:05Z",
-      "link": "https://arxiv.org/abs/2601.11209v2",
+      "published": "2026-01-04T19:15:22Z",
+      "updated": "2026-01-04T19:15:22Z",
+      "link": "https://arxiv.org/abs/2601.01642v1",
       "relevance_score": 9.0,
-      "relevance_reason": "Highly relevant as the paper discusses a non-parametric method for constructing smooth and strictly arbitrage-free option price surfaces, which aligns with the researcher's interest in Limit Order Book Modelling."
+      "relevance_reason": "This paper directly addresses rare-event simulation techniques in the presence of distributional uncertainty, which is highly relevant to a researcher interested in Limit Order Book Modelling."
     },
     {
-      "arxiv_id": "2601.11201v1",
-      "title": "Fast Times, Slow Times: Timescale Separation in Financial Timeseries Data",
-      "abstract": "Financial time series exhibit multiscale behavior, with interaction between multiple processes operating on different timescales. This paper introduces a method for separating these processes using variance and tail stationarity criteria, framed as generalized eigenvalue problems. The approach allows for the identification of slow and fast components in asset returns and prices, with applications to parameter drift, mean reversion, and tail risk management. Empirical examples using currencies, equity ETFs and treasury yields illustrate the practical utility of the method.",
+      "arxiv_id": "2601.00738v1",
+      "title": "Second Thoughts: How 1-second subslots transform CEX-DEX Arbitrage on Ethereum",
+      "abstract": "This paper examines the impact of reducing Ethereum slot time on decentralized exchange activity, with a focus on CEX-DEX arbitrage behavior. We develop a trading model where the agent's DEX transaction is not guaranteed to land, and the agent explicitly accounts for this execution risk when deciding whether to pursue arbitrage opportunities. We compare agent behavior under Ethereum's default 12-second slot time environment with a faster regime that offers 1-second subslot execution. The simulations, calibrated to Binance and Uniswap v3 data from July to September 2025, show that faster slot times increase arbitrage transaction count by 535% and trading volume by 203% on average. The increase in CEX-DEX arbitrage activity under 1-second subslots is driven by the reduction in variance of both successful and failed trade outcomes, increasing the risk-adjusted returns and making CEX-DEX arbitrage more appealing.",
       "authors": [
-        "Jan Rosenzweig"
+        "Aleksei Adadurov",
+        "Sergey Barseghyan",
+        "Anton Chtepine",
+        "Antero Eloranta",
+        "Andrei Sebyakin",
+        "Arsenii Valitov"
       ],
       "categories": [
-        "q-fin.PM",
-        "q-fin.CP",
-        "q-fin.RM",
-        "q-fin.ST",
-        "q-fin.TR"
-      ],
-      "published": "2026-01-16T11:23:13Z",
-      "updated": "2026-01-16T11:23:13Z",
-      "link": "https://arxiv.org/abs/2601.11201v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "The paper discusses timescale separation in financial time series data, which is highly relevant to a researcher interested in Limit Order Book Modelling as it involves identifying slow and fast components in asset returns and prices."
-    },
-    {
-      "arxiv_id": "2601.18804v1",
-      "title": "Deep g-Pricing for CSI 300 Index Options with Volatility Trajectories and Market Sentiment",
-      "abstract": "Option pricing in real markets faces fundamental challenges. The Black--Scholes--Merton (BSM) model assumes constant volatility and uses a linear generator $g(t,x,y,z)=-ry$, while lacking explicit behavioral factors, resulting in systematic departures from observed dynamics. This paper extends the BSM model by learning a nonlinear generator within a deep Forward--Backward Stochastic Differential Equation (FBSDE) framework. We propose a dual-network architecture where the value network $u_\u03b8$ learns option prices and the generator network $g_\u03c6$ characterizes the pricing mechanism, with the hedging strategy $Z_t=\u03c3_t X_t \\nabla_x u_\u03b8$ obtained via automatic differentiation. The framework adopts forward recursion from a learnable initial condition $Y_0=u_\u03b8(0,\\cdot)$, naturally accommodating volatility trajectory and sentiment features. Empirical results on CSI 300 index options show that our method reduces Mean Absolute Error (MAE) by 32.2\\% and Mean Absolute Percentage Error (MAPE) by 35.3\\% compared with BSM. Interpretability analysis indicates that architectural improvements are effective across all option types, while the information advantage is asymmetric between calls and puts. Specifically, call option improvements are primarily driven by sentiment features, whereas put options show more balanced contributions from volatility trajectory and sentiment features. This finding aligns with economic intuition regarding option pricing mechanisms.",
-      "authors": [
-        "Yilun Zhang",
-        "Zheng Tang",
-        "Hexiang Sun",
-        "Yufeng Shi"
-      ],
-      "categories": [
-        "q-fin.CP",
-        "cs.LG",
-        "math.PR",
-        "q-fin.PR"
-      ],
-      "published": "2026-01-15T08:58:09Z",
-      "updated": "2026-01-15T08:58:09Z",
-      "link": "https://arxiv.org/abs/2601.18804v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "This paper directly addresses the modelling of options pricing with a focus on volatility trajectories and market sentiment, which are important aspects in limit order book modelling."
-    },
-    {
-      "arxiv_id": "2601.18801v1",
-      "title": "Design-Robust Event-Study Estimation under Staggered Adoption Diagnostics, Sensitivity, and Orthogonalisation",
-      "abstract": "This paper develops a design-first econometric framework for event-study and difference-in-differences estimands under staggered adoption with heterogeneous effects, emphasising (i) exact probability limits for conventional two-way fixed effects event-study regressions, (ii) computable design diagnostics that quantify contamination and negative-weight risk, and (iii) sensitivity-robust inference that remains uniformly valid under restricted violations of parallel trends. The approach is accompanied by orthogonal score constructions that reduce bias from high-dimensional nuisance estimation when conditioning on covariates. Theoretical results and Monte Carlo experiments jointly deliver a self-contained methodology paper suitable for finance and econometrics applications where timing variation is intrinsic to policy, regulation, and market-structure changes.",
-      "authors": [
-        "Craig S Wright"
-      ],
-      "categories": [
-        "econ.EM",
-        "econ.GN",
-        "q-fin.CP",
-        "q-fin.GN"
-      ],
-      "published": "2026-01-14T09:04:24Z",
-      "updated": "2026-01-14T09:04:24Z",
-      "link": "https://arxiv.org/abs/2601.18801v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "This paper is highly relevant as it focuses on econometric framework for event-study estimands, which is directly related to limit order book modelling research interests."
-    },
-    {
-      "arxiv_id": "2601.07131v1",
-      "title": "The Limits of Complexity: Why Feature Engineering Beats Deep Learning in Investor Flow Prediction",
-      "abstract": "The application of machine learning to financial prediction has accelerated dramatically, yet the conditions under which complex models outperform simple alternatives remain poorly understood. This paper investigates whether advanced signal processing and deep learning techniques can extract predictive value from investor order flows beyond what simple feature engineering achieves. Using a comprehensive dataset of 2.79 million observations spanning 2,439 Korean equities from 2020--2024, we apply three methodologies: \\textit{Independent Component Analysis} (ICA) to recover latent market drivers, \\textit{Wavelet Coherence} analysis to characterize multi-scale correlation structure, and \\textit{Long Short-Term Memory} (LSTM) networks with attention mechanisms for non-linear prediction. Our results reveal a striking finding: a parsimonious linear model using market capitalization-normalized flows (``Matched Filter'' preprocessing) achieves a Sharpe ratio of 1.30 and cumulative return of 272.6\\%, while the full ICA-Wavelet-LSTM pipeline generates a Sharpe ratio of only 0.07 with a cumulative return of $-5.1\\%$. The raw LSTM model collapsed to predicting the unconditional mean, achieving a hit rate of 47.5\\% -- worse than random. We conclude that in low signal-to-noise financial environments, domain-specific feature engineering yields substantially higher marginal returns than algorithmic complexity. These findings establish important boundary conditions for the application of deep learning to financial prediction.",
-      "authors": [
-        "Sungwoo Kang"
-      ],
-      "categories": [
+        "q-fin.TR",
         "q-fin.CP"
       ],
-      "published": "2026-01-12T01:46:37Z",
-      "updated": "2026-01-12T01:46:37Z",
-      "link": "https://arxiv.org/abs/2601.07131v1",
+      "published": "2026-01-02T16:39:25Z",
+      "updated": "2026-01-02T16:39:25Z",
+      "link": "https://arxiv.org/abs/2601.00738v1",
       "relevance_score": 9.0,
-      "relevance_reason": "This paper directly addresses the use of machine learning in financial prediction, specifically comparing the effectiveness of deep learning techniques against simple feature engineering in predicting investor order flows. It provides insights into the limitations and benefits of complex models in this context, which is highly relevant to a researcher focused on limit order book modelling."
-    },
-    {
-      "arxiv_id": "2601.07852v1",
-      "title": "Utility-Weighted Forecasting and Calibration for Risk-Adjusted Decisions under Trading Frictions",
-      "abstract": "Forecasting accuracy is routinely optimised in financial prediction tasks even though investment and risk-management decisions are executed under transaction costs, market impact, capacity limits, and binding risk constraints. This paper treats forecasting as an econometric input to a constrained decision problem. A predictive distribution induces a decision rule through a utility objective combined with an explicit friction operator consisting of both a cost functional and a feasible-set constraint system. The econometric target becomes minimisation of expected decision loss net of costs rather than minimisation of prediction error. The paper develops a utility-weighted calibration criterion aligned to the decision loss and establishes sufficient conditions under which calibrated predictive distributions weakly dominate uncalibrated alternatives. An empirical study using a pre-committed nested walk-forward protocol on liquid equity index futures confirms the theory: the proposed utility-weighted calibration reduces realised decision loss by over 30\\% relative to an uncalibrated baseline ($t$-stat -30.31) for loss differential and improves the Sharpe ratio from -3.62 to -2.29 during a drawdown regime. The mechanism is identified as a structural reduction in the frequency of binding constraints (from 16.0\\% to 5.1\\%), preventing the \"corner solution\" failures that characterize overconfident forecasts in high-friction environments.",
-      "authors": [
-        "Craig S Wright"
-      ],
-      "categories": [
-        "econ.EM",
-        "q-fin.CP",
-        "q-fin.PM",
-        "q-fin.TR"
-      ],
-      "published": "2026-01-09T01:11:21Z",
-      "updated": "2026-01-09T01:11:21Z",
-      "link": "https://arxiv.org/abs/2601.07852v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "Highly relevant as it discusses utility-weighted forecasting and decision-making under trading frictions, which aligns closely with interests in limit order book modelling."
-    },
-    {
-      "arxiv_id": "2601.04896v2",
-      "title": "Deep Reinforcement Learning for Optimum Order Execution: Mitigating Risk and Maximizing Returns",
-      "abstract": "Optimal Order Execution is a well-established problem in finance that pertains to the flawless execution of a trade (buy or sell) for a given volume within a specified time frame. This problem revolves around optimizing returns while minimizing risk, yet recent research predominantly focuses on addressing one aspect of this challenge. In this paper, we introduce an innovative approach to Optimal Order Execution within the US market, leveraging Deep Reinforcement Learning (DRL) to effectively address this optimization problem holistically. Our study assesses the performance of our model in comparison to two widely employed execution strategies: Volume Weighted Average Price (VWAP) and Time Weighted Average Price (TWAP). Our experimental findings clearly demonstrate that our DRL-based approach outperforms both VWAP and TWAP in terms of return on investment and risk management. The model's ability to adapt dynamically to market conditions, even during periods of market stress, underscores its promise as a robust solution.",
-      "authors": [
-        "Khabbab Zakaria",
-        "Jayapaulraj Jerinsh",
-        "Andreas Maier",
-        "Patrick Krauss",
-        "Stefano Pasquali",
-        "Dhagash Mehta"
-      ],
-      "categories": [
-        "q-fin.CP"
-      ],
-      "published": "2026-01-08T12:49:11Z",
-      "updated": "2026-01-09T19:17:01Z",
-      "link": "https://arxiv.org/abs/2601.04896v2",
-      "relevance_score": 9.0,
-      "relevance_reason": "Highly relevant as it directly addresses the researcher's interest in Limit Order Book Modelling through the use of Deep Reinforcement Learning for Optimal Order Execution."
-    },
-    {
-      "arxiv_id": "2601.04608v1",
-      "title": "Forecasting the U.S. Treasury Yield Curve: A Distributionally Robust Machine Learning Approach",
-      "abstract": "We study U.S. Treasury yield curve forecasting under distributional uncertainty and recast forecasting as an operations research and managerial decision problem. Rather than minimizing average forecast error, the forecaster selects a decision rule that minimizes worst case expected loss over an ambiguity set of forecast error distributions. To this end, we propose a distributionally robust ensemble forecasting framework that integrates parametric factor models with high dimensional nonparametric machine learning models through adaptive forecast combinations. The framework consists of three machine learning components. First, a rolling window Factor Augmented Dynamic Nelson Siegel model captures level, slope, and curvature dynamics using principal components extracted from economic indicators. Second, Random Forest models capture nonlinear interactions among macro financial drivers and lagged Treasury yields. Third, distributionally robust forecast combination schemes aggregate heterogeneous forecasts under moment uncertainty, penalizing downside tail risk via expected shortfall and stabilizing second moment estimation through ridge regularized covariance matrices. The severity of the worst case criterion is adjustable, allowing the forecaster to regulate the trade off between robustness and statistical efficiency. Using monthly data, we evaluate out of sample forecasts across maturities and horizons from one to twelve months ahead. Adaptive combinations deliver superior performance at short horizons, while Random Forest forecasts dominate at longer horizons. Extensions to global sovereign bond yields confirm the stability and generalizability of the proposed framework.",
-      "authors": [
-        "Jinjun Liu",
-        "Ming-Yen Cheng"
-      ],
-      "categories": [
-        "q-fin.MF",
-        "q-fin.CP",
-        "stat.ML"
-      ],
-      "published": "2026-01-08T05:26:43Z",
-      "updated": "2026-01-08T05:26:43Z",
-      "link": "https://arxiv.org/abs/2601.04608v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "This paper is highly relevant as it discusses forecasting methods related to financial data, which aligns closely with the researcher's interest in limit order book modelling."
-    },
-    {
-      "arxiv_id": "2601.04602v1",
-      "title": "Forecasting Equity Correlations with Hybrid Transformer Graph Neural Network",
-      "abstract": "This paper studies forward-looking stock-stock correlation forecasting for S\\&P 500 constituents and evaluates whether learned correlation forecasts can improve graph-based clustering used in basket trading strategies. We cast 10-day ahead correlation prediction in Fisher-z space and train a Temporal-Heterogeneous Graph Neural Network (THGNN) to predict residual deviations from a rolling historical baseline. The architecture combines a Transformer-based temporal encoder, which captures non-stationary, complex, temporal dependencies, with an edge-aware graph attention network that propagates cross-asset information over the equity network. Inputs span daily returns, technicals, sector structure, previous correlations, and macro signals, enabling regime-aware forecasts and attention-based feature and neighbor importance to provide interpretability. Out-of-sample results from 2019-2024 show that the proposed model meaningfully reduces correlation forecasting error relative to rolling-window estimates. When integrated into a graph-based clustering framework, forward-looking correlations produce adaptable and economically meaningfully baskets, particularly during periods of market stress. These findings suggest that improvements in correlation forecasts translate into meaningful gains during portfolio construction tasks.",
-      "authors": [
-        "Jack Fanshawe",
-        "Rumi Masih",
-        "Alexander Cameron"
-      ],
-      "categories": [
-        "q-fin.CP",
-        "q-fin.TR"
-      ],
-      "published": "2026-01-08T05:16:06Z",
-      "updated": "2026-01-08T05:16:06Z",
-      "link": "https://arxiv.org/abs/2601.04602v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "This paper is highly relevant as it deals with forecasting correlations in the context of equities, which is directly related to Limit Order Book Modelling."
-    },
-    {
-      "arxiv_id": "2601.05290v1",
-      "title": "Multi-Period Martingale Optimal Transport: Classical Theory, Neural Acceleration, and Financial Applications",
-      "abstract": "This paper develops a computational framework for Multi-Period Martingale Optimal Transport (MMOT), addressing convergence rates, algorithmic efficiency, and financial calibration. Our contributions include: (1) Theoretical analysis: We establish discrete convergence rates of $O(\\sqrt{\u0394t} \\log(1/\u0394t))$ via Donsker's principle and linear algorithmic convergence of $(1-\u03ba)^{2/3}$; (2) Algorithmic improvements: We introduce incremental updates ($O(M^2)$ complexity) and adaptive sparse grids; (3) Numerical implementation: A hybrid neural-projection solver is proposed, combining transformer-based warm-starting with Newton-Raphson projection. Once trained, the pure neural solver achieves a $1{,}597\\times$ online inference speedup ($4.7$s $\\to 2.9$ms) suitable for real-time applications, while the hybrid solver ensures martingale constraints to $10^{-6}$ precision. Validated on 12,000 synthetic instances (GBM, Merton, Heston) and 120 real market scenarios.",
-      "authors": [
-        "Sri Sairam Gautam B"
-      ],
-      "categories": [
-        "q-fin.CP",
-        "q-fin.MF",
-        "q-fin.PR"
-      ],
-      "published": "2026-01-07T21:10:29Z",
-      "updated": "2026-01-07T21:10:29Z",
-      "link": "https://arxiv.org/abs/2601.05290v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "Highly relevant as the paper specifically addresses Multi-Period Martingale Optimal Transport, which is a key topic in Limit Order Book Modelling"
-    },
-    {
-      "arxiv_id": "2601.04049v1",
-      "title": "Quantum computing for multidimensional option pricing: End-to-end pipeline",
-      "abstract": "This work introduces an end-to-end framework for multi-asset option pricing that combines market-consistent risk-neutral density recovery with quantum-accelerated numerical integration. We first calibrate arbitrage-free marginal distributions from European option quotes using the Normal Inverse Gaussian (NIG) model, leveraging its analytical tractability and ability to capture skewness and fat tails. Marginals are coupled via a Gaussian copula to construct joint distributions. To address the computational bottleneck of the high-dimensional integration required to solve the option pricing formula, we employ Quantum Accelerated Monte Carlo (QAMC) techniques based on Quantum Amplitude Estimation (QAE), achieving quadratic convergence improvements over classical Monte Carlo (CMC) methods. Theoretical results establish accuracy bounds and query complexity for both marginal density estimation (via cosine-series expansions) and multidimensional pricing. Empirical tests on liquid equity entities (Credit Agricole, AXA, Michelin) confirm high calibration accuracy and demonstrate that QAMC requires 10-100 times fewer queries than classical methods for comparable precision. This study provides a practical route to integrate arbitrage-aware modelling with quantum computing, highlighting implications for scalability and future extensions to complex derivatives.",
-      "authors": [
-        "Julien Hok",
-        "\u00c1lvaro Leitao"
-      ],
-      "categories": [
-        "q-fin.CP",
-        "math.NA",
-        "quant-ph"
-      ],
-      "published": "2026-01-07T16:07:19Z",
-      "updated": "2026-01-07T16:07:19Z",
-      "link": "https://arxiv.org/abs/2601.04049v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "The paper directly addresses limit order book modelling by introducing a framework for multi-asset option pricing, which would be highly relevant to a researcher in this field."
-    },
-    {
-      "arxiv_id": "2601.19504v1",
-      "title": "Generating Alpha: A Hybrid AI-Driven Trading System Integrating Technical Analysis, Machine Learning and Financial Sentiment for Regime-Adaptive Equity Strategies",
-      "abstract": "The intricate behavior patterns of financial markets are influenced by fundamental, technical, and psychological factors. During times of high volatility and regime shifts causes many traditional strategies like trend-following or mean-reversion to fail. This paper proposes a hybrid AI-based trading strategy that combines (1) trend-following and directional momentum capture via EMA and MACD, (2) detection of price normalization through mean-reversion using RSI and Bollinger Bands, (3) market psychological interpretation through sentiment analysis using FinBERT, (4) signal generation through machine learning using XGBoost and (5)dynamically adjusting exposure with market regime filtering based on volatility and return environments. The system achieved a final portfolio value of $235,492.83, yielding a return of 135.49% on initial investment over a period of 24 months. The hybrid model outperformed major benchmark indexes like S&P 500 and NASDAQ-100 over the same period showing strong flexibility and lower downside risk with superior profits validating the use of multi-modal AI in algorithmic trading.",
-      "authors": [
-        "Varun Narayan Kannan Pillai",
-        "Akshay Ajith",
-        "Sumesh K J"
-      ],
-      "categories": [
-        "q-fin.CP"
-      ],
-      "published": "2026-01-27T11:44:47Z",
-      "updated": "2026-01-27T11:44:47Z",
-      "link": "https://arxiv.org/abs/2601.19504v1",
-      "relevance_score": 8.0,
-      "relevance_reason": "The paper explores a hybrid AI-driven trading system incorporating technical analysis, machine learning, and sentiment analysis, which could provide valuable insights for researchers interested in limit order book modelling."
-    },
-    {
-      "arxiv_id": "2601.19321v1",
-      "title": "Predictive Accuracy versus Interpretability in Energy Markets: A Copula-Enhanced TVP-SVAR Analysis",
-      "abstract": "This paper investigates whether structural econometric models can rival machine learning in forecasting energy--macro dynamics while retaining causal interpretability. Using monthly data from 1999 to 2025, we develop a unified framework that integrates Time-Varying Parameter Structural VARs (TVP-SVAR) with advanced dependence structures, including DCC-GARCH, t-copulas, and mixed Clayton--Frank--Gumbel copulas. These models are empirically evaluated against leading machine learning techniques Gaussian Process Regression (GPR), Artificial Neural Networks, Random Forests, and Support Vector Regression across seven macro-financial and energy variables, with Brent crude oil as the central asset. The findings reveal three major insights. First, TVP-SVAR consistently outperforms standard VAR models, confirming structural instability in energy transmission channels. Second, copula-based extensions capture non-linear and tail dependence more effectively than symmetric DCC models, particularly during periods of macroeconomic stress. Third, despite their methodological differences, copula-enhanced econometric models and GPR achieve statistically equivalent predictive accuracy (t-test p = 0.8444). However, only the econometric approach provides interpretable impulse responses, regime shifts, and tail-risk diagnostics. We conclude that machine learning can replicate predictive performance but cannot substitute the explanatory power of structural econometrics. This synthesis offers a pathway where AI accuracy and economic interpretability jointly inform energy policy and risk management.",
-      "authors": [
-        "Fredy Pokou",
-        "Jules Sadefo Kamdem",
-        "Kpante Emmanuel Gnandi"
-      ],
-      "categories": [
-        "q-fin.CP",
-        "q-fin.ST",
-        "stat.ML"
-      ],
-      "published": "2026-01-27T08:04:16Z",
-      "updated": "2026-01-27T08:04:16Z",
-      "link": "https://arxiv.org/abs/2601.19321v1",
-      "relevance_score": 8.0,
-      "relevance_reason": "The paper explores forecasting energy markets using advanced econometric models, which may be of interest to a researcher in Limit Order Book Modelling due to the focus on predictive accuracy and interpretability."
-    },
-    {
-      "arxiv_id": "2601.11097v1",
-      "title": "KANHedge: Efficient Hedging of High-Dimensional Options Using Kolmogorov-Arnold Network-Based BSDE Solver",
-      "abstract": "High-dimensional option pricing and hedging present significant challenges in quantitative finance, where traditional PDE-based methods struggle with the curse of dimensionality. The BSDE framework offers a computationally efficient alternative to PDE-based methods, and recently proposed deep BSDE solvers, generally utilizing conventional Multi-Layer Perceptrons (MLPs), build upon this framework to provide a scalable alternative to numerical BSDE solvers. In this research, we show that although such MLP-based deep BSDEs demonstrate promising results in option pricing, there remains room for improvement regarding hedging performance. To address this issue, we introduce KANHedge, a novel BSDE-based hedger that leverages Kolmogorov-Arnold Networks (KANs) within the BSDE framework. Unlike conventional MLP approaches that use fixed activation functions, KANs employ learnable B-spline activation functions that provide enhanced function approximation capabilities for continuous derivatives. We comprehensively evaluate KANHedge on both European and American basket options across multiple dimensions and market conditions. Our experimental results demonstrate that while KANHedge and MLP achieve comparable pricing accuracy, KANHedge provides improved hedging performance. Specifically, KANHedge achieves considerable reductions in hedging cost metrics, demonstrating enhanced risk control capabilities.",
-      "authors": [
-        "Rushikesh Handal",
-        "Masanori Hirano"
-      ],
-      "categories": [
-        "q-fin.CP",
-        "cs.LG"
-      ],
-      "published": "2026-01-16T08:57:17Z",
-      "updated": "2026-01-16T08:57:17Z",
-      "link": "https://arxiv.org/abs/2601.11097v1",
-      "relevance_score": 8.0,
-      "relevance_reason": "The paper directly addresses the challenges of high-dimensional option pricing and hedging, which align with the interests of a researcher focused on limit order book modeling. The use of deep BSDE solvers and innovative approaches like KANHedge may offer valuable insights for improving modeling techniques in this area."
-    },
-    {
-      "arxiv_id": "2601.10043v1",
-      "title": "Instruction Finetuning LLaMA-3-8B Model Using LoRA for Financial Named Entity Recognition",
-      "abstract": "Particularly, financial named-entity recognition (NER) is one of the many important approaches to translate unformatted reports and news into structured knowledge graphs. However, free, easy-to-use large language models (LLMs) often fail to differentiate organisations as people, or disregard an actual monetary amount entirely. This paper takes Meta's Llama 3 8B and applies it to financial NER by combining instruction fine-tuning and Low-Rank Adaptation (LoRA). Each annotated sentence is converted into an instruction-input-output triple, enabling the model to learn task descriptions while fine-tuning with small low-rank matrices instead of updating all weights. Using a corpus of 1,693 sentences, our method obtains a micro-F1 score of 0.894 compared with Qwen3-8B, Baichuan2-7B, T5, and BERT-Base. We present dataset statistics, describe training hyperparameters, and perform visualizations of entity density, learning curves, and evaluation metrics. Our results show that instruction tuning combined with parameter-efficient fine-tuning enables state-of-the-art performance on domain-sensitive NER.",
-      "authors": [
-        "Zhiming Lian"
-      ],
-      "categories": [
-        "q-fin.CP",
-        "cs.LG"
-      ],
-      "published": "2026-01-15T03:41:00Z",
-      "updated": "2026-01-15T03:41:00Z",
-      "link": "https://arxiv.org/abs/2601.10043v1",
-      "relevance_score": 8.0,
-      "relevance_reason": "This paper is highly relevant as it discusses using a large language model for financial NER, which aligns closely with the researcher's interest in limit order book modelling."
+      "relevance_reason": "This paper directly discusses the impact of slot time reduction on decentralized exchange activity, specifically focusing on CEX-DEX arbitrage behavior, which aligns closely with the researcher's interest in limit order book modelling."
     }
   ]
 }
