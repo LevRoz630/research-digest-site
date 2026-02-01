@@ -41,9 +41,18 @@ async def main():
     now = datetime.now(timezone.utc)
     month_ago = now - timedelta(days=30)
 
+    # Enhanced interests prompt for LLM ranking
+    enhanced_interests = f"""{interests}
+
+When ranking, also consider:
+- Author credentials and reputation (prefer established researchers from top institutions)
+- Quality of methodology described in abstract
+- Novelty and potential impact of the work
+- Papers with well-known authors in the field should be scored higher"""
+
     config = DigestConfig(
         categories=categories,
-        interests=interests,
+        interests=enhanced_interests,
         max_papers=150,
         top_n=25,
         llm_provider=llm_provider,
