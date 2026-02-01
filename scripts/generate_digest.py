@@ -84,26 +84,14 @@ When ranking, also consider:
     digest = result.get("digest", {})
     papers = digest.get("papers", [])
 
-    # Filter out previously seen papers
-    seen = load_seen_papers()
-    new_papers = [p for p in papers if p.get("arxiv_id") not in seen]
+    print(f"Fetched {len(papers)} papers")
 
-    print(f"Fetched {len(papers)} papers, {len(new_papers)} are new")
-
-    if not new_papers:
-        print("No new papers to add")
+    if not papers:
+        print("No papers found")
         return 0
 
-    # Update seen papers
-    for p in new_papers:
-        seen.add(p.get("arxiv_id"))
-    save_seen_papers(seen)
-
-    # Update digest with only new papers
-    digest["papers"] = new_papers
-
-    # Save to dated JSON file
-    date_str = now.strftime("%Y-%m-%d")
+    # Save to timestamped JSON file (allows multiple regenerations per day)
+    date_str = now.strftime("%Y-%m-%d-%H%M%S")
     digest_file = digests_dir / f"{date_str}.json"
 
     with open(digest_file, "w") as f:

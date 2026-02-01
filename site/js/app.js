@@ -178,6 +178,47 @@ const Favorites = {
   }
 };
 
+/* Seen Papers Management */
+const SeenPapers = {
+  data: { arxiv_ids: [] },
+  sha: null,
+
+  async load() {
+    try {
+      const result = await GitHub.getFile('seen_papers.json');
+      if (result) {
+        this.data = result.content;
+        this.sha = result.sha;
+      }
+    } catch (e) {
+      console.error('Failed to load seen papers:', e);
+    }
+    return this.data;
+  },
+
+  async save(message) {
+    const result = await GitHub.putFile(
+      'seen_papers.json',
+      this.data,
+      this.sha,
+      message
+    );
+    this.sha = result.content.sha;
+  },
+
+  has(arxivId) {
+    return (this.data.arxiv_ids || []).includes(arxivId);
+  },
+
+  async markSeen(arxivId) {
+    if (this.has(arxivId)) return false;
+    this.data.arxiv_ids = this.data.arxiv_ids || [];
+    this.data.arxiv_ids.push(arxivId);
+    await this.save(`Mark paper as seen: ${arxivId}`);
+    return true;
+  }
+};
+
 /* Digest Loading */
 const Digests = {
   async loadList() {
@@ -231,7 +272,7 @@ const UI = {
   },
 
   renderPaperCard(paper, options = {}) {
-    const { showSaveButton = true, showRemoveButton = false, showEditNote = false } = options;
+    const { showSaveButton = true, showRemoveButton = false, showEditNote = false, showMarkSeenButton = false } = options;
     const scoreClass = this.getScoreClass(paper.quality_score || paper.relevance_score);
     const isSaved = Favorites.has(paper.arxiv_id);
 
@@ -265,6 +306,9 @@ const UI = {
     }
     if (showEditNote) {
       actionsHtml += `<button class="btn btn-secondary edit-note-btn" data-arxiv="${paper.arxiv_id}">Edit Note</button>`;
+    }
+    if (showMarkSeenButton) {
+      actionsHtml += `<button class="btn btn-secondary mark-seen-btn" data-arxiv="${paper.arxiv_id}">Mark Seen</button>`;
     }
 
     let noteHtml = '';
@@ -339,7 +383,7 @@ const Pages = {
         return;
       }
 
-      container.innerHTML = digest.papers.map(p => UI.renderPaperCard(p, { showSaveButton: true })).join('');
+      container.innerHTML = digest.papers.map(p => UI.renderPaperCard(p, { showSaveButton: true, showMarkSeenButton: true })).join('');
 
       // Event listeners for save buttons
       container.querySelectorAll('.save-btn').forEach(btn => {
@@ -370,6 +414,33 @@ const Pages = {
       // Toggle abstract expand on click
       container.querySelectorAll('.abstract').forEach(el => {
         el.addEventListener('click', () => el.classList.toggle('expanded'));
+      });
+
+      // Mark as seen button handlers
+      container.querySelectorAll('.mark-seen-btn').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          const arxivId = e.target.dataset.arxiv;
+
+          if (!GitHub.hasToken()) {
+            alert('Please configure your GitHub token on the Favorites page first.');
+            return;
+          }
+
+          btn.disabled = true;
+          btn.textContent = 'Marking...';
+
+          try {
+            await SeenPapers.load();
+            await SeenPapers.markSeen(arxivId);
+            const card = btn.closest('.paper-card');
+            card.style.opacity = '0.5';
+            btn.textContent = 'Seen';
+          } catch (err) {
+            alert('Failed to mark as seen: ' + err.message);
+            btn.disabled = false;
+            btn.textContent = 'Mark Seen';
+          }
+        });
       });
     } catch (err) {
       container.innerHTML = `<div class="status error">Failed to load digest: ${err.message}</div>`;
