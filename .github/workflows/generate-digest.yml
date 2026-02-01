@@ -30,6 +30,7 @@ jobs:
       - name: Generate digest
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
           DIGEST_INTERESTS: ${{ inputs.interests }}
           LLM_PROVIDER: openai
         run: python scripts/generate_digest.py

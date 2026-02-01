@@ -57,6 +57,7 @@ When ranking, also consider:
         top_n=25,
         llm_provider=llm_provider,
         openai_api_key=os.environ.get("OPENAI_API_KEY"),
+        semantic_scholar_api_key=os.environ.get("SEMANTIC_SCHOLAR_API_KEY"),
         sources=["semantic_scholar"],
         date_filter=DateFilter(
             published_after=month_ago.strftime("%Y-%m-%d"),
