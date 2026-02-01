@@ -366,6 +366,11 @@ const Pages = {
           }
         });
       });
+
+      // Toggle abstract expand on click
+      container.querySelectorAll('.abstract').forEach(el => {
+        el.addEventListener('click', () => el.classList.toggle('expanded'));
+      });
     } catch (err) {
       container.innerHTML = `<div class="status error">Failed to load digest: ${err.message}</div>`;
     }

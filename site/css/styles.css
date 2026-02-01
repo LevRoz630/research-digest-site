@@ -207,6 +207,29 @@ a:hover {
   padding: 16px;
   background: #f8f9fa;
   border-radius: 6px;
+  max-height: 4.2em;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.paper-card .abstract::after {
+  content: '... click to expand';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 16px 16px 40px;
+  background: linear-gradient(to right, transparent, #f8f9fa 30%);
+  color: #666;
+  font-size: 12px;
+}
+
+.paper-card .abstract.expanded {
+  max-height: none;
+}
+
+.paper-card .abstract.expanded::after {
+  content: none;
 }
 
 .paper-card .reason {
