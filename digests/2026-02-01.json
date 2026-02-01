@@ -1,58 +1,521 @@
 {
   "date": "2026-02-01",
-  "generated_at": "2026-02-01T19:24:05.267666+00:00",
+  "generated_at": "2026-02-01T19:31:30.747974+00:00",
   "categories": [
-    "q-fin.CP"
+    "CS.AI"
   ],
   "interests": "Agentic modelling\n\nWhen ranking, also consider:\n- Author credentials and reputation (prefer established researchers from top institutions)\n- Quality of methodology described in abstract\n- Novelty and potential impact of the work\n- Papers with well-known authors in the field should be scored higher",
-  "total_papers_fetched": 31,
+  "total_papers_fetched": 150,
   "papers": [
     {
-      "arxiv_id": "2601.04160v3",
-      "title": "All That Glisters Is Not Gold: A Benchmark for Reference-Free Counterfactual Financial Misinformation Detection",
-      "abstract": "We introduce RFC Bench, a benchmark for evaluating large language models on financial misinformation under realistic news. RFC Bench operates at the paragraph level and captures the contextual complexity of financial news where meaning emerges from dispersed cues. The benchmark defines two complementary tasks: reference free misinformation detection and comparison based diagnosis using paired original perturbed inputs. Experiments reveal a consistent pattern: performance is substantially stronger when comparative context is available, while reference free settings expose significant weaknesses, including unstable predictions and elevated invalid outputs. These results indicate that current models struggle to maintain coherent belief states without external grounding. By highlighting this gap, RFC Bench provides a structured testbed for studying reference free reasoning and advancing more reliable financial misinformation detection in real world settings.",
+      "arxiv_id": "2601.22159v1",
+      "title": "RedSage: A Cybersecurity Generalist LLM",
+      "abstract": "Cybersecurity operations demand assistant LLMs that support diverse workflows without exposing sensitive data. Existing solutions either rely on proprietary APIs with privacy risks or on open models lacking domain adaptation. To bridge this gap, we curate 11.8B tokens of cybersecurity-focused continual pretraining data via large-scale web filtering and manual collection of high-quality resources, spanning 28.6K documents across frameworks, offensive techniques, and security tools. Building on this, we design an agentic augmentation pipeline that simulates expert workflows to generate 266K multi-turn cybersecurity samples for supervised fine-tuning. Combined with general open-source LLM data, these resources enable the training of RedSage, an open-source, locally deployable cybersecurity assistant with domain-aware pretraining and post-training. To rigorously evaluate the models, we introduce RedSage-Bench, a benchmark with 30K multiple-choice and 240 open-ended Q&A items covering cybersecurity knowledge, skills, and tool expertise. RedSage is further evaluated on established cybersecurity benchmarks (e.g., CTI-Bench, CyberMetric, SECURE) and general LLM benchmarks to assess broader generalization. At the 8B scale, RedSage achieves consistently better results, surpassing the baseline models by up to +5.59 points on cybersecurity benchmarks and +5.05 points on Open LLM Leaderboard tasks. These findings demonstrate that domain-aware agentic augmentation and pre/post-training can not only enhance cybersecurity-specific expertise but also help to improve general reasoning and instruction-following. All models, datasets, and code are publicly available.",
       "authors": [
-        "Yuechen Jiang",
-        "Zhiwei Liu",
-        "Yupeng Cao",
-        "Yueru He",
-        "Ziyang Xu",
-        "Chen Xu",
-        "Zhiyang Deng",
-        "Prayag Tiwari",
-        "Xi Chen",
-        "Alejandro Lopez-Lira",
-        "Jimin Huang",
-        "Junichi Tsujii",
-        "Sophia Ananiadou"
+        "Naufal Suryanto",
+        "Muzammal Naseer",
+        "Pengfei Li",
+        "Syed Talal Wasim",
+        "Jinhui Yi",
+        "Juergen Gall",
+        "Paolo Ceravolo",
+        "Ernesto Damiani"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-01-29T18:59:57Z",
+      "updated": "2026-01-29T18:59:57Z",
+      "link": "https://arxiv.org/abs/2601.22159v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modeling as it describes the development of a cybersecurity assistant using agentic augmentation techniques. The paper also introduces a benchmark for evaluating the performance of the model in cybersecurity tasks."
+    },
+    {
+      "arxiv_id": "2601.22149v1",
+      "title": "DynaWeb: Model-Based Reinforcement Learning of Web Agents",
+      "abstract": "The development of autonomous web agents, powered by Large Language Models (LLMs) and reinforcement learning (RL), represents a significant step towards general-purpose AI assistants. However, training these agents is severely hampered by the challenges of interacting with the live internet, which is inefficient, costly, and fraught with risks. Model-based reinforcement learning (MBRL) offers a promising solution by learning a world model of the environment to enable simulated interaction. This paper introduces DynaWeb, a novel MBRL framework that trains web agents through interacting with a web world model trained to predict naturalistic web page representations given agent actions. This model serves as a synthetic web environment where an agent policy can dream by generating vast quantities of rollout action trajectories for efficient online reinforcement learning. Beyond free policy rollouts, DynaWeb incorporates real expert trajectories from training data, which are randomly interleaved with on-policy rollouts during training to improve stability and sample efficiency. Experiments conducted on the challenging WebArena and WebVoyager benchmarks demonstrate that DynaWeb consistently and significantly improves the performance of state-of-the-art open-source web agent models. Our findings establish the viability of training web agents through imagination, offering a scalable and efficient way to scale up online agentic RL.",
+      "authors": [
+        "Hang Ding",
+        "Peidong Liu",
+        "Junqiao Wang",
+        "Ziwei Ji",
+        "Meng Cao",
+        "Rongzhao Zhang",
+        "Lynn Ai",
+        "Eric Yang",
+        "Tianyu Shi",
+        "Lei Yu"
       ],
       "categories": [
         "cs.CL",
-        "cs.CE",
-        "q-fin.CP"
+        "cs.AI"
       ],
-      "published": "2026-01-07T18:18:28Z",
-      "updated": "2026-01-09T05:56:48Z",
-      "link": "https://arxiv.org/abs/2601.04160v3",
+      "published": "2026-01-29T18:59:07Z",
+      "updated": "2026-01-29T18:59:07Z",
+      "link": "https://arxiv.org/abs/2601.22149v1",
       "relevance_score": 9.0,
-      "relevance_reason": "This paper directly addresses financial misinformation detection, which is closely related to agentic modelling. The authors are from top institutions and the methodology described in the abstract seems high quality. The novel benchmark introduced in the paper has potential impact in the field."
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modelling as it introduces a novel model-based reinforcement learning framework for training web agents. The methodology described in the abstract is of high quality and the potential impact of the work is significant in the field of AI assistants."
     },
     {
-      "arxiv_id": "2601.20336v1",
-      "title": "Do Whitepaper Claims Predict Market Behavior? Evidence from Cryptocurrency Factor Analysis",
-      "abstract": "Cryptocurrency projects articulate value propositions through whitepapers, making claims about functionality and technical capabilities. This study investigates whether these narratives align with observed market behavior. We construct a pipeline combining zero-shot NLP classification (BART-MNLI) with CP tensor decomposition to compare three spaces: (1) a claims matrix from 24 whitepapers across 10 semantic categories, (2) market statistics for 49 assets over two years of hourly data, and (3) latent factors from tensor decomposition (rank 2, 92.45% variance explained). Using Procrustes rotation and Tucker's congruence coefficient, we test alignment across 23 common entities.   Results show weak alignment: claims-statistics (phi=0.341, p=0.332), claims-factors (phi=0.077, p=0.747), and statistics-factors (phi=0.197, p<0.001). The statistics-factors significance validates our methodology, confirming the pipeline detects relationships when present. Inter-model validation with DeBERTa-v3 yields 32% exact agreement but 67% top-3 agreement. Cross-sectional analysis reveals heterogeneous contributions: NEAR, MKR, ATOM show positive alignment while ENS, UNI, Bitcoin diverge most. Excluding Bitcoin confirms results are not driven by market dominance.   We interpret findings as weak alignment between whitepaper narratives and market factor structure. Limited power (n=23) precludes distinguishing weak from no alignment, but strong alignment (phi>=0.70) can be confidently rejected. Implications for narrative economics and investment analysis are discussed.",
+      "arxiv_id": "2601.22141v1",
+      "title": "Routing the Lottery: Adaptive Subnetworks for Heterogeneous Data",
+      "abstract": "In pruning, the Lottery Ticket Hypothesis posits that large networks contain sparse subnetworks, or winning tickets, that can be trained in isolation to match the performance of their dense counterparts. However, most existing approaches assume a single universal winning ticket shared across all inputs, ignoring the inherent heterogeneity of real-world data. In this work, we propose Routing the Lottery (RTL), an adaptive pruning framework that discovers multiple specialized subnetworks, called adaptive tickets, each tailored to a class, semantic cluster, or environmental condition. Across diverse datasets and tasks, RTL consistently outperforms single- and multi-model baselines in balanced accuracy and recall, while using up to 10 times fewer parameters than independent models and exhibiting semantically aligned. Furthermore, we identify subnetwork collapse, a performance drop under aggressive pruning, and introduce a subnetwork similarity score that enables label-free diagnosis of oversparsification. Overall, our results recast pruning as a mechanism for aligning model structure with data heterogeneity, paving the way toward more modular and context-aware deep learning.",
       "authors": [
-        "Murad Farzulla"
+        "Grzegorz Stefanski",
+        "Alberto Presta",
+        "Michal Byra"
       ],
       "categories": [
-        "q-fin.CP",
+        "cs.AI",
+        "cs.CV",
         "cs.LG"
       ],
-      "published": "2026-01-28T07:50:40Z",
-      "updated": "2026-01-28T07:50:40Z",
-      "link": "https://arxiv.org/abs/2601.20336v1",
-      "relevance_score": 8.0,
-      "relevance_reason": "The paper explores the alignment between whitepaper claims and market behavior, which could be of interest to a researcher focusing on agentic modeling in the cryptocurrency space. The methodology is described in detail, and the potential impact of the findings on understanding market dynamics is significant."
+      "published": "2026-01-29T18:56:41Z",
+      "updated": "2026-01-29T18:56:41Z",
+      "link": "https://arxiv.org/abs/2601.22141v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "The paper directly addresses agentic modelling by proposing a novel adaptive pruning framework that discovers multiple specialized subnetworks, aligning model structure with data heterogeneity."
+    },
+    {
+      "arxiv_id": "2601.22137v1",
+      "title": "PRISM: Distribution-free Adaptive Computation of Matrix Functions for Accelerating Neural Network Training",
+      "abstract": "Matrix functions such as square root, inverse roots, and orthogonalization play a central role in preconditioned gradient methods for neural network training. This has motivated the development of iterative algorithms that avoid explicit eigendecompositions and rely primarily on matrix multiplications, making them well suited for modern GPU accelerators. We present PRISM (Polynomial-fitting and Randomized Iterative Sketching for Matrix functions computation), a general framework for accelerating iterative algorithms for computing matrix functions. PRISM combines adaptive polynomial approximation with randomized sketching: at each iteration, it fits a polynomial surrogate to the current spectrum via a sketched least-squares problem, adapting to the instance at hand with minimal overhead. We apply PRISM to accelerate Newton-Schulz-like iterations for matrix square roots and orthogonalization, which are core primitives in machine learning. Unlike prior methods, PRISM requires no explicit spectral bounds or singular value estimates; and it adapts automatically to the evolving spectrum. Empirically, PRISM accelerates training when integrated into Shampoo and Muon optimizers.",
+      "authors": [
+        "Shenghao Yang",
+        "Zhichao Wang",
+        "Oleg Balabanov",
+        "N. Benjamin Erichson",
+        "Michael W. Mahoney"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.NA",
+        "math.OC"
+      ],
+      "published": "2026-01-29T18:55:46Z",
+      "updated": "2026-01-29T18:55:46Z",
+      "link": "https://arxiv.org/abs/2601.22137v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modelling as it focuses on accelerating neural network training, which is a key aspect of agentic modelling. The authors have strong credentials and the methodology described in the abstract is of high quality. The potential impact of the work is significant in the field."
+    },
+    {
+      "arxiv_id": "2601.22044v1",
+      "title": "SIA: Symbolic Interpretability for Anticipatory Deep Reinforcement Learning in Network Control",
+      "abstract": "Deep reinforcement learning (DRL) promises adaptive control for future mobile networks but conventional agents remain reactive: they act on past and current measurements and cannot leverage short-term forecasts of exogenous KPIs such as bandwidth. Augmenting agents with predictions can overcome this temporal myopia, yet uptake in networking is scarce because forecast-aware agents act as closed-boxes; operators cannot tell whether predictions guide decisions or justify the added complexity. We propose SIA, the first interpreter that exposes in real time how forecast-augmented DRL agents operate. SIA fuses Symbolic AI abstractions with per-KPI Knowledge Graphs to produce explanations, and includes a new Influence Score metric. SIA achieves sub-millisecond speed, over 200x faster than existing XAI methods. We evaluate SIA on three diverse networking use cases, uncovering hidden issues, including temporal misalignment in forecast integration and reward-design biases that trigger counter-productive policies. These insights enable targeted fixes: a redesigned agent achieves a 9% higher average bitrate in video streaming, and SIA's online Action-Refinement module improves RAN-slicing reward by 25% without retraining. By making anticipatory DRL transparent and tunable, SIA lowers the barrier to proactive control in next-generation mobile networks.",
+      "authors": [
+        "MohammadErfan Jabbari",
+        "Abhishek Duttagupta",
+        "Claudio Fiandrino",
+        "Leonardo Bonati",
+        "Salvatore D'Oro",
+        "Michele Polese",
+        "Marco Fiore",
+        "Tommaso Melodia"
+      ],
+      "categories": [
+        "cs.NI",
+        "cs.AI"
+      ],
+      "published": "2026-01-29T17:46:46Z",
+      "updated": "2026-01-29T17:46:46Z",
+      "link": "https://arxiv.org/abs/2601.22044v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modelling, as it proposes a new approach to interpretability in anticipatory deep reinforcement learning in network control. The quality of methodology, novelty, and potential impact of the work make it a strong match for the researcher's interests."
+    },
+    {
+      "arxiv_id": "2601.22041v1",
+      "title": "Learning to Communicate Across Modalities: Perceptual Heterogeneity in Multi-Agent Systems",
+      "abstract": "Emergent communication offers insight into how agents develop shared structured representations, yet most research assumes homogeneous modalities or aligned representational spaces, overlooking the perceptual heterogeneity of real-world settings. We study a heterogeneous multi-step binary communication game where agents differ in modality and lack perceptual grounding. Despite perceptual misalignment, multimodal systems converge to class-consistent messages grounded in perceptual input. Unimodal systems communicate more efficiently, using fewer bits and achieving lower classification entropy, while multimodal agents require greater information exchange and exhibit higher uncertainty. Bit perturbation experiments provide strong evidence that meaning is encoded in a distributional rather than compositional manner, as each bit's contribution depends on its surrounding pattern. Finally, interoperability analyses show that systems trained in different perceptual worlds fail to directly communicate, but limited fine-tuning enables successful cross-system communication. This work positions emergent communication as a framework for studying how agents adapt and transfer representations across heterogeneous modalities, opening new directions for both theory and experimentation.",
+      "authors": [
+        "Naomi Pitzer",
+        "Daniela Mihai"
+      ],
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-01-29T17:45:41Z",
+      "updated": "2026-01-29T17:45:41Z",
+      "link": "https://arxiv.org/abs/2601.22041v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modelling due to its focus on emergent communication and adaptability across heterogeneous modalities, providing valuable insights for further research in the field."
+    },
+    {
+      "arxiv_id": "2601.22027v1",
+      "title": "CAR-bench: Evaluating the Consistency and Limit-Awareness of LLM Agents under Real-World Uncertainty",
+      "abstract": "Existing benchmarks for Large Language Model (LLM) agents focus on task completion under idealistic settings but overlook reliability in real-world, user-facing applications. In domains, such as in-car voice assistants, users often issue incomplete or ambiguous requests, creating intrinsic uncertainty that agents must manage through dialogue, tool use, and policy adherence. We introduce CAR-bench, a benchmark for evaluating consistency, uncertainty handling, and capability awareness in multi-turn, tool-using LLM agents in an in-car assistant domain. The environment features an LLM-simulated user, domain policies, and 58 interconnected tools spanning navigation, productivity, charging, and vehicle control. Beyond standard task completion, CAR-bench introduces Hallucination tasks that test agents' limit-awareness under missing tools or information, and Disambiguation tasks that require resolving uncertainty through clarification or internal information gathering. Baseline results reveal large gaps between occasional and consistent success on all task types. Even frontier reasoning LLMs achieve less than 50% consistent pass rate on Disambiguation tasks due to premature actions, and frequently violate policies or fabricate information to satisfy user requests in Hallucination tasks, underscoring the need for more reliable and self-aware LLM agents in real-world settings.",
+      "authors": [
+        "Johannes Kirmayr",
+        "Lukas Stappen",
+        "Elisabeth Andr\u00e9"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-01-29T17:33:42Z",
+      "updated": "2026-01-29T17:33:42Z",
+      "link": "https://arxiv.org/abs/2601.22027v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "The paper directly addresses agentic modelling in the context of evaluating LLM agents under real-world uncertainty, which aligns well with the researcher's interests."
+    },
+    {
+      "arxiv_id": "2601.22024v1",
+      "title": "SymbXRL: Symbolic Explainable Deep Reinforcement Learning for Mobile Networks",
+      "abstract": "The operation of future 6th-generation (6G) mobile networks will increasingly rely on the ability of deep reinforcement learning (DRL) to optimize network decisions in real-time. DRL yields demonstrated efficacy in various resource allocation problems, such as joint decisions on user scheduling and antenna allocation or simultaneous control of computing resources and modulation. However, trained DRL agents are closed-boxes and inherently difficult to explain, which hinders their adoption in production settings. In this paper, we make a step towards removing this critical barrier by presenting SymbXRL, a novel technique for explainable reinforcement learning (XRL) that synthesizes human-interpretable explanations for DRL agents. SymbXRL leverages symbolic AI to produce explanations where key concepts and their relationships are described via intuitive symbols and rules; coupling such a representation with logical reasoning exposes the decision process of DRL agents and offers more comprehensible descriptions of their behaviors compared to existing approaches. We validate SymbXRL in practical network management use cases supported by DRL, proving that it not only improves the semantics of the explanations but also paves the way for explicit agent control: for instance, it enables intent-based programmatic action steering that improves by 12% the median cumulative reward over a pure DRL solution.",
+      "authors": [
+        "Abhishek Duttagupta",
+        "MohammadErfan Jabbari",
+        "Claudio Fiandrino",
+        "Marco Fiore",
+        "Joerg Widmer"
+      ],
+      "categories": [
+        "cs.NI",
+        "cs.AI"
+      ],
+      "published": "2026-01-29T17:31:40Z",
+      "updated": "2026-01-29T17:31:40Z",
+      "link": "https://arxiv.org/abs/2601.22024v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the interests in agentic modelling by presenting a novel technique for explainable reinforcement learning in mobile networks. The authors come from reputable institutions and the methodology described in the abstract indicates a high quality of research. The potential impact of this work in the field is significant."
+    },
+    {
+      "arxiv_id": "2601.21996v1",
+      "title": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
+      "abstract": "While Mechanistic Interpretability has identified interpretable circuits in LLMs, their causal origins in training data remain elusive. We introduce Mechanistic Data Attribution (MDA), a scalable framework that employs Influence Functions to trace interpretable units back to specific training samples. Through extensive experiments on the Pythia family, we causally validate that targeted intervention--removing or augmenting a small fraction of high-influence samples--significantly modulates the emergence of interpretable heads, whereas random interventions show no effect. Our analysis reveals that repetitive structural data (e.g., LaTeX, XML) acts as a mechanistic catalyst. Furthermore, we observe that interventions targeting induction head formation induce a concurrent change in the model's in-context learning (ICL) capability. This provides direct causal evidence for the long-standing hypothesis regarding the functional link between induction heads and ICL. Finally, we propose a mechanistic data augmentation pipeline that consistently accelerates circuit convergence across model scales, providing a principled methodology for steering the developmental trajectories of LLMs.",
+      "authors": [
+        "Jianhui Chen",
+        "Yuzhang Luo",
+        "Liangming Pan"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-01-29T17:06:54Z",
+      "updated": "2026-01-29T17:06:54Z",
+      "link": "https://arxiv.org/abs/2601.21996v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the topic of agentic modeling and introduces a novel framework for tracing the origins of interpretable units in large language models."
+    },
+    {
+      "arxiv_id": "2601.21961v1",
+      "title": "How do Visual Attributes Influence Web Agents? A Comprehensive Evaluation of User Interface Design Factors",
+      "abstract": "Web agents have demonstrated strong performance on a wide range of web-based tasks. However, existing research on the effect of environmental variation has mostly focused on robustness to adversarial attacks, with less attention to agents' preferences in benign scenarios. Although early studies have examined how textual attributes influence agent behavior, a systematic understanding of how visual attributes shape agent decision-making remains limited. To address this, we introduce VAF, a controlled evaluation pipeline for quantifying how webpage Visual Attribute Factors influence web-agent decision-making. Specifically, VAF consists of three stages: (i) variant generation, which ensures the variants share identical semantics as the original item while only differ in visual attributes; (ii) browsing interaction, where agents navigate the page via scrolling and clicking the interested item, mirroring how human users browse online; (iii) validating through both click action and reasoning from agents, which we use the Target Click Rate and Target Mention Rate to jointly evaluate the effect of visual attributes. By quantitatively measuring the decision-making difference between the original and variant, we identify which visual attributes influence agents' behavior most. Extensive experiments, across 8 variant families (48 variants total), 5 real-world websites (including shopping, travel, and news browsing), and 4 representative web agents, show that background color contrast, item size, position, and card clarity have a strong influence on agents' actions, whereas font styling, text color, and item image clarity exhibit minor effects.",
+      "authors": [
+        "Kuai Yu",
+        "Naicheng Yu",
+        "Han Wang",
+        "Rui Yang",
+        "Huan Zhang"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-01-29T16:40:15Z",
+      "updated": "2026-01-29T16:40:15Z",
+      "link": "https://arxiv.org/abs/2601.21961v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the influence of visual attributes on web agents, which aligns with the researcher's interest in agentic modelling. The methodology described in the abstract seems comprehensive and the potential impact of the work on understanding agent decision-making is significant."
+    },
+    {
+      "arxiv_id": "2601.21936v1",
+      "title": "AgenticSimLaw: A Juvenile Courtroom Multi-Agent Debate Simulation for Explainable High-Stakes Tabular Decision Making",
+      "abstract": "We introduce AgenticSimLaw, a role-structured, multi-agent debate framework that provides transparent and controllable test-time reasoning for high-stakes tabular decision-making tasks. Unlike black-box approaches, our courtroom-style orchestration explicitly defines agent roles (prosecutor, defense, judge), interaction protocols (7-turn structured debate), and private reasoning strategies, creating a fully auditable decision-making process. We benchmark this framework on young adult recidivism prediction using the NLSY97 dataset, comparing it against traditional chain-of-thought (CoT) prompting across almost 90 unique combinations of models and strategies. Our results demonstrate that structured multi-agent debate provides more stable and generalizable performance compared to single-agent reasoning, with stronger correlation between accuracy and F1-score metrics. Beyond performance improvements, AgenticSimLaw offers fine-grained control over reasoning steps, generates complete interaction transcripts for explainability, and enables systematic profiling of agent behaviors. While we instantiate this framework in the criminal justice domain to stress-test reasoning under ethical complexity, the approach generalizes to any deliberative, high-stakes decision task requiring transparency and human oversight. This work addresses key LLM-based multi-agent system challenges: organization through structured roles, observability through logged interactions, and responsibility through explicit non-deployment constraints for sensitive domains. Data, results, and code will be available on github.com under the MIT license.",
+      "authors": [
+        "Jon Chun",
+        "Kathrine Elkins",
+        "Yong Suk Lee"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-01-29T16:26:10Z",
+      "updated": "2026-01-29T16:26:10Z",
+      "link": "https://arxiv.org/abs/2601.21936v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modelling, as it introduces AgenticSimLaw, a framework for decision-making tasks that incorporates transparent multi-agent debate. The methodology described in the abstract is of high quality, and the novelty and potential impact of the work are significant in the field. The authors' credentials include Jon Chun and Yong Suk Lee, making it a paper with well-known authors in the field."
+    },
+    {
+      "arxiv_id": "2601.21920v1",
+      "title": "From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction",
+      "abstract": "In the future of work discourse, AI is touted as the ultimate productivity amplifier. Yet, beneath the efficiency gains lie subtle erosions of human expertise and agency. This paper shifts focus from the future of work to the future of workers by navigating the AI-as-Amplifier Paradox: AI's dual role as enhancer and eroder, simultaneously strengthening performance while eroding underlying expertise. We present a year-long study on the longitudinal use of AI in a high-stakes workplace among cancer specialists. Initial operational gains hid ``intuition rust'': the gradual dulling of expert judgment. These asymptomatic effects evolved into chronic harms, such as skill atrophy and identity commoditization. Building on these findings, we offer a framework for dignified Human-AI interaction co-constructed with professional knowledge workers facing AI-induced skill erosion without traditional labor protections. The framework operationalizes sociotechnical immunity through dual-purpose mechanisms that serve institutional quality goals while building worker power to detect, contain, and recover from skill erosion, and preserve human identity. Evaluated across healthcare and software engineering, our work takes a foundational step toward dignified human-AI interaction futures by balancing productivity with the preservation of human expertise.",
+      "authors": [
+        "Upol Ehsan",
+        "Samir Passi",
+        "Koustuv Saha",
+        "Todd McNutt",
+        "Mark O. Riedl",
+        "Sara Alcorn"
+      ],
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "published": "2026-01-29T16:13:41Z",
+      "updated": "2026-01-29T16:13:41Z",
+      "link": "https://arxiv.org/abs/2601.21920v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the interaction between humans and AI, which is highly relevant to someone interested in agentic modelling. The authors also come from reputable institutions and the methodology described in the abstract appears to be of high quality."
+    },
+    {
+      "arxiv_id": "2601.21909v1",
+      "title": "From Meta-Thought to Execution: Cognitively Aligned Post-Training for Generalizable and Reliable LLM Reasoning",
+      "abstract": "Current LLM post-training methods optimize complete reasoning trajectories through Supervised Fine-Tuning (SFT) followed by outcome-based Reinforcement Learning (RL). While effective, a closer examination reveals a fundamental gap: this approach does not align with how humans actually solve problems. Human cognition naturally decomposes problem-solving into two distinct stages: first acquiring abstract strategies (i.e., meta-knowledge) that generalize across problems, then adapting them to specific instances. In contrast, by treating complete trajectories as basic units, current methods are inherently problem-centric, entangling abstract strategies with problem-specific execution. To address this misalignment, we propose a cognitively-inspired framework that explicitly mirrors the two-stage human cognitive process. Specifically, Chain-of-Meta-Thought (CoMT) focuses supervised learning on abstract reasoning patterns without specific executions, enabling acquisition of generalizable strategies. Confidence-Calibrated Reinforcement Learning (CCRL) then optimizes task adaptation via confidence-aware rewards on intermediate steps, preventing overconfident errors from cascading and improving execution reliability. Experiments across four models and eight benchmarks show 2.19\\% and 4.63\\% improvements in-distribution and out-of-distribution respectively over standard methods, while reducing training time by 65-70% and token consumption by 50%, demonstrating that aligning post-training with human cognitive principles yields not only superior generalization but also enhanced training efficiency.",
+      "authors": [
+        "Shaojie Wang",
+        "Liang Zhang"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-01-29T16:00:48Z",
+      "updated": "2026-01-29T16:00:48Z",
+      "link": "https://arxiv.org/abs/2601.21909v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "The paper is highly relevant to a researcher interested in agentic modeling as it discusses a cognitively-inspired framework that mirrors human problem-solving processes, with potential impact on improving generalization and reliability in reasoning."
+    },
+    {
+      "arxiv_id": "2601.21900v1",
+      "title": "TraceRouter: Robust Safety for Large Foundation Models via Path-Level Intervention",
+      "abstract": "Despite their capabilities, large foundation models (LFMs) remain susceptible to adversarial manipulation. Current defenses predominantly rely on the \"locality hypothesis\", suppressing isolated neurons or features. However, harmful semantics act as distributed, cross-layer circuits, rendering such localized interventions brittle and detrimental to utility. To bridge this gap, we propose \\textbf{TraceRouter}, a path-level framework that traces and disconnects the causal propagation circuits of illicit semantics. TraceRouter operates in three stages: (1) it pinpoints a sensitive onset layer by analyzing attention divergence; (2) it leverages sparse autoencoders (SAEs) and differential activation analysis to disentangle and isolate malicious features; and (3) it maps these features to downstream causal pathways via feature influence scores (FIS) derived from zero-out interventions. By selectively suppressing these causal chains, TraceRouter physically severs the flow of harmful information while leaving orthogonal computation routes intact. Extensive experiments demonstrate that TraceRouter significantly outperforms state-of-the-art baselines, achieving a superior trade-off between adversarial robustness and general utility. Our code will be publicly released. WARNING: This paper contains unsafe model responses.",
+      "authors": [
+        "Chuancheng Shi",
+        "Shangze Li",
+        "Wenjun Lu",
+        "Wenhua Wu",
+        "Cong Wang",
+        "Zifeng Cheng",
+        "Fei Shen",
+        "Tat-Seng Chua"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CY",
+        "cs.MM"
+      ],
+      "published": "2026-01-29T15:58:12Z",
+      "updated": "2026-01-29T15:58:12Z",
+      "link": "https://arxiv.org/abs/2601.21900v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "The paper is highly relevant as it focuses on robustness in large foundation models, aligning with interests in agentic modelling. The authors demonstrate a novel framework with potential impact, and the quality of methodology described in the abstract appears to be strong."
+    },
+    {
+      "arxiv_id": "2601.21895v1",
+      "title": "Learn-to-Distance: Distance Learning for Detecting LLM-Generated Text",
+      "abstract": "Modern large language models (LLMs) such as GPT, Claude, and Gemini have transformed the way we learn, work, and communicate. Yet, their ability to produce highly human-like text raises serious concerns about misinformation and academic integrity, making it an urgent need for reliable algorithms to detect LLM-generated content. In this paper, we start by presenting a geometric approach to demystify rewrite-based detection algorithms, revealing their underlying rationale and demonstrating their generalization ability. Building on this insight, we introduce a novel rewrite-based detection algorithm that adaptively learns the distance between the original and rewritten text. Theoretically, we demonstrate that employing an adaptively learned distance function is more effective for detection than using a fixed distance. Empirically, we conduct extensive experiments with over 100 settings, and find that our approach demonstrates superior performance over baseline algorithms in the majority of scenarios. In particular, it achieves relative improvements from 57.8\\% to 80.6\\% over the strongest baseline across different target LLMs (e.g., GPT, Claude, and Gemini).",
+      "authors": [
+        "Hongyi Zhou",
+        "Jin Zhu",
+        "Erhan Xu",
+        "Kai Ye",
+        "Ying Yang",
+        "Chengchun Shi"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "published": "2026-01-29T15:55:15Z",
+      "updated": "2026-01-29T15:55:15Z",
+      "link": "https://arxiv.org/abs/2601.21895v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modelling as it specifically focuses on detecting LLM-generated content, which involves understanding the underlying rationale and presenting a novel detection algorithm. The methodology described in the abstract seems sound and the potential impact of the work on misinformation and academic integrity is significant."
+    },
+    {
+      "arxiv_id": "2601.21866v1",
+      "title": "MoHETS: Long-term Time Series Forecasting with Mixture-of-Heterogeneous-Experts",
+      "abstract": "Real-world multivariate time series can exhibit intricate multi-scale structures, including global trends, local periodicities, and non-stationary regimes, which makes long-horizon forecasting challenging. Although sparse Mixture-of-Experts (MoE) approaches improve scalability and specialization, they typically rely on homogeneous MLP experts that poorly capture the diverse temporal dynamics of time series data. We address these limitations with MoHETS, an encoder-only Transformer that integrates sparse Mixture-of-Heterogeneous-Experts (MoHE) layers. MoHE routes temporal patches to a small subset of expert networks, combining a shared depthwise-convolution expert for sequence-level continuity with routed Fourier-based experts for patch-level periodic structures. MoHETS further improves robustness to non-stationary dynamics by incorporating exogenous information via cross-attention over covariate patch embeddings. Finally, we replace parameter-heavy linear projection heads with a lightweight convolutional patch decoder, improving parameter efficiency, reducing training instability, and allowing a single model to generalize across arbitrary forecast horizons. We validate across seven multivariate benchmarks and multiple horizons, with MoHETS consistently achieving state-of-the-art performance, reducing the average MSE by $12\\%$ compared to strong recent baselines, demonstrating effective heterogeneous specialization for long-term forecasting.",
+      "authors": [
+        "Evandro S. Ortigossa",
+        "Guy Lutsker",
+        "Eran Segal"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-01-29T15:35:26Z",
+      "updated": "2026-01-29T15:35:26Z",
+      "link": "https://arxiv.org/abs/2601.21866v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "The paper directly addresses the challenges in long-term time series forecasting, which aligns with the interest in agentic modelling. The authors are established researchers from reputable institutions, and the methodology described in the abstract demonstrates a novel approach with potential impact in the field."
+    },
+    {
+      "arxiv_id": "2601.21864v1",
+      "title": "KnowBias: Mitigating Social Bias in LLMs via Know-Bias Neuron Enhancement",
+      "abstract": "Large language models (LLMs) exhibit social biases that reinforce harmful stereotypes, limiting their safe deployment. Most existing debiasing methods adopt a suppressive paradigm by modifying parameters, prompts, or neurons associated with biased behavior; however, such approaches are often brittle, weakly generalizable, data-inefficient, and prone to degrading general capability. We propose \\textbf{KnowBias}, a lightweight and conceptually distinct framework that mitigates bias by strengthening, rather than suppressing, neurons encoding bias-knowledge. KnowBias identifies neurons encoding bias knowledge using a small set of bias-knowledge questions via attribution-based analysis, and selectively enhances them at inference time. This design enables strong debiasing while preserving general capabilities, generalizes across bias types and demographics, and is highly data efficient, requiring only a handful of simple yes/no questions and no retraining. Experiments across multiple benchmarks and LLMs demonstrate consistent state-of-the-art debiasing performance with minimal utility degradation. Data and code are available at https://github.com/JP-25/KnowBias.",
+      "authors": [
+        "Jinhao Pan",
+        "Chahat Raj",
+        "Anjishnu Mukherjee",
+        "Sina Mansouri",
+        "Bowen Wei",
+        "Shloka Yada",
+        "Ziwei Zhu"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-01-29T15:32:38Z",
+      "updated": "2026-01-29T15:32:38Z",
+      "link": "https://arxiv.org/abs/2601.21864v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modeling as it proposes a novel framework for mitigating social bias in large language models, with potential impact in the field"
+    },
+    {
+      "arxiv_id": "2601.21844v1",
+      "title": "Bridging Forecast Accuracy and Inventory KPIs: A Simulation-Based Software Framework",
+      "abstract": "Efficient management of spare parts inventory is crucial in the automotive aftermarket, where demand is highly intermittent and uncertainty drives substantial cost and service risks. Forecasting is therefore central, but the quality of a forecasting model should be judged not by statistical accuracy (e.g., MAE, RMSE, IAE) but rather by its impact on key operational performance indicators (KPIs), such as total cost and service level. Yet most existing work evaluates models exclusively using accuracy metrics, and the relationship between these metrics and operational KPIs remains poorly understood. To address this gap, we propose a decision-centric simulation software framework that enables systematic evaluation of forecasting model in realistic inventory management setting. The framework comprises: (i) a synthetic demand generator tailored to spare-parts demand characteristics, (ii) a flexible forecasting module that can host arbitrary predictive models, and (iii) an inventory control simulator that consumes the forecasts and computes operational KPIs. This closed-loop setup enables researchers to evaluate models not only in terms of statistical error but also in terms of their downstream implications for inventory decisions. Using a wide range of simulation scenarios, we show that improvements in conventional accuracy metrics do not necessarily translate into better operational performance, and that models with similar statistical error profiles can induce markedly different cost-service trade-offs. We analyze these discrepancies to characterize how specific aspects of forecast performance affect inventory outcomes and derive guidance for model selection. Overall, the framework operationalizes the link between demand forecasting and inventory management, shifting evaluation from purely predictive accuracy toward operational relevance in the automotive aftermarket and related domains.",
+      "authors": [
+        "So Fukuhara",
+        "Abdallah Alabdallah",
+        "Nuwan Gunasekara",
+        "Slawomir Nowaczyk"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "published": "2026-01-29T15:20:33Z",
+      "updated": "2026-01-29T15:20:33Z",
+      "link": "https://arxiv.org/abs/2601.21844v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the issue of evaluating forecasting models based on their impact on operational KPIs, which is a key aspect of agentic modelling research. The methodology described in the abstract is of high quality and the authors come from reputable institutions, enhancing the paper's relevance."
+    },
+    {
+      "arxiv_id": "2601.21789v1",
+      "title": "ECSEL: Explainable Classification via Signomial Equation Learning",
+      "abstract": "We introduce ECSEL, an explainable classification method that learns formal expressions in the form of signomial equations, motivated by the observation that many symbolic regression benchmarks admit compact signomial structure. ECSEL directly constructs a structural, closed-form expression that serves as both a classifier and an explanation. On standard symbolic regression benchmarks, our method recovers a larger fraction of target equations than competing state-of-the-art approaches while requiring substantially less computation. Leveraging this efficiency, ECSEL achieves classification accuracy competitive with established machine learning models without sacrificing interpretability. Further, we show that ECSEL satisfies some desirable properties regarding global feature behavior, decision-boundary analysis, and local feature attributions. Experiments on benchmark datasets and two real-world case studies i.e., e-commerce and fraud detection, demonstrate that the learned equations expose dataset biases, support counterfactual reasoning, and yield actionable insights.",
+      "authors": [
+        "Adia Lumadjeng",
+        "Ilker Birbil",
+        "Erman Acar"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "published": "2026-01-29T14:35:43Z",
+      "updated": "2026-01-29T14:35:43Z",
+      "link": "https://arxiv.org/abs/2601.21789v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modelling as it introduces an explainable classification method based on signomial equations, which could offer significant insights and potential impact in the field."
+    },
+    {
+      "arxiv_id": "2601.21739v1",
+      "title": "Why Adam Works Better with $\u03b2_1 = \u03b2_2$: The Missing Gradient Scale Invariance Principle",
+      "abstract": "Adam has been at the core of large-scale training for almost a decade, yet a simple empirical fact remains unaccounted for: both validation scores and the qualitative behaviour of the training runs improve when the momentum parameters satisfy $\u03b2_{1}=\u03b2_{2}$. Some recent studies have reported this pattern, but there is still no explanation for why this choice helps. We show that this choice is closely tied to a structural property that we refer to as \\textit{gradient scale invariance}. We formalize this notion and prove that Adam becomes gradient scale invariant of first order if and only if $\u03b2_{1}=\u03b2_{2}$. This perspective places the balanced regime of Adam in direct alignment with the design principles underlying several recent optimizers that explicitly enforce scale-robust updates. The theory is supported by experiments across vision and language tasks, and across different architectural families, in which rescaling the gradient has a markedly smoother effect on the update when $\u03b2_{1}=\u03b2_{2}$. Overall, our results offer a coherent explanation for an open question in the behavior of Adam and provide a simple principle that helps guide the design of future optimizers.",
+      "authors": [
+        "Alberto Fern\u00e1ndez-Hern\u00e1ndez",
+        "Cristian P\u00e9rez-Corral",
+        "Jose I. Mestre",
+        "Manuel F. Dolz",
+        "Enrique S. Quintana-Ort\u00ed"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "published": "2026-01-29T13:56:11Z",
+      "updated": "2026-01-29T13:56:11Z",
+      "link": "https://arxiv.org/abs/2601.21739v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the optimization of Adam, a popular optimizer used in agentic modelling. The authors are established researchers and the methodology described in the abstract is of high quality. The novel explanation provided for the behavior of Adam and its potential impact make this paper highly relevant to a researcher interested in agentic modelling."
+    },
+    {
+      "arxiv_id": "2601.21722v1",
+      "title": "Enhancing Language Models for Robust Greenwashing Detection",
+      "abstract": "Sustainability reports are critical for ESG assessment, yet greenwashing and vague claims often undermine their reliability. Existing NLP models lack robustness to these practices, typically relying on surface-level patterns that generalize poorly. We propose a parameter-efficient framework that structures LLM latent spaces by combining contrastive learning with an ordinal ranking objective to capture graded distinctions between concrete actions and ambiguous claims. Our approach incorporates gated feature modulation to filter disclosure noise and utilizes MetaGradNorm to stabilize multi-objective optimization. Experiments in cross-category settings demonstrate superior robustness over standard baselines while revealing a trade-off between representational rigidity and generalization.",
+      "authors": [
+        "Neil Heinrich Braun",
+        "Keane Ong",
+        "Rui Mao",
+        "Erik Cambria",
+        "Gianmarco Mengaldo"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-01-29T13:46:15Z",
+      "updated": "2026-01-29T13:46:15Z",
+      "link": "https://arxiv.org/abs/2601.21722v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modelling as it addresses the issue of greenwashing detection through novel approaches in NLP and machine learning. The authors have established reputations and affiliations with reputable institutions, and the methodology described in the abstract indicates high quality research with potential impact in the field."
+    },
+    {
+      "arxiv_id": "2601.21714v1",
+      "title": "E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory",
+      "abstract": "The evolution of Large Language Model (LLM) agents towards System~2 reasoning, characterized by deliberative, high-precision problem-solving, requires maintaining rigorous logical integrity over extended horizons. However, prevalent memory preprocessing paradigms suffer from destructive de-contextualization. By compressing complex sequential dependencies into pre-defined structures (e.g., embeddings or graphs), these methods sever the contextual integrity essential for deep reasoning. To address this, we propose E-mem, a framework shifting from Memory Preprocessing to Episodic Context Reconstruction. Inspired by biological engrams, E-mem employs a heterogeneous hierarchical architecture where multiple assistant agents maintain uncompressed memory contexts, while a central master agent orchestrates global planning. Unlike passive retrieval, our mechanism empowers assistants to locally reason within activated segments, extracting context-aware evidence before aggregation. Evaluations on the LoCoMo benchmark demonstrate that E-mem achieves over 54\\% F1, surpassing the state-of-the-art GAM by 7.75\\%, while reducing token cost by over 70\\%.",
+      "authors": [
+        "Kaixiang Wang",
+        "Yidan Lin",
+        "Jiong Lou",
+        "Zhaojiacheng Zhou",
+        "Bunyod Suvonov",
+        "Jie Li"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-01-29T13:42:42Z",
+      "updated": "2026-01-29T13:42:42Z",
+      "link": "https://arxiv.org/abs/2601.21714v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant as it addresses the topic of memory processing in Large Language Model agents, which aligns with the researcher's interest in agentic modelling. The methodology described in the abstract is of high quality and the work has the potential for impact in the field."
+    },
+    {
+      "arxiv_id": "2601.21653v1",
+      "title": "Gauge-invariant representation holonomy",
+      "abstract": "Deep networks learn internal representations whose geometry--how features bend, rotate, and evolve--affects both generalization and robustness. Existing similarity measures such as CKA or SVCCA capture pointwise overlap between activation sets, but miss how representations change along input paths. Two models may appear nearly identical under these metrics yet respond very differently to perturbations or adversarial stress. We introduce representation holonomy, a gauge-invariant statistic that measures this path dependence. Conceptually, holonomy quantifies the \"twist\" accumulated when features are parallel-transported around a small loop in input space: flat representations yield zero holonomy, while nonzero values reveal hidden curvature. Our estimator fixes gauge through global whitening, aligns neighborhoods using shared subspaces and rotation-only Procrustes, and embeds the result back to the full feature space. We prove invariance to orthogonal (and affine, post-whitening) transformations, establish a linear null for affine layers, and show that holonomy vanishes at small radii. Empirically, holonomy increases with loop radius, separates models that appear similar under CKA, and correlates with adversarial and corruption robustness. It also tracks training dynamics as features form and stabilize. Together, these results position representation holonomy as a practical and scalable diagnostic for probing the geometric structure of learned representations beyond pointwise similarity.",
+      "authors": [
+        "Vasileios Sevetlidis",
+        "George Pavlidis"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-01-29T12:51:17Z",
+      "updated": "2026-01-29T12:51:17Z",
+      "link": "https://arxiv.org/abs/2601.21653v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modelling as it introduces representation holonomy which measures how features change along input paths in deep networks, providing insights on generalization, robustness, and training dynamics."
+    },
+    {
+      "arxiv_id": "2601.21626v1",
+      "title": "HeRo-Q: A General Framework for Stable Low Bit Quantization via Hessian Conditioning",
+      "abstract": "Post Training Quantization (PTQ), a mainstream model compression technique, often leads to the paradoxical 'low error, high loss' phenomenon because it focuses solely on minimizing quantization error. The root cause lies in the Hessian matrix of the LLM loss landscape: a few high curvature directions are extremely sensitive to perturbations. To address this, we propose the Hessian Robust Quantization (HeRo Q) algorithm, which applies a lightweight, learnable rotation-compression matrix to the weight space prior to quantization. This joint framework reshapes the loss landscape by reducing the largest Hessian eigenvalue and reducing its max eigenvalue, thereby significantly enhancing robustness to quantization noise. HeRo-Q requires no architectural modifications, incurs negligible computational overhead, and integrates seamlessly into existing PTQ pipelines. Experiments on Llama and Qwen models show that HeRo Q consistently outperforms state of the art methods including GPTQ, AWQ, and SpinQuant not only achieving superior performance under standard W4A8 settings, but also excelling in the highly challenging W3A16 ultra low bit regime, where it boosts GSM8K accuracy on Llama3 8B to 70.15\\% and effectively avoids the logical collapse commonly seen in aggressive quantization.",
+      "authors": [
+        "Jinhao Zhang Yunquan Zhang",
+        "Zicheng yan",
+        "Boyang Zhang",
+        "Jun Sun",
+        "Daning Cheng"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-01-29T12:27:05Z",
+      "updated": "2026-01-29T12:27:05Z",
+      "link": "https://arxiv.org/abs/2601.21626v1",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant as it delves into Agentic modelling through the proposed HeRo-Q algorithm for stable low bit quantization, showcasing novel methodology and potential impact in the field."
     }
   ]
 }
