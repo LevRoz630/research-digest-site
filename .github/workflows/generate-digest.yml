@@ -3,11 +3,6 @@ name: Generate Digest
 on:
   workflow_dispatch:
     inputs:
-      categories:
-        description: 'arXiv categories (comma-separated)'
-        required: true
-        default: 'cs.AI,cs.CL,cs.LG'
-        type: string
       interests:
         description: 'Research interests for ranking'
         required: true
@@ -35,7 +30,6 @@ jobs:
       - name: Generate digest
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          DIGEST_CATEGORIES: ${{ inputs.categories }}
           DIGEST_INTERESTS: ${{ inputs.interests }}
           LLM_PROVIDER: openai
         run: python scripts/generate_digest.py
