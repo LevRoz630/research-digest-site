@@ -41,13 +41,23 @@ async def main():
     now = datetime.now(timezone.utc)
     month_ago = now - timedelta(days=30)
 
+    # Enhanced interests prompt to consider author credentials
+    enhanced_interests = f"""{interests}
+
+When ranking, also consider:
+- Author credentials and reputation (prefer established researchers from top institutions)
+- Quality of methodology described in abstract
+- Novelty and potential impact of the work
+- Papers with well-known authors in the field should be scored higher"""
+
     config = DigestConfig(
         categories=categories,
-        interests=interests,
-        max_papers=100,
-        top_n=20,
+        interests=enhanced_interests,
+        max_papers=150,
+        top_n=25,
         llm_provider=llm_provider,
         openai_api_key=os.environ.get("OPENAI_API_KEY"),
+        sources=["arxiv", "huggingface", "semantic_scholar"],  # All sources
         date_filter=DateFilter(
             published_after=month_ago.strftime("%Y-%m-%d"),
             published_before=now.strftime("%Y-%m-%d"),
