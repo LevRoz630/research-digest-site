@@ -1,66 +1,58 @@
 {
   "date": "2026-02-01",
-  "generated_at": "2026-02-01T19:21:43.914922+00:00",
+  "generated_at": "2026-02-01T19:24:05.267666+00:00",
   "categories": [
     "q-fin.CP"
   ],
-  "interests": "Agentic modelling",
+  "interests": "Agentic modelling\n\nWhen ranking, also consider:\n- Author credentials and reputation (prefer established researchers from top institutions)\n- Quality of methodology described in abstract\n- Novelty and potential impact of the work\n- Papers with well-known authors in the field should be scored higher",
   "total_papers_fetched": 31,
   "papers": [
     {
-      "arxiv_id": "2601.09074v1",
-      "title": "The Fourier estimator of spot volatility: Unbounded coefficients and jumps in the price process",
-      "abstract": "In this paper we study the Fourier estimator of Malliavin and Mancino for the spot volatility. We establish the convergence of the trigonometric polynomial to the volatility's path in a setting that includes the following aspects. First, the volatility is required to satisfy a mild integrability condition, but otherwise allowed to be unbounded. Second, the price process is assumed to have cadlag paths, not necessarily continuous. We obtain convergence rates for the probability of a bad approximation in estimated coefficients, with a speed that allow to obtain an almost sure convergence and not just in probability in the estimated reconstruction of the volatility's path. This is a new result even in the setting of continuous paths. We prove that a rescaled trigonometric polynomial approximate the quadratic jump process.",
+      "arxiv_id": "2601.04160v3",
+      "title": "All That Glisters Is Not Gold: A Benchmark for Reference-Free Counterfactual Financial Misinformation Detection",
+      "abstract": "We introduce RFC Bench, a benchmark for evaluating large language models on financial misinformation under realistic news. RFC Bench operates at the paragraph level and captures the contextual complexity of financial news where meaning emerges from dispersed cues. The benchmark defines two complementary tasks: reference free misinformation detection and comparison based diagnosis using paired original perturbed inputs. Experiments reveal a consistent pattern: performance is substantially stronger when comparative context is available, while reference free settings expose significant weaknesses, including unstable predictions and elevated invalid outputs. These results indicate that current models struggle to maintain coherent belief states without external grounding. By highlighting this gap, RFC Bench provides a structured testbed for studying reference free reasoning and advancing more reliable financial misinformation detection in real world settings.",
       "authors": [
-        "L. J. Espinosa Gonz\u00e1lez",
-        "Erick Trevi\u00f1o Aguilar"
+        "Yuechen Jiang",
+        "Zhiwei Liu",
+        "Yupeng Cao",
+        "Yueru He",
+        "Ziyang Xu",
+        "Chen Xu",
+        "Zhiyang Deng",
+        "Prayag Tiwari",
+        "Xi Chen",
+        "Alejandro Lopez-Lira",
+        "Jimin Huang",
+        "Junichi Tsujii",
+        "Sophia Ananiadou"
       ],
       "categories": [
-        "q-fin.CP",
-        "math.PR"
-      ],
-      "published": "2026-01-14T02:07:49Z",
-      "updated": "2026-01-14T02:07:49Z",
-      "link": "https://arxiv.org/abs/2601.09074v1",
-      "relevance_score": 9.0,
-      "relevance_reason": "This paper is highly relevant to a researcher interested in agentic modelling as it focuses on the Fourier estimator of spot volatility, convergence rates, and unbounded coefficients in the price process."
-    },
-    {
-      "arxiv_id": "2601.03175v2",
-      "title": "Breaking the Dimensional Barrier: Dynamic Portfolio Choice with Parameter Uncertainty via Pontryagin Projection",
-      "abstract": "We study continuous-time CRRA portfolio choice in diffusion markets with uncertain estimated coefficients. Nature draws a latent parameter from a given distribution and keeps it fixed; the investor cannot observe this parameter and must commit to a parameter-blind policy maximizing an ex-ante objective. We treat the uncertainty distribution as an inference-agnostic sampling input.   We develop a simulation-only two-stage solver. Stage 1 extends Pontryagin-Guided Direct Policy Optimization (PG-DPO) by sampling parameters internally and computing gradients via backpropagation through time. Stage 2 performs an aggregated Pontryagin projection: it aggregates costates across the parameter distribution to enforce a deployable stationarity condition, yielding a structured correction amortized via interactive distillation.   We prove a uniform conditional BPTT-PMP correspondence and a residual-based policy-gap bound with explicit error terms. Experiments on high-dimensional Gaussian drift and factor-driven benchmarks show that projection stabilizes learning and accurately recovers analytic references, while a model-free PPO baseline remains far from the targets.",
-      "authors": [
-        "Jeonggyu Huh",
-        "Hyeng Keun Koo"
-      ],
-      "categories": [
+        "cs.CL",
+        "cs.CE",
         "q-fin.CP"
       ],
-      "published": "2026-01-06T16:52:35Z",
-      "updated": "2026-01-15T14:48:55Z",
-      "link": "https://arxiv.org/abs/2601.03175v2",
+      "published": "2026-01-07T18:18:28Z",
+      "updated": "2026-01-09T05:56:48Z",
+      "link": "https://arxiv.org/abs/2601.04160v3",
       "relevance_score": 9.0,
-      "relevance_reason": "Highly relevant as it deals with dynamic portfolio choice and parameter uncertainty, which are key aspects of agentic modelling."
+      "relevance_reason": "This paper directly addresses financial misinformation detection, which is closely related to agentic modelling. The authors are from top institutions and the methodology described in the abstract seems high quality. The novel benchmark introduced in the paper has potential impact in the field."
     },
     {
-      "arxiv_id": "2601.07792v1",
-      "title": "Non-Convex Portfolio Optimization via Energy-Based Models: A Comparative Analysis Using the Thermodynamic HypergRaphical Model Library (THRML) for Index Tracking",
-      "abstract": "Portfolio optimization under cardinality constraints transforms the classical Markowitz mean-variance problem from a convex quadratic problem into an NP-hard combinatorial optimization problem. This paper introduces a novel approach using THRML (Thermodynamic HypergRaphical Model Library), a JAX-based library for building and sampling probabilistic graphical models that reformulates index tracking as probabilistic inference on an Ising Hamiltonian. Unlike traditional methods that seek a single optimal solution, THRML samples from the Boltzmann distribution of high-quality portfolios using GPU-accelerated block Gibbs sampling, providing natural regularization against overfitting.   We implement three key innovations: (1) dynamic coupling strength that scales inversely with market volatility (VIX), adapting diversification pressure to market regimes; (2) rebalanced bias weights prioritizing tracking quality over momentum for index replication; and (3) sector-aware post-processing ensuring institutional-grade diversification. Backtesting on a 100-stock S and P 500 universe from 2023 to 2025 demonstrates that THRML achieves 4.31 percent annualized tracking error versus 5.66 to 6.30 percent for baselines, while simultaneously generating 128.63 percent total return against the index total return of 79.61 percent. The Diebold-Mariano test confirms statistical significance with p less than 0.0001 across all comparisons. These results position energy-based models as a promising paradigm for portfolio construction, bridging statistical mechanics and quantitative finance.",
+      "arxiv_id": "2601.20336v1",
+      "title": "Do Whitepaper Claims Predict Market Behavior? Evidence from Cryptocurrency Factor Analysis",
+      "abstract": "Cryptocurrency projects articulate value propositions through whitepapers, making claims about functionality and technical capabilities. This study investigates whether these narratives align with observed market behavior. We construct a pipeline combining zero-shot NLP classification (BART-MNLI) with CP tensor decomposition to compare three spaces: (1) a claims matrix from 24 whitepapers across 10 semantic categories, (2) market statistics for 49 assets over two years of hourly data, and (3) latent factors from tensor decomposition (rank 2, 92.45% variance explained). Using Procrustes rotation and Tucker's congruence coefficient, we test alignment across 23 common entities.   Results show weak alignment: claims-statistics (phi=0.341, p=0.332), claims-factors (phi=0.077, p=0.747), and statistics-factors (phi=0.197, p<0.001). The statistics-factors significance validates our methodology, confirming the pipeline detects relationships when present. Inter-model validation with DeBERTa-v3 yields 32% exact agreement but 67% top-3 agreement. Cross-sectional analysis reveals heterogeneous contributions: NEAR, MKR, ATOM show positive alignment while ENS, UNI, Bitcoin diverge most. Excluding Bitcoin confirms results are not driven by market dominance.   We interpret findings as weak alignment between whitepaper narratives and market factor structure. Limited power (n=23) precludes distinguishing weak from no alignment, but strong alignment (phi>=0.70) can be confidently rejected. Implications for narrative economics and investment analysis are discussed.",
       "authors": [
-        "Javier Mancilla",
-        "Theodoros D. Bouloumis",
-        "Frederic Goguikian"
+        "Murad Farzulla"
       ],
       "categories": [
         "q-fin.CP",
-        "q-fin.PM",
-        "stat.ML"
+        "cs.LG"
       ],
-      "published": "2026-01-12T18:04:33Z",
-      "updated": "2026-01-12T18:04:33Z",
-      "link": "https://arxiv.org/abs/2601.07792v1",
+      "published": "2026-01-28T07:50:40Z",
+      "updated": "2026-01-28T07:50:40Z",
+      "link": "https://arxiv.org/abs/2601.20336v1",
       "relevance_score": 8.0,
-      "relevance_reason": "This paper examines non-convex portfolio optimization using energy-based models, which may be of interest to a researcher interested in agentic modelling."
+      "relevance_reason": "The paper explores the alignment between whitepaper claims and market behavior, which could be of interest to a researcher focusing on agentic modeling in the cryptocurrency space. The methodology is described in detail, and the potential impact of the findings on understanding market dynamics is significant."
     }
   ]
 }
