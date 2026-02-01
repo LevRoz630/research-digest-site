@@ -174,6 +174,31 @@ a:hover {
   margin-right: 6px;
 }
 
+/* Quality metrics */
+.paper-card .quality-metrics {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.paper-card .quality-metrics .metric {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.paper-card .quality-metrics .h-index {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.paper-card .quality-metrics .upvotes {
+  background: #fef3c7;
+  color: #d97706;
+}
+
 .paper-card .abstract {
   font-size: 14px;
   color: #444;

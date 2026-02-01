@@ -232,17 +232,22 @@ const UI = {
 
   renderPaperCard(paper, options = {}) {
     const { showSaveButton = true, showRemoveButton = false, showEditNote = false } = options;
-    const scoreClass = this.getScoreClass(paper.relevance_score);
+    const scoreClass = this.getScoreClass(paper.quality_score || paper.relevance_score);
     const isSaved = Favorites.has(paper.arxiv_id);
 
     const authors = paper.authors?.slice(0, 3).join(', ') || '';
     const moreAuthors = paper.authors?.length > 3 ? ` +${paper.authors.length - 3} more` : '';
 
-    // Categories
-    const categories = paper.categories || [];
-    const categoriesHtml = categories.length > 0
-      ? `<div class="categories">${categories.map(c => `<span>${this.escapeHtml(c)}</span>`).join('')}</div>`
-      : '';
+    // Quality metrics
+    let metricsHtml = '<div class="quality-metrics">';
+    if (paper.author_h_indices?.length > 0) {
+      const avgH = Math.round(paper.author_h_indices.reduce((a, b) => a + b, 0) / paper.author_h_indices.length);
+      metricsHtml += `<span class="metric h-index" title="Average author h-index">h: ${avgH}</span>`;
+    }
+    if (paper.huggingface_upvotes != null && paper.huggingface_upvotes > 0) {
+      metricsHtml += `<span class="metric upvotes" title="HuggingFace upvotes">${paper.huggingface_upvotes} upvotes</span>`;
+    }
+    metricsHtml += '</div>';
 
     // Abstract (shown by default)
     const abstractHtml = paper.abstract
@@ -267,12 +272,14 @@ const UI = {
       noteHtml = `<div class="user-note"><strong>Note:</strong> ${this.escapeHtml(paper.user_note)}</div>`;
     }
 
+    const displayScore = paper.quality_score || paper.relevance_score;
+
     return `
       <div class="paper-card" data-arxiv="${paper.arxiv_id}">
-        <span class="score-badge ${scoreClass}">${paper.relevance_score?.toFixed(1) || '?'}/10</span>
+        <span class="score-badge ${scoreClass}">${displayScore?.toFixed(1) || '?'}/10</span>
         <h3><a href="${paper.link}" target="_blank">${this.escapeHtml(paper.title)}</a></h3>
         <p class="authors">${this.escapeHtml(authors)}${moreAuthors}</p>
-        ${categoriesHtml}
+        ${metricsHtml}
         ${abstractHtml}
         ${paper.relevance_reason ? `<p class="reason">${this.escapeHtml(paper.relevance_reason)}</p>` : ''}
         ${noteHtml}
@@ -392,16 +399,13 @@ const Pages = {
     });
 
     // Regenerate digest functionality
-    const categoriesInput = document.getElementById('digest-categories');
     const interestsInput = document.getElementById('digest-interests');
     const regenerateBtn = document.getElementById('regenerate-digest');
     const regenerateStatus = document.getElementById('regenerate-status');
 
     // Load saved settings
-    const savedCategories = localStorage.getItem('digest_categories');
     const savedInterests = localStorage.getItem('digest_interests');
-    if (savedCategories) categoriesInput.value = savedCategories;
-    if (savedInterests) interestsInput.value = savedInterests;
+    if (savedInterests && interestsInput) interestsInput.value = savedInterests;
 
     regenerateBtn?.addEventListener('click', async () => {
       if (!GitHub.hasToken()) {
@@ -410,17 +414,15 @@ const Pages = {
         return;
       }
 
-      const categories = categoriesInput.value.trim();
-      const interests = interestsInput.value.trim();
+      const interests = interestsInput?.value.trim() || '';
 
-      if (!categories) {
-        regenerateStatus.textContent = 'Please enter at least one category.';
+      if (!interests) {
+        regenerateStatus.textContent = 'Please enter your research interests.';
         regenerateStatus.className = 'status error';
         return;
       }
 
       // Save settings
-      localStorage.setItem('digest_categories', categories);
       localStorage.setItem('digest_interests', interests);
 
       regenerateBtn.disabled = true;
@@ -429,7 +431,6 @@ const Pages = {
 
       try {
         await GitHub.triggerWorkflow('generate-digest.yml', {
-          categories: categories,
           interests: interests
         });
         regenerateStatus.textContent = 'Digest regeneration triggered! Check GitHub Actions for progress.';
