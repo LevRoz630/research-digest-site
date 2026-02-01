@@ -74,6 +74,11 @@ def build_site() -> None:
         content = content.replace("{{REPO}}", repo)
         (output_dir / html_file.name).write_text(content)
 
+    # Copy favicon
+    favicon = site_dir / "favicon.svg"
+    if favicon.exists():
+        shutil.copy(favicon, output_dir / "favicon.svg")
+
     # Create digests directory in output
     output_digests = output_dir / "digests"
     output_digests.mkdir()
