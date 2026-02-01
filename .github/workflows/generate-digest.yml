@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install "daily-research-digest[openai]"
+          pip install "daily-research-digest[openai] @ git+https://github.com/LevRoz630/daily-research-digest.git"
 
       - name: Generate digest
         env:
