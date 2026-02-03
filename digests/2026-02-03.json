@@ -1,0 +1,351 @@
+{
+  "date": "2026-02-03",
+  "generated_at": "2026-02-03T10:31:11.472057+00:00",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "interests": "AI Safety, Reinforcement Learning\n\nWhen ranking, also consider:\n- Author credentials and reputation (prefer established researchers from top institutions)\n- Quality of methodology described in abstract\n- Novelty and potential impact of the work\n- Papers with well-known authors in the field should be scored higher",
+  "total_papers_fetched": 100,
+  "papers": [
+    {
+      "arxiv_id": "s2:a1e6856b8bd12f9fa6fd10c1adec23a85756b22b",
+      "title": "Safety Verification of Cyber-Physical Systems with Reinforcement Learning Control",
+      "abstract": "This paper proposes a new forward reachability analysis approach to verify safety of cyber-physical systems (CPS) with reinforcement learning controllers. The foundation of our approach lies on two efficient, exact and over-approximate reachability algorithms for neural network control systems using star sets, which is an efficient representation of polyhedra. Using these algorithms, we determine the initial conditions for which a safety-critical system with a neural network controller is safe by incrementally searching a critical initial condition where the safety of the system cannot be established. Our approach produces tight over-approximation error and it is computationally efficient, which allows the application to practical CPS with learning enable components (LECs). We implement our approach in NNV, a recent verification tool for neural networks and neural network control systems, and evaluate its advantages and applicability by verifying safety of a practical Advanced Emergency Braking System (AEBS) with a reinforcement learning (RL) controller trained using the deep deterministic policy gradient (DDPG) method. The experimental results show that our new reachability algorithms are much less conservative than existing polyhedra-based approaches. We successfully determine the entire region of the initial conditions of the AEBS with the RL controller such that the safety of the system is guaranteed, while a polyhedra-based approach cannot prove the safety properties of the system.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2019-01-01",
+      "updated": "2019-01-01",
+      "link": "https://www.semanticscholar.org/paper/a1e6856b8bd12f9fa6fd10c1adec23a85756b22b",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in AI Safety and Reinforcement Learning as it addresses safety verification of cyber-physical systems with reinforcement learning controllers, providing a novel approach with potential impact in the field.",
+      "author_h_indices": [
+        22,
+        8,
+        15,
+        14,
+        35,
+        48
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 9.313235294117648
+    },
+    {
+      "arxiv_id": "2410.09486",
+      "title": "ActSafe: Active Exploration with Safety Constraints for Reinforcement Learning",
+      "abstract": "Reinforcement learning (RL) is ubiquitous in the development of modern AI systems. However, state-of-the-art RL agents require extensive, and potentially unsafe, interactions with their environments to learn effectively. These limitations confine RL agents to simulated environments, hindering their ability to learn directly in real-world settings. In this work, we present ActSafe, a novel model-based RL algorithm for safe and efficient exploration. ActSafe learns a well-calibrated probabilistic model of the system and plans optimistically w.r.t. the epistemic uncertainty about the unknown dynamics, while enforcing pessimism w.r.t. the safety constraints. Under regularity assumptions on the constraints and dynamics, we show that ActSafe guarantees safety during learning while also obtaining a near-optimal policy in finite time. In addition, we propose a practical variant of ActSafe that builds on latest model-based RL advancements and enables safe exploration even in high-dimensional settings such as visual control. We empirically show that ActSafe obtains state-of-the-art performance in difficult exploration tasks on standard safe deep RL benchmarks while ensuring safety during learning.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/0d6810090d2ae12cd20530f8f883d635dcf4b5c5",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in AI Safety and Reinforcement Learning. The authors present a novel model-based RL algorithm for safe exploration, which has potential impact on improving safety and efficiency in RL agents. The quality of methodology and the potential impact of the work make it highly relevant.",
+      "author_h_indices": [
+        7,
+        10,
+        7,
+        17,
+        45,
+        8
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 9.20735294117647
+    },
+    {
+      "arxiv_id": "2506.03568",
+      "title": "Confidence-Guided Human-AI Collaboration: Reinforcement Learning with Distributional Proxy Value Propagation for Autonomous Driving",
+      "abstract": "Autonomous driving promises significant advancements in mobility, road safety and traffic efficiency, yet reinforcement learning and imitation learning face safe-exploration and distribution-shift challenges. Although human-AI collaboration alleviates these issues, it often relies heavily on extensive human intervention, which increases costs and reduces efficiency. This paper develops a confidence-guided human-AI collaboration (C-HAC) strategy to overcome these limitations. First, C-HAC employs a distributional proxy value propagation method within the distributional soft actor-critic (DSAC) framework. By leveraging return distributions to represent human intentions C-HAC achieves rapid and stable learning of human-guided policies with minimal human interaction. Subsequently, a shared control mechanism is activated to integrate the learned human-guided policy with a self-learning policy that maximizes cumulative rewards. This enables the agent to explore independently and continuously enhance its performance beyond human guidance. Finally, a policy confidence evaluation algorithm capitalizes on DSAC's return distribution networks to facilitate dynamic switching between human-guided and self-learning policies via a confidence-based intervention function. This ensures the agent can pursue optimal policies while maintaining safety and performance guarantees. Extensive experiments across diverse driving scenarios reveal that C-HAC significantly outperforms conventional methods in terms of safety, efficiency, and overall performance, achieving state-of-the-art results. The effectiveness of the proposed method is further validated through real-world road tests in complex traffic conditions. The videos and code are available at: https://github.com/lzqw/C-HAC.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/41e1362c3172a5efe75ce4b485f6e4264f84897f",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses AI safety and reinforcement learning in the context of autonomous driving, which aligns closely with the researcher's interests. The methodology described in the abstract shows promise in overcoming challenges in these areas, and the potential impact of the work could be significant.",
+      "author_h_indices": [
+        0,
+        36,
+        0,
+        0,
+        0,
+        39,
+        12
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 9.164495798319328
+    },
+    {
+      "arxiv_id": "2409.00858",
+      "title": "Trustworthy Human-AI Collaboration: Reinforcement Learning with Human Feedback and Physics Knowledge for Safe Autonomous Driving",
+      "abstract": "In the field of autonomous driving, developing safe and trustworthy autonomous driving policies remains a significant challenge. Recently, Reinforcement Learning with Human Feedback (RLHF) has attracted substantial attention due to its potential to enhance training safety and sampling efficiency. Nevertheless, existing RLHF-enabled methods often falter when faced with imperfect human demonstrations, potentially leading to training oscillations or even worse performance than rule-based approaches. Inspired by the human learning process, we propose Physics-enhanced Reinforcement Learning with Human Feedback (PE-RLHF). This novel framework synergistically integrates human feedback (e.g., human intervention and demonstration) and physics knowledge (e.g., traffic flow model) into the training loop of reinforcement learning. The key advantage of PE-RLHF is its guarantee that the learned policy will perform at least as well as the given physics-based policy, even when human feedback quality deteriorates, thus ensuring trustworthy safety improvements. PE-RLHF introduces a Physics-enhanced Human-AI (PE-HAI) collaborative paradigm for dynamic action selection between human and physics-based actions, employs a reward-free approach with a proxy value function to capture human preferences, and incorporates a minimal intervention mechanism to reduce the cognitive load on human mentors. Extensive experiments across diverse driving scenarios demonstrate that PE-RLHF significantly outperforms traditional methods, achieving state-of-the-art (SOTA) performance in safety, efficiency, and generalizability, even with varying quality of human feedback. The philosophy behind PE-RLHF not only advances autonomous driving technology but can also offer valuable insights for other safety-critical domains. Demo video and code are available at: \\https://zilin-huang.github.io/PE-RLHF-website/",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/607fbf81621cc806b03b46f20417a333e97e0912",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in AI safety and reinforcement learning as it addresses the challenges of developing safe autonomous driving policies using RLHF and integrating human feedback and physics knowledge.",
+      "author_h_indices": [
+        10,
+        10,
+        11
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 9.136764705882353
+    },
+    {
+      "arxiv_id": "s2:988c41795cd7c6c3f95df4c80a555cfbed96a9f5",
+      "title": "Increasing the Safety of Adaptive Cruise Control Using Physics-Guided Reinforcement Learning",
+      "abstract": "This paper presents a novel approach for improving the safety of vehicles equipped with Adaptive Cruise Control (ACC) by making use of Machine Learning (ML) and physical knowledge. More exactly, we train a Soft Actor-Critic (SAC) Reinforcement Learning (RL) algorithm that makes use of physical knowledge such as the jam-avoiding distance in order to automatically adjust the ideal longitudinal distance between the ego- and leading-vehicle, resulting in a safer solution. In our use case, the experimental results indicate that the physics-guided (PG) RL approach is better at avoiding collisions at any selected deceleration level and any fleet size when compared to a pure RL approach, proving that a physics-informed ML approach is more reliable when developing safe and efficient Artificial Intelligence (AI) components in autonomous vehicles (AVs).",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2021-01-01",
+      "updated": "2021-01-01",
+      "link": "https://www.semanticscholar.org/paper/988c41795cd7c6c3f95df4c80a555cfbed96a9f5",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the intersection of AI Safety and Reinforcement Learning in the context of autonomous vehicles, making it highly relevant to a researcher with those interests. The methodology described in the abstract demonstrates a novel approach that combines physics-guided RL to improve safety, and the potential impact of the work on developing safe AI components in AVs is significant.",
+      "author_h_indices": [
+        4,
+        4,
+        7,
+        3,
+        1,
+        9
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 9.061764705882354
+    },
+    {
+      "arxiv_id": "s2:57a24dcfe05c738c78ba153631a29e3bf6bc99e7",
+      "title": "Explainable AI and Robustness-Based Test and Evaluation of Reinforcement Learning",
+      "abstract": "Reinforcement learning is a powerful and proven approach to generating near-optimal decision policies across domains, although characterizing performance boundaries, explaining decisions, and quantifying output uncertainties are major barriers to widespread adoption of reinforcement learning for real-time use. This is particularly true for high-risk and safety-critical aerospace systems where the cost of failure is high and performance envelopes for systems of interest may be small. To address these issues, this article presents a three-part test and evaluation framework for reinforcement learning, which is purpose-built from a systems engineering perspective on artificial intelligence. This framework employs explainable AI techniques\u2014namely, Shapley additive explanations\u2014to examine opaque decision-making, introduces robustness testing to characterize performance bounds and sensitivities, and incorporates output validation against accepted solutions. In this article, we consider an example problem of a high-speed aerospace vehicle emergency descent problem where a reinforcement learning agent is trained to control vehicle angle of attack (AoA). Shapley additive explanations expose the most significant features that impact the selection of AoA command while robustness testing characterizes the acceptable range of disturbances in flight parameters the trained vehicle can accommodate. Finally, the outputs from the reinforcement learning agent are compared with a baseline optimal trajectory as an acceptance criterion of RL solutions.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/57a24dcfe05c738c78ba153631a29e3bf6bc99e7",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the interests of AI Safety and Reinforcement Learning through the development of a test and evaluation framework using explainable AI techniques and robustness testing. The methodology described in the abstract is of high quality and the potential impact of the work is significant for the field.",
+      "author_h_indices": [
+        4,
+        9,
+        1,
+        3,
+        13,
+        4,
+        2,
+        2,
+        1
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 9.05735294117647
+    },
+    {
+      "arxiv_id": "s2:8d72974c505c366ca507aa19943f0b7bf3f4161e",
+      "title": "Trust-based positional forgery detection in AI-driven autonomous intersection management using hybrid graph-based reinforcement learning",
+      "abstract": "Positional forgery by malicious vehicles can severely disrupt AI-driven autonomous intersection management systems, leading to inaccurate traffic predictions and increased accident risks. Traditional detection methods struggle in multi-tiered vehicular networks. This paper presents a Trust-Based Positional Forgery Detection (TPFD) system that leverages a Hybrid Graph-based Reinforcement Learning (HGRL) framework to combat positional forgery. The system integrates Graph Neural Networks (GNNs) for modelling Vehicle-to-Everything (V2X) communication, Recurrent Neural Networks (RNNs) for analysing temporal data, and Reinforcement Learning (RL) for dynamic trust evaluation. TPFD achieved a detection accuracy of 98.3%, reduced the false positive rate to 3.5%, and scaled efficiently to networks of up to 10,000 vehicles. The system also reduced hazardous traffic gap errors by 30%, enhancing intersection safety. This research strengthens the reliability and security of AI-based traffic systems, contributing to more efficient traffic management and increased public trust in autonomous vehicles.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/8d72974c505c366ca507aa19943f0b7bf3f4161e",
+      "relevance_score": 9.0,
+      "relevance_reason": "Directly relevant to AI Safety and Reinforcement Learning, with a novel approach using hybrid graph-based reinforcement learning. The methodology described in the abstract is of high quality and the potential impact on improving autonomous intersection management is significant.",
+      "author_h_indices": [
+        1
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 9.013235294117647
+    },
+    {
+      "arxiv_id": "s2:c5b60422da6c987d6bc131594ece0f0843996b48",
+      "title": "A Theoretical Framework for Hybrid Cognitive-Reinforcement Learning Architecture in Safety-Critical Autonomous Systems",
+      "abstract": "This paper presents a novel theoretical framework for Hybrid Cognitive-Reinforcement Learning (HCRL) architecture\ndesigned for safety-critical autonomous systems. The proposed theoretical model synergistically integrates symbolic reasoning\nparadigms with multi-agent deep reinforcement learning through a principled Bayesian arbitration mechanism. We derive\nformal mathematical foundations for the hybrid architecture, prove convergence properties, and develop theoretical safety\nguarantees. The framework addresses fundamental limitations of existing approaches by providing: (1) formal integration\nprinciples for symbolic and connectionist paradigms, (2) theoretical safety bounds and convergence analysis, (3) mathematical\nfoundations for multi-modal decision fusion, and (4) complexity analysis for real-time deployment. The theoretical contributions\nestablish a rigorous foundation for developing trustworthy AI systems that combine explainability, adaptability, and formal\nsafety guarantees in critical applications.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/c5b60422da6c987d6bc131594ece0f0843996b48",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses AI safety and reinforcement learning, providing a novel theoretical framework for hybrid cognitive-reinforcement learning in safety-critical autonomous systems. The methodology described in the abstract is rigorous and the potential impact of the work is significant for researchers in this field.",
+      "author_h_indices": [
+        0
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 9.0
+    },
+    {
+      "arxiv_id": "1805.00983",
+      "title": "Robust Deep Reinforcement Learning for Security and Safety in Autonomous Vehicle Systems",
+      "abstract": "The dependence of autonomous vehicles (AVs) on sensors and communication links exposes them to cyber-physical (CP) attacks by adversaries that seek to take control of the AVs by manipulating their data. In this paper, the state estimation process for monitoring AV dynamics, in presence of CP attacks, is analyzed and a novel adversarial deep reinforcement learning (RL) algorithm is proposed to maximize the robustness of AV dynamics control to CP attacks. The attacker's action and the AV's reaction to CP attacks are studied in a game-theoretic framework. In the formulated game, the attacker seeks to inject faulty data to AV sensor readings so as to manipulate the inter-vehicle optimal safe spacing and potentially increase the risk of AV accidents or reduce the vehicle flow on the roads. Meanwhile, the AV, acting as a defender, seeks to minimize the deviations of spacing so as to ensure robustness to the attacker's actions. Since the AV has no information about the attacker's action and due to the infinite possibilities for data value manipulations, each player uses long short term memory (LSTM) blocks to learn the expected spacing deviation resulting from its own action and feeds this deviation to a reinforcement learning (RL) algorithm. Then, the attacker's RL algorithm chooses the action which maximizes the spacing deviation, while the AV's RL algorithm seeks to find the optimal action that minimizes such deviation. Simulation results show that the proposed adversarial deep RL algorithm can improve the robustness of the AV dynamics control as it minimizes the intra-AV spacing deviation.",
+      "authors": [],
+      "categories": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "published": "2018-01-01",
+      "updated": "2018-01-01",
+      "link": "https://www.semanticscholar.org/paper/273afc33b934ac7cf32b1055f9565c7ee7813d95",
+      "relevance_score": 8.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in AI Safety and Reinforcement Learning as it addresses the robustness of autonomous vehicle systems to cyber-physical attacks using a novel adversarial deep RL algorithm.",
+      "author_h_indices": [
+        19,
+        18,
+        102,
+        56
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 8.573529411764707
+    },
+    {
+      "arxiv_id": "1903.03642",
+      "title": "Improved Robustness and Safety for Autonomous Vehicle Control with Adversarial Reinforcement Learning",
+      "abstract": "To improve efficiency and reduce failures in autonomous vehicles, research has focused on developing robust and safe learning methods that take into account disturbances in the environment. Existing literature in robust reinforcement learning poses the learning problem as a two player game between the autonomous system and disturbances. This paper examines two different algorithms to solve the game, Robust Adversarial Reinforcement Learning and Neural Fictitious Self Play, and compares performance on an autonomous driving scenario. We extend the game formulation to a semi-competitive setting and demonstrate that the resulting adversary better captures meaningful disturbances that lead to better overall performance. The resulting robust policy exhibits improved driving efficiency while effectively reducing collision rates compared to baseline control policies produced by traditional reinforcement learning methods.",
+      "authors": [],
+      "categories": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "published": "2018-01-01",
+      "updated": "2018-01-01",
+      "link": "https://www.semanticscholar.org/paper/d13ebe931948711239d2eea8608a0c2e6e3993d1",
+      "relevance_score": 8.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in AI Safety and Reinforcement Learning as it specifically addresses improving safety and efficiency in autonomous vehicles using robust and adversarial learning methods. The methodology described in the abstract and the potential impact of the work make it a valuable read.",
+      "author_h_indices": [
+        6,
+        25,
+        58
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 8.349019607843138
+    },
+    {
+      "arxiv_id": "s2:d95fe1e6fd497c04d54b06df3499d12eed62416f",
+      "title": "Reactive optimal motion planning for a class of holonomic planar agents using reinforcement learning with provable guarantees",
+      "abstract": "In control theory, reactive methods have been widely celebrated owing to their success in providing robust, provably convergent solutions to control problems. Even though such methods have long been formulated for motion planning, optimality has largely been left untreated through reactive means, with the community focusing on discrete/graph-based solutions. Although the latter exhibit certain advantages (completeness, complicated state-spaces), the recent rise in Reinforcement Learning (RL), provides novel ways to address the limitations of reactive methods. The goal of this paper is to treat the reactive optimal motion planning problem through an RL framework. A policy iteration RL scheme is formulated in a consistent manner with the control-theoretic results, thus utilizing the advantages of each approach in a complementary way; RL is employed to construct the optimal input without necessitating the solution of a hard, non-linear partial differential equation. Conversely, safety, convergence and policy improvement are guaranteed through control theoretic arguments. The proposed method is validated in simulated synthetic workspaces, and compared against reactive methods as well as a PRM and an RRT\u22c6 approach. The proposed method outperforms or closely matches the latter methods, indicating the near global optimality of the former, while providing a solution for planning from anywhere within the workspace to the goal position.",
+      "authors": [],
+      "categories": [
+        "Computer Science",
+        "Medicine"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/d95fe1e6fd497c04d54b06df3499d12eed62416f",
+      "relevance_score": 8.0,
+      "relevance_reason": "This paper is relevant to a researcher interested in AI Safety and Reinforcement Learning as it addresses reactive optimal motion planning using RL with provable guarantees, which aligns with those interests.",
+      "author_h_indices": [
+        5,
+        28,
+        54
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 8.341176470588236
+    },
+    {
+      "arxiv_id": "2111.07695",
+      "title": "Joint Synthesis of Safety Certificate and Safe Control Policy using Constrained Reinforcement Learning",
+      "abstract": "Safety is the major consideration in controlling complex dynamical systems using reinforcement learning (RL), where the safety certificate can provide provable safety guarantee. A valid safety certificate is an energy function indicating that safe states are with low energy, and there exists a corresponding safe control policy that allows the energy function to always dissipate. The safety certificate and the safe control policy are closely related to each other and both challenging to synthesize. Therefore, existing learning-based studies treat either of them as prior knowledge to learn the other, which limits their applicability with general unknown dynamics. This paper proposes a novel approach that simultaneously synthesizes the energy-function-based safety certificate and learns the safe control policy with CRL. We do not rely on prior knowledge about either an available model-based controller or a perfect safety certificate. In particular, we formulate a loss function to optimize the safety certificate parameters by minimizing the occurrence of energy increases. By adding this optimization procedure as an outer loop to the Lagrangian-based constrained reinforcement learning (CRL), we jointly update the policy and safety certificate parameters and prove that they will converge to their respective local optima, the optimal safe policy and a valid safety certificate. We evaluate our algorithms on multiple safety-critical benchmark environments. The results show that the proposed algorithm learns provably safe policies with no constraint violation. The validity or feasibility of synthesized safety certificate is also verified numerically.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2021-01-01",
+      "updated": "2021-01-01",
+      "link": "https://www.semanticscholar.org/paper/5eb891004c33a0c6d0b68d5bbfe6ae3ddf99f5b7",
+      "relevance_score": 8.0,
+      "relevance_reason": "The paper is highly relevant to a researcher in AI Safety and Reinforcement Learning as it focuses on synthesizing safety certificates and safe control policies using Constrained Reinforcement Learning. The methodology described in the abstract demonstrates a novel approach without relying on prior knowledge, and the potential impact of the work in improving safety in RL is significant.",
+      "author_h_indices": [
+        13,
+        29,
+        68,
+        13,
+        21
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 8.338823529411764
+    },
+    {
+      "arxiv_id": "s2:331638e2105fd2ed70ec9e700255af1bc962f1be",
+      "title": "Bridging Hamilton-Jacobi Safety Analysis and Reinforcement Learning",
+      "abstract": "Safety analysis is a necessary component in the design and deployment of autonomous robotic systems. Techniques from robust optimal control theory, such as Hamilton-Jacobi reachability analysis, allow a rigorous formalization of safety as guaranteed constraint satisfaction. Unfortunately, the computational complexity of these tools for general dynamical systems scales poorly with state dimension, making existing tools impractical beyond small problems. Modern reinforcement learning methods have shown promising ability to find approximate yet proficient solutions to optimal control problems in complex and high-dimensional systems, however their application has in practice been restricted to problems with an additive payoff over time, unsuitable for reasoning about safety. In recent work, we introduced a time-discounted modification of the problem of maximizing the minimum payoff over time, central to safety analysis, through a modified dynamic programming equation that induces a contraction mapping. Here, we show how a similar contraction mapping can render reinforcement learning techniques amenable to quantitative safety analysis as tools to approximate the safe set and optimal safety policy. This opens a new avenue of research connecting control-theoretic safety analysis and the reinforcement learning domain. We validate the correctness of our formulation by comparing safety results computed through Q-learning to analytic and numerical solutions, and demonstrate its scalability by learning safe sets and control policies for simulated systems of up to 18 state dimensions using value learning and policy gradient techniques.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2019-01-01",
+      "updated": "2019-01-01",
+      "link": "https://www.semanticscholar.org/paper/331638e2105fd2ed70ec9e700255af1bc962f1be",
+      "relevance_score": 8.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in AI Safety and Reinforcement Learning as it bridges Hamilton-Jacobi safety analysis with reinforcement learning, offering a new avenue for connecting control-theoretic safety analysis and reinforcement learning techniques.",
+      "author_h_indices": [
+        31,
+        1,
+        11,
+        16,
+        83
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 8.334117647058823
+    },
+    {
+      "arxiv_id": "s2:fb748150d3eec8e8490be6f43a29f33922c3eae9",
+      "title": "Explainable AI-based Federated Deep Reinforcement Learning for Trusted Autonomous Driving",
+      "abstract": "Recently, the concept of autonomous driving became prevalent in the domain of intelligent transportation due to the promises of increased safety, traffic efficiency, fuel economy and reduced travel time. Numerous studies have been conducted in this area to help newcomer vehicles plan their trajectory and velocity. However, most of these proposals only consider trajectory planning using conjunction with a limited data set (i.e., metropolis areas, highways, and residential areas) or assume fully connected and automated vehicle environment. Moreover, these approaches are not explainable and lack trust regarding the contributions of the participating vehicles. To tackle these problems, we design an Explainable Artificial Intelligence (XAI) Federated Deep Reinforcement Learning model to improve the effectiveness and trustworthiness of the trajectory decisions for newcomer Autonomous Vehicles (AVs). When a newcomer AV seeks help for trajectory planning, the edge server launches a federated learning process to train the trajectory and velocity prediction model in a distributed collaborative fashion among participating AVs. One essential challenge in this approach is AVs selection, i.e., how to select the appropriate AVs that should participate in the federated learning process. For this purpose, XAI is first used to compute the contribution of each feature contributed by each vehicle to the overall solution. This helps us compute the trust value for each AV in the model. Then, a trust-based deep reinforcement learning model is put forward to make the selection decisions. Experiments using a real-life dataset show that our solution achieves better performance than benchmark solutions (i.e., Deep Q-Network (DQN), and Random Selection (RS)).",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2022-01-01",
+      "updated": "2022-01-01",
+      "link": "https://www.semanticscholar.org/paper/fb748150d3eec8e8490be6f43a29f33922c3eae9",
+      "relevance_score": 8.0,
+      "relevance_reason": "The paper is highly relevant to a researcher interested in AI Safety and Reinforcement Learning, as it specifically addresses the trustworthiness and explainability of autonomous driving systems using AI and federated deep reinforcement learning.",
+      "author_h_indices": [
+        16,
+        37,
+        28
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 8.31764705882353
+    },
+    {
+      "arxiv_id": "s2:73dc5f96827910da9369fab7f6b6399925998232",
+      "title": "Epistemic Side Effects: An AI Safety Problem",
+      "abstract": "AI safety research has investigated the problem of negative side effects -- undesirable changes made by AI systems in pursuit of an underspecified objective. However, the focus has been on physical side effects, such as a robot breaking a vase while moving (when the objective makes no mention of the vase). In this paper we introduce the notion of epistemic side effects, which are side effects on the knowledge or beliefs of agents. Epistemic side effects are most pertinent in a (partially observable) multiagent setting. We show that we can extend an existing approach to avoiding (physical) side effects in reinforcement learning to also avoid some epistemic side effects in certain cases. Nonetheless, avoiding negative epistemic side effects remains an important challenge, and we identify some key research problems.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2023-01-01",
+      "updated": "2023-01-01",
+      "link": "https://www.semanticscholar.org/paper/73dc5f96827910da9369fab7f6b6399925998232",
+      "relevance_score": 8.0,
+      "relevance_reason": "The paper addresses AI safety, specifically focusing on a new concept of epistemic side effects, and discusses how it can impact the knowledge or beliefs of agents in a multiagent setting. The methodology mentioned in the abstract seems to be of good quality and the novelty of the concept could have potential impact in the field of AI safety and reinforcement learning.",
+      "author_h_indices": [
+        13,
+        6,
+        60
+      ],
+      "huggingface_upvotes": null,
+      "quality_score": 8.309803921568628
+    }
+  ]
+}
