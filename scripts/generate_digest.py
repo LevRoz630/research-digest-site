@@ -32,8 +32,6 @@ async def main():
     from daily_research_digest.storage import DigestStorage
 
     # Get config from environment
-    categories = os.environ.get("DIGEST_CATEGORIES", "cs.AI,cs.CL,cs.LG").split(",")
-    categories = [c.strip() for c in categories]
     interests = os.environ.get("DIGEST_INTERESTS", "machine learning, AI agents")
     llm_provider = os.environ.get("LLM_PROVIDER", "openai")
 
@@ -51,7 +49,6 @@ When ranking, also consider:
 - Papers with well-known authors in the field should be scored higher"""
 
     config = DigestConfig(
-        categories=categories,
         interests=enhanced_interests,
         max_papers=50,
         top_n=15,
@@ -72,7 +69,6 @@ When ranking, also consider:
     storage = DigestStorage(digests_dir)
     generator = DigestGenerator(storage)
 
-    print(f"Generating digest for categories: {categories}")
     print(f"Interests: {interests}")
     print(f"Date range: {month_ago.strftime('%Y-%m-%d')} to {now.strftime('%Y-%m-%d')}")
 
