@@ -1,0 +1,326 @@
+{
+  "date": "2026-02-06",
+  "generated_at": "2026-02-06T12:15:34.055311+00:00",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "interests": "Ai safety, reinforcement learning optimization, token expenditure optimization, LLM memory allocation optimization.\n\nWhen ranking, also consider:\n- Author credentials and reputation (prefer established researchers from top institutions)\n- Quality of methodology described in abstract\n- Novelty and potential impact of the work\n- Papers with well-known authors in the field should be scored higher",
+  "total_papers_fetched": 50,
+  "papers": [
+    {
+      "arxiv_id": "s2:7902eb718374bd22c8f09e132ba690fea32201da",
+      "title": "Resource Allocation for Dynamic Platoon Digital Twin Networks: A Multi-Agent Deep Reinforcement Learning Method",
+      "abstract": "Vehicle driving in a platoon is an efficient and ecological driving solution. Introducing the concept of digital twin (DT) into the platoon to establish platoon digital twin (PDT) can improve the management efficiency and driving safety of the platoon. However, the joint allocation of multiple types of resources in a platoon digital twin network (PDTN) is an important issue for the successful implementation and maintenance of the PDT. In this paper, we investigate the resource allocation problem in a PDTN. By comprehensively considering the effects of high mobility of platooning vehicles, real-time nature of the DTs, and multi-vehicle cooperation, we propose a PDT utility optimization model for bandwidth and computation resource allocation. We formulate the dynamic resource allocation problem as an $M$-th order Markov decision process (MDP) and design a deep reinforcement learning (DRL)-based dynamic resource allocation (DRLDRA) method to solve it. To optimize the actions of the agent, we reshape the state in a smaller time granularity to better reflect the temporal variations of the state. Correspondingly, we design temporal feature extraction neural networks (TFENNs) based on multi-head self-attention (MHSA) mechanism and long short-term memory (LSTM) to extract the temporal features of the state. To improve the learning efficiency, a decentralized multi-agent deep deterministic policy gradient (DDPG)-based learning framework is proposed. Numerical results show that the DRLDRA method performs excellently and outperforms other benchmark methods.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/7902eb718374bd22c8f09e132ba690fea32201da",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant to the researcher's interests as it addresses resource allocation optimization in dynamic platoon networks using deep reinforcement learning, which aligns with their interests in reinforcement learning optimization and memory allocation optimization.",
+      "author_h_indices": [
+        4,
+        5,
+        3,
+        8,
+        2,
+        3,
+        5
+      ],
+      "quality_score": 9.120535714285715
+    },
+    {
+      "arxiv_id": "2505.18979",
+      "title": "GhostPrompt: Jailbreaking Text-to-image Generative Models based on Dynamic Optimization",
+      "abstract": "Text-to-image (T2I) generation models can inadvertently produce not-safe-for-work (NSFW) content, prompting the integration of text and image safety filters. Recent advances employ large language models (LLMs) for semantic-level detection, rendering traditional token-level perturbation attacks largely ineffective. However, our evaluation shows that existing jailbreak methods are ineffective against these modern filters. We introduce GhostPrompt, the first automated jailbreak framework that combines dynamic prompt optimization with multimodal feedback. It consists of two key components: (i) Dynamic Optimization, an iterative process that guides a large language model (LLM) using feedback from text safety filters and CLIP similarity scores to generate semantically aligned adversarial prompts; and (ii) Adaptive Safety Indicator Injection, which formulates the injection of benign visual cues as a reinforcement learning problem to bypass image-level filters. GhostPrompt achieves state-of-the-art performance, increasing the ShieldLM-7B bypass rate from 12.5\\% (Sneakyprompt) to 99.0\\%, improving CLIP score from 0.2637 to 0.2762, and reducing the time cost by $4.2 \\times$. Moreover, it generalizes to unseen filters including GPT-4.1 and successfully jailbreaks DALLE 3 to generate NSFW images in our evaluation, revealing systemic vulnerabilities in current multimodal defenses. To support further research on AI safety and red-teaming, we will release code and adversarial prompts under a controlled-access protocol.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/1be3e9092f10fc67e2b2bc84d11ab1508e0fb21b",
+      "relevance_score": 8.0,
+      "relevance_reason": "The paper addresses AI safety with a focus on bypassing safety filters using dynamic optimization, which aligns with the researcher's interest in AI safety. The methodology described in the abstract is of high quality and the potential impact of the work on improving text-to-image generative models is significant.",
+      "author_h_indices": [
+        0,
+        0,
+        14,
+        25,
+        25
+      ],
+      "quality_score": 8.32
+    },
+    {
+      "arxiv_id": "s2:adbb0b23447a4992b90c4415c552bbf7f09c7d84",
+      "title": "Adaptive Generalized Proportional Fair Scheduling with Deep Reinforcement Learning",
+      "abstract": "The emergence of 5G and the upcoming 6G has been and will be supporting numerous applications with various quality of service (QoS) requirements which inevitably come with increased complexity. Artificial Intelligence (AI) is getting tremendous attention in handling the complexity of wireless communication systems. Among many, medium access control (MAC) scheduling, which controls wireless resource allocation among different bearers or UEs, is one of the potential applications of AI, for it is difficult to dynamically optimize due to the non-deterministic and the partially-occupying characteristics of the mobile traffic. In this work, we formulate an optimization problem of maximizing user perceived throughput (UPT) while minimizing packet delay violation by controlling the parameters of the MAC scheduling algorithm. This problem is a combinatorial optimization problem, and optimal points vary with circumstances. We use deep reinforcement learning (DRL) to design a dynamic policy that adaptively changes the governing parameters of the scheduler. A 3D-heatmap capturing the status of a network with varying UEs is created. An efficient convolutional neural network with long-short term memory (CNN-LSTM) networks and a reinforcement learning framework are used for efficient training. Experiments in dynamically changing circumstances show that our DRL-based policy adapts to the network states while providing QoS satisfaction.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2022-01-01",
+      "updated": "2022-01-01",
+      "link": "https://www.semanticscholar.org/paper/adbb0b23447a4992b90c4415c552bbf7f09c7d84",
+      "relevance_score": 8.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in AI safety, reinforcement learning optimization, and token expenditure optimization. The paper discusses the use of deep reinforcement learning in optimizing MAC scheduling for wireless communication systems, addressing complexity and quality of service requirements.",
+      "author_h_indices": [
+        2,
+        2,
+        15,
+        1,
+        4,
+        8
+      ],
+      "quality_score": 8.133333333333333
+    },
+    {
+      "arxiv_id": "2507.15574",
+      "title": "On the Role of AI in Managing Satellite Constellations: Insights from the ConstellAI Project",
+      "abstract": "The rapid expansion of satellite constellations in near-Earth orbits presents significant challenges in satellite network management, requiring innovative approaches for efficient, scalable, and resilient operations. This paper explores the role of Artificial Intelligence (AI) in optimizing the operation of satellite mega-constellations, drawing from the ConstellAI project funded by the European Space Agency (ESA). A consortium comprising GMV GmbH, Saarland University, and Thales Alenia Space collaborates to develop AI-driven algorithms and demonstrates their effectiveness over traditional methods for two crucial operational challenges: data routing and resource allocation. In the routing use case, Reinforcement Learning (RL) is used to improve the end-to-end latency by learning from historical queuing latency, outperforming classical shortest path algorithms. For resource allocation, RL optimizes the scheduling of tasks across constellations, focussing on efficiently using limited resources such as battery and memory. Both use cases were tested for multiple satellite constellation configurations and operational scenarios, resembling the real-life spacecraft operations of communications and Earth observation satellites. This research demonstrates that RL not only competes with classical approaches but also offers enhanced flexibility, scalability, and generalizability in decision-making processes, which is crucial for the autonomous and intelligent management of satellite fleets. The findings of this activity suggest that AI can fundamentally alter the landscape of satellite constellation management by providing more adaptive, robust, and cost-effective solutions.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/0a0f20b906297ec417f3487292e5564894f518f6",
+      "relevance_score": 8.0,
+      "relevance_reason": "Relevant due to the focus on AI optimization in satellite constellation management, which aligns with interests in AI safety and optimization. Author credentials and reputation are strong with collaboration from GMV GmbH, Saarland University, and Thales Alenia Space. Methodology and potential impact of the work are well-described and significant for the field.",
+      "author_h_indices": [
+        5,
+        21,
+        1,
+        3,
+        1,
+        0,
+        5
+      ],
+      "quality_score": 8.128571428571428
+    },
+    {
+      "arxiv_id": "s2:4e966e9514243cac12d88178a972ee07ab390aca",
+      "title": "AI-Enhanced Performance Optimization for Microservice-Based Systems",
+      "abstract": "Microservice architectures (MSAs) have revolutionized software development by offering flexibility, scalability, and resilience through the decomposition of applications into loosely coupled services. However, resource management and performance optimization in MSAs remain challenging due to dynamic workloads and complex interdependencies. Traditional approaches, such as static provisioning and rule-based scaling, struggle to handle these challenges efficiently, often leading to over-provisioning or under-provisioning of resources. In this paper, we propose an AI-driven optimization framework that integrates reinforcement learning (RL), predictive analytics (PA), and evolutionary algorithms (EA) to dynamically manage resources in microservices environments. The proposed framework anticipates workload changes, optimizes resource allocation in real-time, and continuously adapts to evolving system conditions. Our empirical evaluation, conducted on a Kubernetes-based microservice platform, demonstrates significant improvements in performance and resource efficiency compared to conventional methods like Kubernetes' Horizontal Pod Autoscaler (HPA). The AI-driven system achieves up to a 27.3% reduction in latency during traffic surges and improves throughput by 25.7%, while also reducing CPU and memory usage by up to 25.7% and 22.7%, respectively. These results suggest that AI-driven optimization offers a scalable and efficient solution for managing microservices in highly dynamic environments.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/4e966e9514243cac12d88178a972ee07ab390aca",
+      "relevance_score": 8.0,
+      "relevance_reason": "The paper is highly relevant to a researcher interested in AI safety, reinforcement learning optimization, and memory allocation optimization. The methodology described in the abstract is of high quality and the AI-driven optimization framework presented has the potential to have a significant impact in the field. The authors have demonstrated improvements in performance and resource efficiency, making this paper highly relevant to the researcher's interests.",
+      "author_h_indices": [
+        3
+      ],
+      "quality_score": 8.075
+    },
+    {
+      "arxiv_id": "s2:72be1201627bbc50dc19910633b6af70ae2a8a30",
+      "title": "Dynamic resource allocation using AI-driven workload forecasting in multi-cloud environments",
+      "abstract": "This research investigates the application of artificial intelligence (AI) for dynamic resource allocation using workload forecasting in multi-cloud environments. With the growing adoption of multi-cloud strategies, organizations face increasing challenges in managing resource distribution efficiently due to fluctuating and unpredictable workloads. To address this, the study introduces an AI-driven framework that combines time-series forecasting models such as Long Short-Term Memory (LSTM) networks, reinforcement learning, and decision tree-based algorithms to accurately predict workload demands and allocate resources dynamically across multiple cloud platforms. The system continuously monitors workload patterns and adjusts resource provisioning in real-time to enhance performance and cost-efficiency. Experimental results demonstrate that the proposed approach significantly improves CPU and memory utilization, reduces operational costs by up to 25%, and increases SLA compliance. By offering a scalable, intelligent solution for resource management, this research contributes to the advancement of autonomous cloud operations. It provides practical value for optimizing complex multi-cloud infrastructures' performance, reliability, and efficiency.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/72be1201627bbc50dc19910633b6af70ae2a8a30",
+      "relevance_score": 8.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in AI-driven workload forecasting and resource allocation in multi-cloud environments. The use of LSTM networks, reinforcement learning, and decision tree-based algorithms aligns with interests in AI safety and optimization. The methodology described in the abstract is of high quality, and the potential impact of the work on improving resource utilization and cost-efficiency is significant.",
+      "author_h_indices": [
+        1
+      ],
+      "quality_score": 8.025
+    },
+    {
+      "arxiv_id": "s2:f3e97e1ff2e9fc5c6233ef478cc41d2264a29d0d",
+      "title": "RATM: Reinforcement Learning For Co-Optimized CPU Scheduling and NUMA Memory Management",
+      "abstract": "Modern operating systems rely on static heuristics\u2014 carefully tuned at design time \u2014 to manage CPU scheduling and memory allocation. These heuristics fundamentally fail under the different dynamically shifting workloads characteristic of contemporary data centers, where batch processing, real-time analytics, and interactive services coexist. This paper presents RATM (Resource-Aware Adaptive Task Manager), a novel \"Authoritative Controller\" architecture implemented in Rust that replaces static policies with a Deep Q-Network (DQN) reinforcement learning agent capable of optimizing kernel behavior at runtime. Our system introduces a strict Policy-Mechanism Separation, a model-free DQN agent that observes continuous system state and selects actions, while the VRRP (Varying Response Ratio Priority) Scheduler and NAAT (NUMA-Aware Adaptive Tiered) Allocator execute commands as passive, tunable mechanisms. The RATM controller mediates between these layers, enforcing safety invariants and translating abstract actions into concrete API calls. The experimental results demonstrate that our RL-driven kernel achieves over up to 70% reduction in average wait latency in calibration scenarios compared to the static baseline, while maintaining high fairness. The RL agent learns to proactively trigger NUMA page migrations during workload phase transitions, effectively \"flattening the curve\" of latency spikes that plague traditional schedulers. The entire implementation \u2014 including lock-free data structures, atomic metrics collection, and the RL training loop \u2014 is realized in safe Rust, leveraging the language's ownership model and `Send`/`Sync` traits to eliminate data races by construction. This work demonstrates that adaptive, learning-based kernel subsystems are not only feasible but can be implemented with the same safety guarantees expected of production operating systems.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2026-01-01",
+      "updated": "2026-01-01",
+      "link": "https://www.semanticscholar.org/paper/f3e97e1ff2e9fc5c6233ef478cc41d2264a29d0d",
+      "relevance_score": 8.0,
+      "relevance_reason": "This paper is highly relevant as it covers topics such as reinforcement learning optimization and memory allocation optimization, which align with the researcher's interests. The methodology described in the abstract is of high quality and the potential impact of the work is significant. Additionally, the authors introduce a novel approach to kernel optimization using RL, making it a valuable contribution to the field.",
+      "author_h_indices": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "quality_score": 8.0
+    },
+    {
+      "arxiv_id": "s2:d23a031467926ac45f925809c875329314c25aa3",
+      "title": "Artificial Intelligence for Autonomous Infrastructure: A Deep Reinforcement Learning Approach to Datacenter Operations",
+      "abstract": "The current datacenter operations are more complex than ever before due to the skyrocketing demand\nfor cloud services, Internet of Things (IoT) applications, and real-time analytics. Classical rule-of-thumb control and\nheuristic optimization cannot keep up with the highly dynamic nature of non-linear large-scale computing\ninfrastructure. The paper explores deep reinforcement learning (DRL) as a basis for fully autonomous infrastructure\nmanagement, specifically thermal regulation, workload scheduling, and energy-conscious resource allocation.\nWe initially examine the shortcomings of traditional datacenter control loops and outline the gaps that do not facilitate\nscalability and fault tolerance. Our next suggestion is a hybrid DARA system comprising model-free policy learning\nand predictive simulations of digital twins to allow self-optimizing behavior under unpredictable workloads and\nequipment breakdowns. An implementation on a simple datacenter simulator using live telemetry streams has been\ntested and shown to perform 18 percent better in cooling energy and 12 percent better in resource utilization than state-\nof-the-art baselines.\nThe findings attest to the fact that DRL can assist in autonomous infrastructure that is capable of constant adaptation\nwithout human assistance. We mention the practical deployment issues, such as data quality, safety limitations, and how\nit works with the legacy orchestration platforms, and the future research directions that would bring us to the fully self-\ngoverning datacenters. The study also adds to the existing literature that AI-based control can reduce the operational\nexpenses and environmental footprint significantly and enhance the reliability of the provided services.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/d23a031467926ac45f925809c875329314c25aa3",
+      "relevance_score": 8.0,
+      "relevance_reason": "Relevant to AI safety, reinforcement learning optimization, and memory allocation optimization. The paper discusses the use of deep reinforcement learning in datacenter operations, which can be applicable to token expenditure optimization as well.",
+      "author_h_indices": [
+        0
+      ],
+      "quality_score": 8.0
+    },
+    {
+      "arxiv_id": "s2:3733f73913899ed133f28407cd0ea7a90fa8abd6",
+      "title": "AI-Based Automated Load Testing and Resource Scaling in Cloud Environments Using Self-Learning Agents",
+      "abstract": "Cloud environments face dynamic and unpredictable workloads, making efficient load testing and resource scaling critical for maintaining performance, reducing costs, and ensuring reliability. Traditional approaches to load testing and scaling rely on predefined rules or manual intervention, which often fail to adapt to rapidly changing demand patterns. This research introduces an AI-based automated framework that leverages self-learning agents to conduct continuous load testing and intelligent resource scaling in real time. The proposed system employs reinforcement learning and adaptive performance modeling to simulate variable workloads, detect bottlenecks, and optimize resource allocation with minimal human intervention. Experimental results in a simulated multi-cloud environment demonstrate significant improvements in response time, throughput, and cost efficiency compared to static or heuristic-based scaling methods. The findings suggest that self-learning agents can transform cloud resource management into a fully autonomous, performance-driven process, enabling service providers to meet stringent SLA requirements while optimizing operational expenditure.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/3733f73913899ed133f28407cd0ea7a90fa8abd6",
+      "relevance_score": 8.0,
+      "relevance_reason": "This paper is highly relevant to a researcher interested in Ai safety, reinforcement learning optimization, and token expenditure optimization. The authors present a novel AI-based automated framework for load testing and resource scaling in cloud environments, which utilizes self-learning agents and reinforcement learning, aligning well with the researcher's interests.",
+      "author_h_indices": [
+        0,
+        0
+      ],
+      "quality_score": 8.0
+    },
+    {
+      "arxiv_id": "s2:bfb6fd7932c2433418fa03b201cc000d66a09121",
+      "title": "Multi-User Semantic Communication for Interactive Speech Dialogue With Dynamic Resource Allocation",
+      "abstract": "This paper presents a novel semantic communication model for multi-turn interactive speech dialogue tasks, enabling multiple users to engage in dialogue with a language model deployed at a base station (BS) in a massive MIMO (mMIMO) system. The framework utilizes a time-slotted design and integrates a distributed memory module to store semantic speech features from previous interactions. The speech quantization model incorporates a token fusion mechanism to address token length and computational complexity. An enhanced speech context retrieval model, augmented with knowledge distillation, is introduced to retrieve relevant historical contexts from the memory module efficiently, significantly improving response quality. Long short-term memory (LSTM) network-based joint source-channel (JSC) encoders and decoders are employed to mitigate multi-user interference. The system undergoes a comprehensive four-step training process, optimizing each component sequentially. In the final phase, Randomized Ensembled Double $Q$-Learning (REDQ), a reinforcement learning algorithm, is applied to optimize bandwidth and power allocation, effectively reducing latency and enhancing the accuracy of generated responses. Extensive simulations validate that the proposed semantic communication system significantly improves answer accuracy, particularly in multi-user scenarios, while effectively reducing computational complexity and latency.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/bfb6fd7932c2433418fa03b201cc000d66a09121",
+      "relevance_score": 7.0,
+      "relevance_reason": "The paper addresses optimization in multi-turn dialogues, which may be of interest to the researcher. The use of LSTM networks and reinforcement learning for optimization aligns with their interests in reinforcement learning optimization.",
+      "author_h_indices": [
+        4,
+        47
+      ],
+      "quality_score": 7.557812499999999
+    },
+    {
+      "arxiv_id": "s2:b2a305f92f3f0491f4dd6d2c36904901a0b81570",
+      "title": "AI-Driven Cloud Resource Optimization for Smart Cities",
+      "abstract": "The fast-paced advent of smart cities is generating enormous volumes of data, thus necessitating good cloud resource management for the various urban applications. This paper discusses the use of Artificial Intelligence (AI) techniques as a means of optimizing resource allocation in the cloud in smart cities, making it efficient, scalable, and sustainable. By using AI-driven techniques of reinforcement learning, predictive analytics, and deep learning, the framework of the work can automatically change the amount of resources in response to the variables of smart city applications, such as energy distribution, traffic management, and public safety, in a manner that ensures the efficient and timely delivery of these services. In particular, the study uses real-world data to evaluate the framework, thereby demonstrating the notable improvements in service quality, energy efficiency, and resource utilization. Furthermore, this research looks at issues such as the minimization of latency, cost optimization, and the inclusion of edge computing for local decision-making. The findings of the study as well as this research work indicate that $\\mathbf{A I}$ is capable of changing the cloud infrastructure into a more adaptive, intelligent, and ecofriendly source for smart cities.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/b2a305f92f3f0491f4dd6d2c36904901a0b81570",
+      "relevance_score": 7.0,
+      "relevance_reason": "The paper is relevant to a researcher interested in AI-driven optimization, although it does not directly address token expenditure optimization or LLM memory allocation. The methodology described in the abstract seems solid, and the potential impact of improved resource allocation in smart cities is significant. The use of AI techniques such as reinforcement learning aligns with the researcher's interests in AI safety and optimization.",
+      "author_h_indices": [
+        48,
+        0,
+        17
+      ],
+      "quality_score": 7.473958333333333
+    },
+    {
+      "arxiv_id": "2008.10713",
+      "title": "Dynamic Dispatching for Large-Scale Heterogeneous Fleet via Multi-agent Deep Reinforcement Learning",
+      "abstract": "Dynamic dispatching is one of the core problems for operation optimization in traditional industries such as mining, as it is about how to smartly allocate the right resources to the right place at the right time. Conventionally, the industry relies on heuristics or even human intuitions which are often short-sighted and sub-optimal solutions. Leveraging the power of AI and Internet of Things (IoT), data-driven automation is reshaping this area. However, facing its own challenges such as large-scale and heterogenous trucks running in a highly dynamic environment, it can barely adopt methods developed in other domains (e.g., ride-sharing). In this paper, we propose a novel Deep Reinforcement Learning approach to solve the dynamic dispatching problem in mining. We first develop an event-based mining simulator with parameters calibrated in real mines. Then we propose an experience-sharing Deep Q Network with a novel abstract state/action representation to learn memories from heterogeneous agents altogether and realizes learning in a centralized way. We demonstrate that the proposed methods significantly outperform the most widely adopted approaches in the industry by 5.56% in terms of productivity. The proposed approach has great potential in a broader range of industries (e.g., manufacturing, logistics) which have a large-scale of heterogenous equipment working in a highly dynamic environment, as a general framework for dynamic resource allocation.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2020-01-01",
+      "updated": "2020-01-01",
+      "link": "https://www.semanticscholar.org/paper/af6b757bb3ffa18cc7b1aa794d28b384e7e14ec8",
+      "relevance_score": 7.0,
+      "relevance_reason": "The paper is relevant as it covers reinforcement learning optimization, which aligns with the researcher's interests. The methodology described in the abstract is of high quality and the potential impact on the field could be significant. Additionally, the paper is authored by researchers in computer science.",
+      "author_h_indices": [
+        5,
+        8,
+        8,
+        14,
+        6,
+        16
+      ],
+      "quality_score": 7.207812500000001
+    },
+    {
+      "arxiv_id": "2412.02610",
+      "title": "AI-Driven Resource Allocation Framework for Microservices in Hybrid Cloud Platforms",
+      "abstract": "The increasing demand for scalable, efficient resource management in hybrid cloud environments has led to the exploration of AI-driven approaches for dynamic resource allocation. This paper presents an AI-driven framework for resource allocation among microservices in hybrid cloud platforms. The framework employs reinforcement learning (RL)-based resource utilization optimization to reduce costs and improve performance. The framework integrates AI models with cloud management tools to respond to challenges of dynamic scaling and cost-efficient low-latency service delivery. The reinforcement learning model continuously adjusts provisioned resources as required by the microservices and predicts the future consumption trends to minimize both under- and over-provisioning of resources. Preliminary simulation results indicate that using AI in the provision of resources related to costs can reduce expenditure by up to 30-40% compared to manual provisioning and threshold-based auto-scaling approaches. It is also estimated that the efficiency in resource utilization is expected to improve by 20%-30% with a corresponding latency cut of 15%-20% during the peak demand periods. This study compares the AI-driven approach with existing static and rule-based resource allocation methods, demonstrating the capability of this new model to outperform them in terms of flexibility and real-time interests. The results indicate that reinforcement learning can make optimization of hybrid cloud platforms even better, offering a 25-35% improvement in cost efficiency and the power of scaling for microservice-based applications. The proposed framework is a strong and scalable solution to managing cloud resources in dynamic and performance-critical environments.",
+      "authors": [],
+      "categories": [
+        "Computer Science",
+        "Engineering"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/25889f715ebabc9bef37b17fefc0b1afb4d5f2cb",
+      "relevance_score": 7.0,
+      "relevance_reason": "The paper is relevant as it explores AI-driven resource allocation in cloud environments, touches on reinforcement learning for optimization, and discusses cost reduction and performance improvement. While not directly addressing token expenditure or LLM memory allocation, it aligns with the researcher's interests in AI safety and optimization.",
+      "author_h_indices": [
+        10,
+        7
+      ],
+      "quality_score": 7.1859375000000005
+    },
+    {
+      "arxiv_id": "s2:da51558149bc75bdf58215da2cf72da2a756c84a",
+      "title": "Deep Reinforcement Learning-Based Unmanned Aerial Vehicle Mobile Crowdsensing with Landing Constraints",
+      "abstract": "With the development of artificial intelligence techniques, the unmanned aerial vehicle (UAV)-assisted intelligent mobile crowdsensing has attracted a lot of attention. In this work, a deep reinforcement learning (DRL)-based approach is proposed for solving the UAV trajectory planning problem under landing constraints. Firstly, a trajectory planning optimization problem with landing and other practical environmental constraints is formulated. Then, the optimization problem is further formulated as a Markov decision process problem, and a deep deterministic policy gradient (DDPG)-based DRL algorithm is proposed, where both the convolutional neural network and the long short-term memory are employed to process the spatial and temporal information of the state. The simulation results show that the proposed approach achieves high data collection rates while meeting the landing constraints as well as ensuring the safety of the UAV.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2023-01-01",
+      "updated": "2023-01-01",
+      "link": "https://www.semanticscholar.org/paper/da51558149bc75bdf58215da2cf72da2a756c84a",
+      "relevance_score": 7.0,
+      "relevance_reason": "The paper is relevant as it discusses deep reinforcement learning, optimization, and practical constraints in the context of UAVs, which aligns with the researcher's interests in AI safety, reinforcement learning optimization, and memory allocation optimization.",
+      "author_h_indices": [
+        1,
+        21,
+        3
+      ],
+      "quality_score": 7.182291666666667
+    },
+    {
+      "arxiv_id": "s2:270a5481f6448c256bee3b25f50584a705954993",
+      "title": "D3T: Dual-Timescale Optimization of Task Scheduling and Thermal Management for Energy Efficient Geo-Distributed Data Centers",
+      "abstract": "The surge of artificial intelligence (AI) has intensified compute-intensive tasks, sharply increasing the need for energy-efficient management in geo-distributed data centers. Existing approaches struggle to coordinate task scheduling and cooling control due to mismatched time constants, stochastic Information Technology (IT) workloads, variable renewable energy, and fluctuating electricity prices. To address these challenges, we propose D3T, a dual-timescale deep reinforcement learning (DRL) framework that jointly optimizes task scheduling and thermal management for energy-efficient geo-distributed data centers. At the fast timescale, D3T employs Deep Q-Network (DQN) to schedule tasks, reducing operational expenditure (OPEX) and task sojourn time. At the slow timescale, a QMIX-based multi-agent DRL method regulates cooling across distributed data centers by dynamically adjusting airflow rates, thereby preventing hotspots and reducing energy waste. Extensive experiments were conducted using TRNSYS with real-world traces, and the results demonstrate that, compared to baseline algorithms, D3T reduces OPEX by 13% in IT subsystems and 29% in cooling subsystems, improves power usage effectiveness (PUE) by 7%, and maintains more stable thermal safety across geo-distributed data centers.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2026-01-01",
+      "updated": "2026-01-01",
+      "link": "https://www.semanticscholar.org/paper/270a5481f6448c256bee3b25f50584a705954993",
+      "relevance_score": 7.0,
+      "relevance_reason": "The paper is relevant as it addresses optimization in data centers, which intersects with AI safety and token expenditure optimization. The methodology of using deep reinforcement learning is of interest to researchers in these areas.",
+      "author_h_indices": [
+        17,
+        0,
+        0,
+        4,
+        4,
+        18
+      ],
+      "quality_score": 7.156770833333334
+    }
+  ]
+}
