@@ -53,7 +53,7 @@ When ranking, also consider:
     config = DigestConfig(
         categories=categories,
         interests=enhanced_interests,
-        max_papers=150,
+        max_papers=50,
         top_n=15,
         llm_provider=llm_provider,
         openai_api_key=os.environ.get("OPENAI_API_KEY"),

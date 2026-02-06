@@ -107,6 +107,87 @@ const GitHub = {
     }
 
     return true;
+  },
+
+  async getLatestWorkflowRun(workflowId) {
+    const { owner, repo } = App.config;
+    const url = `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflowId}/runs?per_page=1`;
+
+    const token = this.getToken();
+    const res = await fetch(url, {
+      headers: {
+        'Accept': 'application/vnd.github.v3+json',
+        'Authorization': `Bearer ${token}`
+      }
+    });
+
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.workflow_runs?.[0] || null;
+  },
+
+  async getWorkflowRun(runId) {
+    const { owner, repo } = App.config;
+    const url = `https://api.github.com/repos/${owner}/${repo}/actions/runs/${runId}`;
+
+    const token = this.getToken();
+    const res = await fetch(url, {
+      headers: {
+        'Accept': 'application/vnd.github.v3+json',
+        'Authorization': `Bearer ${token}`
+      }
+    });
+
+    if (!res.ok) return null;
+    return res.json();
+  },
+
+  async pollWorkflowUntilDone(workflowId, onStatus) {
+    // Wait for GitHub to register the run
+    onStatus('queued', 'Waiting for workflow to start...');
+    await new Promise(r => setTimeout(r, 3000));
+
+    // Find the triggered run
+    let run = await this.getLatestWorkflowRun(workflowId);
+    if (!run) {
+      onStatus('error', 'Could not find workflow run.');
+      return false;
+    }
+
+    const runId = run.id;
+    const maxAttempts = 60; // 5 minutes max (60 * 5s)
+
+    for (let i = 0; i < maxAttempts; i++) {
+      run = await this.getWorkflowRun(runId);
+      if (!run) {
+        onStatus('error', 'Lost track of workflow run.');
+        return false;
+      }
+
+      const status = run.status;
+      const conclusion = run.conclusion;
+
+      if (status === 'completed') {
+        if (conclusion === 'success') {
+          onStatus('completed', 'Digest generated and deployed!');
+          return true;
+        } else {
+          onStatus('error', `Workflow failed: ${conclusion}`);
+          return false;
+        }
+      }
+
+      if (status === 'queued' || status === 'waiting' || status === 'pending') {
+        onStatus('queued', 'Queued, waiting for runner...');
+      } else if (status === 'in_progress') {
+        onStatus('in_progress', 'Generating digest...');
+      }
+
+      await new Promise(r => setTimeout(r, 5000));
+    }
+
+    onStatus('error', 'Timed out waiting for workflow.');
+    return false;
   }
 };
 
@@ -503,14 +584,33 @@ const Pages = {
 
       regenerateBtn.disabled = true;
       regenerateBtn.textContent = 'Triggering...';
-      regenerateStatus.textContent = '';
+      regenerateStatus.innerHTML = '';
+      regenerateStatus.className = '';
 
       try {
         await GitHub.triggerWorkflow('generate-digest.yml', {
           interests: interests
         });
-        regenerateStatus.textContent = 'Digest regeneration triggered! Check GitHub Actions for progress.';
-        regenerateStatus.className = 'status success';
+
+        regenerateStatus.className = 'status info progress-status';
+        regenerateStatus.innerHTML = '<span class="spinner"></span> Triggered, waiting for workflow to start...';
+
+        const success = await GitHub.pollWorkflowUntilDone('generate-digest.yml', (state, message) => {
+          if (state === 'error') {
+            regenerateStatus.className = 'status error';
+            regenerateStatus.innerHTML = message;
+          } else if (state === 'completed') {
+            regenerateStatus.className = 'status success';
+            regenerateStatus.innerHTML = message + ' <a href="index.html">View digests</a>';
+          } else {
+            regenerateStatus.className = 'status info progress-status';
+            regenerateStatus.innerHTML = '<span class="spinner"></span> ' + message;
+          }
+        });
+
+        if (success) {
+          regenerateBtn.textContent = 'Regenerate Digest';
+        }
       } catch (err) {
         regenerateStatus.textContent = 'Failed: ' + err.message;
         regenerateStatus.className = 'status error';

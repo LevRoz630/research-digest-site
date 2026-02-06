@@ -412,6 +412,28 @@ a:hover {
   border: 1px solid #bfdbfe;
 }
 
+/* Progress spinner */
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #bfdbfe;
+  border-top-color: #1e40af;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.progress-status {
+  display: flex;
+  align-items: center;
+}
+
 /* Loading state */
 .loading {
   text-align: center;
