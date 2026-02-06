@@ -109,10 +109,7 @@ const GitHub = {
     return true;
   },
 
-  async getLatestWorkflowRun(workflowId) {
-    const { owner, repo } = App.config;
-    const url = `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflowId}/runs?per_page=1`;
-
+  async fetchGitHubApi(url) {
     const token = this.getToken();
     const res = await fetch(url, {
       headers: {
@@ -120,48 +117,57 @@ const GitHub = {
         'Authorization': `Bearer ${token}`
       }
     });
-
-    if (!res.ok) return null;
-    const data = await res.json();
-    return data.workflow_runs?.[0] || null;
-  },
-
-  async getWorkflowRun(runId) {
-    const { owner, repo } = App.config;
-    const url = `https://api.github.com/repos/${owner}/${repo}/actions/runs/${runId}`;
-
-    const token = this.getToken();
-    const res = await fetch(url, {
-      headers: {
-        'Accept': 'application/vnd.github.v3+json',
-        'Authorization': `Bearer ${token}`
-      }
-    });
-
     if (!res.ok) return null;
     return res.json();
   },
 
   async pollWorkflowUntilDone(workflowId, onStatus) {
+    const { owner, repo } = App.config;
+    const runsUrl = `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflowId}/runs?per_page=1&event=workflow_dispatch`;
+
     // Wait for GitHub to register the run
     onStatus('queued', 'Waiting for workflow to start...');
     await new Promise(r => setTimeout(r, 3000));
 
-    // Find the triggered run
-    let run = await this.getLatestWorkflowRun(workflowId);
-    if (!run) {
-      onStatus('error', 'Could not find workflow run.');
-      return false;
+    // Find the triggered run (retry a few times)
+    let run = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        const data = await this.fetchGitHubApi(runsUrl);
+        run = data?.workflow_runs?.[0] || null;
+        if (run) break;
+      } catch {
+        // Retry after a short delay
+      }
+      await new Promise(r => setTimeout(r, 2000));
     }
 
-    const runId = run.id;
+    if (!run) {
+      onStatus('completed', 'Workflow triggered! It may take a minute to complete.');
+      return true;
+    }
+
+    const runUrl = `https://api.github.com/repos/${owner}/${repo}/actions/runs/${run.id}`;
     const maxAttempts = 60; // 5 minutes max (60 * 5s)
+    let consecutiveErrors = 0;
 
     for (let i = 0; i < maxAttempts; i++) {
-      run = await this.getWorkflowRun(runId);
+      try {
+        run = await this.fetchGitHubApi(runUrl);
+        consecutiveErrors = 0;
+      } catch {
+        consecutiveErrors++;
+        if (consecutiveErrors >= 3) {
+          onStatus('completed', 'Workflow triggered! Check GitHub Actions for final status.');
+          return true;
+        }
+        await new Promise(r => setTimeout(r, 5000));
+        continue;
+      }
+
       if (!run) {
-        onStatus('error', 'Lost track of workflow run.');
-        return false;
+        onStatus('completed', 'Workflow triggered! Check GitHub Actions for final status.');
+        return true;
       }
 
       const status = run.status;
@@ -186,8 +192,8 @@ const GitHub = {
       await new Promise(r => setTimeout(r, 5000));
     }
 
-    onStatus('error', 'Timed out waiting for workflow.');
-    return false;
+    onStatus('completed', 'Workflow triggered! Check GitHub Actions for final status.');
+    return true;
   }
 };
 
@@ -591,33 +597,33 @@ const Pages = {
         await GitHub.triggerWorkflow('generate-digest.yml', {
           interests: interests
         });
-
-        regenerateStatus.className = 'status info progress-status';
-        regenerateStatus.innerHTML = '<span class="spinner"></span> Triggered, waiting for workflow to start...';
-
-        const success = await GitHub.pollWorkflowUntilDone('generate-digest.yml', (state, message) => {
-          if (state === 'error') {
-            regenerateStatus.className = 'status error';
-            regenerateStatus.innerHTML = message;
-          } else if (state === 'completed') {
-            regenerateStatus.className = 'status success';
-            regenerateStatus.innerHTML = message + ' <a href="index.html">View digests</a>';
-          } else {
-            regenerateStatus.className = 'status info progress-status';
-            regenerateStatus.innerHTML = '<span class="spinner"></span> ' + message;
-          }
-        });
-
-        if (success) {
-          regenerateBtn.textContent = 'Regenerate Digest';
-        }
       } catch (err) {
-        regenerateStatus.textContent = 'Failed: ' + err.message;
+        regenerateStatus.textContent = 'Failed to trigger: ' + err.message;
         regenerateStatus.className = 'status error';
-      } finally {
         regenerateBtn.disabled = false;
         regenerateBtn.textContent = 'Regenerate Digest';
+        return;
       }
+
+      // Trigger succeeded — now poll for progress
+      regenerateStatus.className = 'status info progress-status';
+      regenerateStatus.innerHTML = '<span class="spinner"></span> Triggered, waiting for workflow to start...';
+
+      await GitHub.pollWorkflowUntilDone('generate-digest.yml', (state, message) => {
+        if (state === 'error') {
+          regenerateStatus.className = 'status error';
+          regenerateStatus.innerHTML = message;
+        } else if (state === 'completed') {
+          regenerateStatus.className = 'status success';
+          regenerateStatus.innerHTML = message + ' <a href="index.html">View digests</a>';
+        } else {
+          regenerateStatus.className = 'status info progress-status';
+          regenerateStatus.innerHTML = '<span class="spinner"></span> ' + message;
+        }
+      });
+
+      regenerateBtn.disabled = false;
+      regenerateBtn.textContent = 'Regenerate Digest';
     });
 
     // Load favorites
