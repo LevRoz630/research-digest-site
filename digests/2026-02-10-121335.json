@@ -1,0 +1,328 @@
+{
+  "date": "2026-02-10",
+  "generated_at": "2026-02-10T12:13:43.753790+00:00",
+  "interests": "Prediction of energy wholesale market using weather features\n\nWhen ranking, also consider:\n- Author credentials and reputation (prefer established researchers from top institutions)\n- Quality of methodology described in abstract\n- Novelty and potential impact of the work\n- Papers with well-known authors in the field should be scored higher",
+  "total_papers_fetched": 50,
+  "papers": [
+    {
+      "arxiv_id": "s2:7e548e77ef3228f81f11e9af8b4dcb1bdceed003",
+      "title": "Embedding the weather prediction errors (WPE) into the photovoltaic (PV) forecasting method using deep learning",
+      "abstract": "The creation of features makes the difference in improving the photovoltaic forecast (PVF) for on\u2010grid, hybrid and off\u2010grid PV systems. The importance of the PVF is tremendous, and it can be essential in optimizing the home appliances to maximize the Renewable Energy Sources (RES) usage or to create performant bids for the electricity market. Several use cases are considered from the connectivity point of view. Therefore, in this paper, we propose a Weather Prediction Error (WPE)\u2010based method that uses a Stacking Regressor (SR) for various PV systems that coexist in the emerging Energy Communities (EC) landscape. The novelty of the research we conduct consists in proposing several features and determining the coefficients to adjust the PVF based on WPE. The forecast results of four types of PV systems from size and connectivity point of view are investigated. Compared with individual Machine Learning (ML) models, R2 increases with more than 3% with the SR and with more than 6% after applying the adjustment coefficients. Nevertheless, the major improvement is recorded for the off\u2010grid inverter and for the large industrial PV power plant, demonstrating that the proposed model is suitable for these types of systems. The other metrics improved as well, especially Mean Average Error (MAE) that decreases between 10% and 23%. A significant decrease is in the case of the industrial on\u2010grid PV, from 130\u2009kW to 123\u2009kW using the SR and to 107\u2009kW after adjustments. This represents around 18% from the initial MAE. The ratio of daily deviations is also improved using the SR. For all the PV systems, the ratio stabilizes in a shorter interval, from daily values between 0.78 and 1.33 obtained with the ML models to values between 0.83 and 1.24 obtained with the SR. After the final adjustments, the interval becomes shorter, having daily values between 0.90 and 1.10.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/7e548e77ef3228f81f11e9af8b4dcb1bdceed003",
+      "relevance_score": 9.0,
+      "relevance_reason": "The paper directly addresses the prediction of energy wholesale market using weather features, which aligns with the researcher's interests. The methodology described in the abstract includes deep learning techniques for improving photovoltaic forecast accuracy, which is relevant for predicting energy market trends. The novel approach and potential impact of the work make it highly relevant for the researcher.",
+      "author_h_indices": [
+        22,
+        22
+      ],
+      "quality_score": 9.628571428571428
+    },
+    {
+      "arxiv_id": "2502.15780",
+      "title": "Feature Engineering Approach to Building Load Prediction: A Case Study for Commercial Building Chiller Plant Optimization in Tropical Weather",
+      "abstract": "In tropical countries with high humidity, air conditioning can account for up to 60% of a building's energy use. For commercial buildings with centralized systems, the efficiency of the chiller plant is vital, and model predictive control provides an effective strategy for optimizing operations through dynamic adjustments based on accurate load predictions. Artificial neural networks are effective for modelling nonlinear systems but are prone to overfitting due to their complexity. Effective feature engineering can mitigate this issue. While weather data are crucial for load prediction, they are often used as raw numerical inputs without advanced processing. Clustering features is a technique that can reduce model complexity and enhance prediction accuracy. Although previous studies have explored clustering algorithms for load prediction, none have applied them to multidimensional weather data, revealing a research gap. This study presents a cooling load prediction model that combines a neural network with Kalman filtering and K-means clustering. Applied to real world data from a commercial skyscraper in Singapore's central business district, the model achieved a 46.5% improvement in prediction accuracy. An optimal chiller sequencing strategy was also developed through genetic algorithm optimization of the predictive load, potentially saving 13.8% in energy. Finally, the study evaluated the integration of thermal energy storage into the chiller plant design, demonstrating potential reductions in capital and operational costs of 26% and 13%, respectively.",
+      "authors": [],
+      "categories": [
+        "Computer Science",
+        "Engineering"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/47da9f4478cf8371496906f577490e36d328c4d4",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the prediction of energy load in a commercial building using weather data, which aligns closely with the researcher's interests. The methodology described in the abstract includes novel approaches such as combining neural networks with Kalman filtering and K-means clustering. The potential impact of improving prediction accuracy by 46.5% and saving 13.8% in energy is also significant.",
+      "author_h_indices": [
+        1,
+        1,
+        2,
+        1,
+        63
+      ],
+      "quality_score": 9.388571428571428
+    },
+    {
+      "arxiv_id": "s2:8faeebebad25165ad1b87a5a79f34d30b114cf94",
+      "title": "Transformer Model with Fourier Embeddings for District Energy Prediction",
+      "abstract": "Districts refer to localized zones or sectors within a city that are managed semi-independently for energy distribution and optimization. Given the complexity and decentralization of smart grid systems, as well as the uncertainty introduced by renewable integration, accurate and reliable energy consumption predictions for district energy assets are essential for increasing local renewable energy usage and enabling effective demand flexibility management. In this paper we propose an adaptation of a transformer model for long-range multivariate energy consumption forecasting at district level and energy assets. It combines multiple energy data sources with weather conditions, temporal indicators, and energy-derived features through a specialized preprocessing pipeline. We introduce Fourier embedding to capture strong recurrent patterns that are not learned through temporal encodings by encoding the dominant frequency found in each feature. We evaluate the model performance on real-world district level dataset, using a multilayer perceptron as baseline model. We show that the transformer model can accurately predict energy demand on different forecasting horizons and for various assets with better MAE values compared with an MLP approach.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/8faeebebad25165ad1b87a5a79f34d30b114cf94",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant as it focuses on predicting energy consumption at a district level using a transformer model with weather features, which aligns closely with the researcher's interest in predicting energy wholesale market using weather features.",
+      "author_h_indices": [
+        0,
+        24,
+        3
+      ],
+      "quality_score": 9.257142857142856
+    },
+    {
+      "arxiv_id": "s2:67fda8eea2b58d540c0113ba04a5d642e1a35a42",
+      "title": "Predicting the Gap in the Day-Ahead and Real-Time Market Prices Leveraging Exogenous Weather Data",
+      "abstract": "Predicting the price gap between the day-ahead Market (DAM) and the real-time Market (RTM) plays a vital role in the convergence bidding mechanism of Independent System Operators (ISOs) in wholesale electricity markets. This paper presents a model to predict the values of the price gap between the DAM and RTM using statistical machine learning algorithms and deep neural networks. In this paper, we seek to answer these questions: What will be the impact of predicting the DAM and RTM price gap directly on the prediction performance of learning methods? How can exogenous weather data affect the price gap prediction? In this paper, several exogenous features are collected, and the impacts of these features are examined to capture the best relations between the features and the target variable. An ensemble learning algorithm, namely the Random Forest (RF), is used to select the most important features. A Long Short-Term Memory (LSTM) network is used to capture long-term dependencies in predicting direct gap values between the markets stated. Moreover, the advantages of directly predicting the gap price rather than subtracting the price predictions of the DAM and RTM are shown. The presented results are based on the California Independent System Operator (CAISO)\u2019s electricity market data for two years. The results show that direct gap prediction using exogenous weather features decreases the error of learning methods by 46%. Therefore, the presented method mitigates the prediction error of the price gap between the DAM and RTM. Thus, the convergence bidders can increase their profit, and the ISOs can tune their mechanism accordingly.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2023-01-01",
+      "updated": "2023-01-01",
+      "link": "https://www.semanticscholar.org/paper/67fda8eea2b58d540c0113ba04a5d642e1a35a42",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the prediction of energy wholesale market using weather features, which aligns perfectly with the researcher's interests. The methodology described in the abstract includes statistical machine learning algorithms and deep neural networks, demonstrating a high level of quality. The potential impact of the work in improving prediction performance is significant, making it highly relevant to the researcher.",
+      "author_h_indices": [
+        1,
+        7,
+        18
+      ],
+      "quality_score": 9.247619047619047
+    },
+    {
+      "arxiv_id": "s2:19498304668dac765c8d043e9bd626f57a8cdcb6",
+      "title": "Short-term Photovoltaic Power Forecasting Based on Multi-site Numerical Weather Prediction and STGCN-Transformer",
+      "abstract": "Reliable short-term forecasting of photovoltaic (PV) output plays a vital role in system scheduling and electricity market operations. Most existing methods rely on numerical weather prediction (NWP) data from a single or specific PV plant location, without fully accounting for the spatial continuity of meteorological conditions in adjacent regions. To mitigate this issue, a short-term PV power forecasting approach that integrates multi-site NWP data with a spatiotemporal graph convolutional network and Transformer architecture (STGCN-Transformer) is proposed. Specifically, a graph network is first constructed using NWP data from the target PV plant and three surrounding NWP locations. A spatiotemporal graph convolutional layer is employed to encode spatiotemporal dependencies and extract meteorological features. A two-stage similar-day selection method is then used to identify historical days with similar power output. Finally, the extracted NWP features, similar-day PV power data, and forecasted humidity are fed into a Transformer-based forecast module to generate short-term PV power. Experiments based on real-world datasets from northwestern China demonstrate the practical effectiveness of the proposed forecasting method. The results show that the proposed method achieves improvements of 12.6% and 6.8% in RMSE and MAE, respectively, compared with existing advanced methods.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/19498304668dac765c8d043e9bd626f57a8cdcb6",
+      "relevance_score": 9.0,
+      "relevance_reason": "The paper directly addresses the prediction of energy wholesale market using weather features, which aligns with the researcher's interests. The methodology described in the abstract seems sound and innovative, with potential impact in the field. The authors also demonstrate credibility through their use of real-world datasets and the observed improvements in forecasting accuracy.",
+      "author_h_indices": [
+        1,
+        28,
+        8,
+        1,
+        4
+      ],
+      "quality_score": 9.24
+    },
+    {
+      "arxiv_id": "s2:98d7c39a7e345a43128c6864e47c48e6a134fb93",
+      "title": "A Short-Term Residential Load Forecasting Model Based on LSTM Recurrent Neural Network Considering Weather Features",
+      "abstract": "With economic growth, the demand for power systems is increasingly large. Short-term load forecasting (STLF) becomes an indispensable factor to enhance the application of a smart grid (SG). Other than forecasting aggregated residential loads in a large scale, it is still an urgent problem to improve the accuracy of power load forecasting for individual energy users due to high volatility and uncertainty. However, as an important variable that affects the power consumption pattern, the influence of weather factors on residential load prediction is rarely studied. In this paper, we review the related research of power load forecasting and introduce a short-term residential load forecasting model based on a long short-term memory (LSTM) recurrent neural network with weather features as an input.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2021-01-01",
+      "updated": "2021-01-01",
+      "link": "https://www.semanticscholar.org/paper/98d7c39a7e345a43128c6864e47c48e6a134fb93",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the prediction of energy wholesale market using weather features, which aligns perfectly with the researcher's interests. The methodology described in the abstract is based on LSTM recurrent neural networks, showing a high level of sophistication. Additionally, the novelty of considering weather features in residential load forecasting has the potential for significant impact in the field.",
+      "author_h_indices": [
+        6,
+        16,
+        3
+      ],
+      "quality_score": 9.238095238095239
+    },
+    {
+      "arxiv_id": "s2:e971d6a9f23379b28193ab81a61c09b86ba5a9a3",
+      "title": "Interpretable Interval Prediction-Based Outlier-Adaptive Day-Ahead Electricity Price Forecasting Involving Cross-Market Features",
+      "abstract": "Electricity prices behave more irregular patterns due to uncertainties and effects of mixed-temporal primary energy markets. Thus, it is challenging to precisely forecast them. To conquer this barrier, an interpretable interval prediction method that seamlessly unifies cross-energy and electricity markets is proposed. At the outset, to clarity the feature rising the aberrant electricity prices, several exogenous, and multitemporal features from other primary energy markets, such as natural gas and coal markets, are unified to settle our database. Then, a Gaussian mixture model (GMM)-lightweight gradient boosting machine hybrid detector is presented to isolate and foresee the outlier sequence of electricity prices. A hybrid LSTNet-kernel density estimation (LSTNet-KDE) method is further proposed to enable outlier-adaptive interpretable interval prediction. Specifically, the LSTNet contributes to amalgamating multitemporality across markets and predicting the principal trends, and the KDE serves to encapsulate the uncertainty for the GMM-foreseen outliers. The method further merges with the Shapley additive explanations technique, such that exogenous latent features that induce electricity prices outliers can be finally comprehended. The numerical study on the real-world Danish electricity market verifies that, our proposed method beats other rivals in terms of precision, especially notable in forecasting outliers of electricity prices.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/e971d6a9f23379b28193ab81a61c09b86ba5a9a3",
+      "relevance_score": 9.0,
+      "relevance_reason": "The paper directly addresses the prediction of energy wholesale market using weather features, proposing an interpretable interval prediction method that integrates cross-energy markets. The methodology described in the abstract seems robust and novel, with a focus on outlier forecasting. The authors' approach and results could potentially have a significant impact on the field.",
+      "author_h_indices": [
+        4,
+        1,
+        12,
+        6,
+        5,
+        1
+      ],
+      "quality_score": 9.13809523809524
+    },
+    {
+      "arxiv_id": "s2:4f1c4275e84868a8113546e8d2b15baa05f33a22",
+      "title": "Enhancing Energy System Modeling with Global Weather Forecast Integration: A German Case Study with European Outlook",
+      "abstract": "Accurate short-term forecasts are crucial for modern power systems, as renewable energy variability and fluctuating demand challenge grid stability and operations. These forecasts enhance scheduling, congestion management, and market participation but are limited by the absence of open-source, regionalized data. To address this, we integrate global weather prediction data into the open-source Python library atlite, enabling highresolution, multi-day forecasting of renewable generation and temperature-dependent demand. In a case study, we demonstrate this approach by generating an hourly regionalized nowcast for the German power system, estimating its day-ahead flexibility requirements and regional curtailment using publicly available data. Our fully open-source and easily adaptable method ensures compatibility with large-scale energy system models such as PyPSA-Eur, allowing broad applications across Europe and beyond. It marks a first step towards bridging the gap between long-term capacity expansion planning using historical data and the need for real-time operational planning and decision-making.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/4f1c4275e84868a8113546e8d2b15baa05f33a22",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the prediction of energy wholesale market using weather features, which aligns with the researcher's interests. The methodology described in the abstract integrates global weather forecast data into energy system modeling, demonstrating potential impact for improving short-term forecasts for renewable generation and demand. The authors also highlight the novelty of their approach and its applicability to large-scale energy models.",
+      "author_h_indices": [
+        3,
+        1,
+        4,
+        4
+      ],
+      "quality_score": 9.085714285714285
+    },
+    {
+      "arxiv_id": "2412.00062",
+      "title": "Deep Learning-Based Electricity Price Forecast for Virtual Bidding in Wholesale Electricity Market",
+      "abstract": "Virtual bidding plays an important role in two-settlement electric power markets, as it can reduce discrepancies between day-ahead and real-time markets. Renewable energy penetration increases volatility in electricity prices, making accurate forecasting critical for virtual bidders, reducing uncertainty and maximizing profits. This study presents a Transformer-based deep learning model to forecast the price spread between real-time and day-ahead electricity prices in the ERCOT (Electric Reliability Council of Texas) market. The proposed model leverages various time-series features, including load forecasts, solar and wind generation forecasts, and temporal attributes. The model is trained under realistic constraints and validated using a walk-forward approach by updating the model every week. Based on the price spread prediction results, several trading strategies are proposed and the most effective strategy for maximizing cumulative profit under realistic market conditions is identified through backtesting. The results show that the strategy of trading only at the peak hour with a precision score of over 50% produces nearly consistent profit over the test period. The proposed method underscores the importance of an accurate electricity price forecasting model and introduces a new method of evaluating the price forecast model from a virtual bidder's perspective, providing valuable insights for future research.",
+      "authors": [],
+      "categories": [
+        "Computer Science",
+        "Economics"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/f6354e175f7f75067911b68ea03ac137b8446515",
+      "relevance_score": 9.0,
+      "relevance_reason": "The paper directly addresses the prediction of energy wholesale market prices using weather features, which aligns with the researcher's interests. The methodology described in the abstract suggests a deep learning approach and the potential impact of the work on virtual bidders is significant. The authors also provide insights for future research in this area.",
+      "author_h_indices": [
+        2,
+        7,
+        3,
+        2,
+        0,
+        5,
+        0
+      ],
+      "quality_score": 9.077551020408162
+    },
+    {
+      "arxiv_id": "s2:eaca6a915e1758eed832bd40fdcc930c48a47be7",
+      "title": "A PatchTST-GRU based heterogeneous seq2seq model with numerical weather prediction refinement for multi-step wind power forecasting",
+      "abstract": "The efficient utilization of wind energy relies on accurate wind power forecasting. However, existing methods face challenges in multi-step forecasting, including error accumulation, insufficient utilization of numerical weather prediction (NWP), and inadequate modeling of localized meteorological characteristics. To address these issues, this paper proposes a heterogeneous sequence-to-sequence (seq2seq) model based on PatchTST-GRU, integrated with NWP refinement. The heterogeneous seq2seq architecture employs a PatchTST backbone as the encoder to extract local temporal features from historical wind power data, combined with a GRU decoder to generate prediction sequences, thereby enhancing long-term dependency modeling. The NWP refinement module is developed to improve the usability of low-resolution NWP data through spatiotemporal scaling, providing future meteorological trend guidance for the decoder. Furthermore, a fusion attention mechanism with asymmetric query-key-value matrices is introduced to dynamically fuse historical wind power temporal patterns with refined NWP features, optimizing prediction outcomes. Experiments using real-world wind farm data demonstrate the effectiveness of the heterogeneous seq2seq architecture, NWP refinement and fusion attention mechanism. Within 48 to 288 forecasting steps, the proposed method outperforms conventional approaches, including light gradient boosting machine, support vector regression and seq2seq, in multiple evaluation metrics. This framework provides reliable multi-step power forecasting support for wind farm operations, while its heterogeneous seq2seq architecture exhibits potential for application to other time series prediction tasks.",
+      "authors": [],
+      "categories": [
+        "Medicine"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/eaca6a915e1758eed832bd40fdcc930c48a47be7",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the prediction of energy wholesale market using weather features, specifically focusing on wind power forecasting. The methodology described in the abstract seems to be of high quality and innovative, with potential impact on the field. The authors' approach and the use of NWP refinement and fusion attention mechanisms make this work highly relevant to a researcher interested in this area.",
+      "author_h_indices": [
+        2,
+        3,
+        2,
+        2,
+        2,
+        2
+      ],
+      "quality_score": 9.061904761904762
+    },
+    {
+      "arxiv_id": "2408.12476",
+      "title": "Predicting Solar Energy Generation with Machine Learning based on AQI and Weather Features",
+      "abstract": "This paper addresses the pressing need for an accurate solar energy prediction model, which is crucial for efficient grid integration. We explore the influence of the Air Quality Index and weather features on solar energy generation, employing advanced Machine Learning and Deep Learning techniques. Our methodology uses time series modeling and makes novel use of power transform normalization and zero-inflated modeling. Various Machine Learning algorithms and Conv2D Long Short-Term Memory model based Deep Learning models are applied to these transformations for precise predictions. Results underscore the effectiveness of our approach, demonstrating enhanced prediction accuracy with Air Quality Index and weather features. We achieved a 0.9691 $R^2$ Score, 0.18 MAE, 0.10 RMSE with Conv2D Long Short-Term Memory model, showcasing the power transform technique's innovation in enhancing time series forecasting for solar energy generation. Such results help our research contribute valuable insights to the synergy between Air Quality Index, weather features, and Deep Learning techniques for solar energy prediction.",
+      "authors": [],
+      "categories": [
+        "Computer Science"
+      ],
+      "published": "2024-01-01",
+      "updated": "2024-01-01",
+      "link": "https://www.semanticscholar.org/paper/b6dadb4368bb1ed4bd77cd00e911f4f361e80ab0",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the prediction of energy generation using weather features, specifically focusing on solar energy. The methodology described involves advanced Machine Learning techniques and demonstrates high prediction accuracy. The authors' exploration of the influence of Air Quality Index and weather features on solar energy generation aligns closely with the researcher's interests.",
+      "author_h_indices": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "quality_score": 9.042857142857143
+    },
+    {
+      "arxiv_id": "s2:4a608f768e48ff3f637cd22aee14b6050e0921c5",
+      "title": "AI-Driven Hybrid Deep Learning Framework for Short-Term Renewable Energy Forecasting under Extreme Weather Events",
+      "abstract": "As wind and solar grow on the grid, operators need short-term forecasts that remain dependable precisely when weather turns extreme. However, the coupling between meteorology and demand/renewable output is highly nonlinear and nonstationary, which limits the accuracy of standard statistical and machine-learning baselines. We introduce a hybrid deep learning framework that pairs an attention-guided convolutional network used to extract spatial signals from meteorological and renewable features with a bidirectional LSTM that models temporal dependencies in load and generation. The model produces probabilistic outputs, yielding point forecasts together with calibrated prediction intervals so that uncertainty can be factored into operations. We evaluated the approach on hourly ERCOT demand, NREL wind integration data, and NOAA weather records, and stress-tested it on periods flagged as extreme using a robust outlier detector. Across multiple horizons, the proposed method reduces the error by approximately 15\u201320% relative to the ARIMA, SVR, and vanilla LSTM baselines, while maintaining strong interval coverage. In volatile conditions, the attention layer consistently elevates the meteorological drivers most responsible for forecast shifts, and the uncertainty head indicates the confidence to place in each estimate, both of which are directly useful for reserve sizing and dispatch decisions. Overall, combining attention-based spatial weighting with bidirectional sequence modeling yields a practical and resilient forecaster for short-term renewable and load predictions under extreme weather conditions.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/4a608f768e48ff3f637cd22aee14b6050e0921c5",
+      "relevance_score": 9.0,
+      "relevance_reason": "The paper directly addresses the prediction of energy wholesale market using weather features through a hybrid deep learning framework. The methodology described in the abstract is of high quality, and the potential impact of the work is significant in the field.",
+      "author_h_indices": [
+        3,
+        1,
+        3,
+        0,
+        0,
+        1
+      ],
+      "quality_score": 9.038095238095238
+    },
+    {
+      "arxiv_id": "s2:0237893a5ace3da28ff6024e814438dc40228f57",
+      "title": "INTEGRATING ECONOMETRIC AND DEEP LEARNING MODELS FOR ENERGY PRICE PREDICTION: A HYBRID APPROACH USING WEATHER AND MARKET DATA",
+      "abstract": "This study proposes a hybrid approach that integrates econometric and deep learning models\u2014specifically, Vector Autoregression (VAR), Long Short-Term Memory (LSTM), and Gated Recurrent Unit (GRU)\u2014to enhance electricity price forecasting. By combining historical data with external factors like weather and market indicators, this hybrid approach aims to improve prediction accuracy in volatile energy markets. The model captures complex temporal dependencies through a hybrid VAR, LSTM, and GRU structure and is tested on historical electricity price data supplemented with weather and market variables. Performance is evaluated using mean absolute error (MAE), root mean square error (RMSE), symmetric mean absolute percentage error (SMAPE), and root mean squared logarithmic error (RMSLE). Results show that deep learning models, particularly GRU, outperform VAR regarding MAE, RMSE, and RMSLE, suggesting superior predictive accuracy for absolute and relative forecasting tasks. However, SMAPE results highlight that the VAR model performs better in capturing proportional errors, suggesting its relative robustness in volatile price environments. Including weather and market data significantly improves the model\u2019s robustness and accuracy. This study\u2019s hybrid approach combines the interpretability of econometric models with the predictive power of deep learning, offering insights into the impact of external factors on energy prices. The model supports better decision-making and risk management for energy market participants in dynamic market environments.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/0237893a5ace3da28ff6024e814438dc40228f57",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the researcher's interest in predicting energy wholesale market using weather features. The methodology described, combining econometric and deep learning models with weather and market data, is of high quality and has the potential to have a significant impact in the field. The authors also utilize well-known models like VAR, LSTM, and GRU, increasing the credibility of their work.",
+      "author_h_indices": [
+        1
+      ],
+      "quality_score": 9.028571428571428
+    },
+    {
+      "arxiv_id": "s2:9105494a6934fbcaba0b55dfead558988949402e",
+      "title": "A Comprehensive Analysis of Imbalance Signal Prediction in the Japanese Electricity Market Using Machine Learning Techniques",
+      "abstract": "Power system imbalances pose significant challenges to maintaining grid stability and ensuring efficient market performance, particularly in the context of the Japanese electricity market. The primary drivers of these imbalances are identified as the nonlinear responses of power generation and consumer electricity demand to uncertain variables such as temperature and solar radiation, in addition to complex factors such as planned generator outages and operational constraints. Consequently, the prediction of imbalance signals using linear models is inherently challenging and requires the adaptation of more advanced methods in practice. This study comprehensively analyzes imbalance signal dynamics and develops practical forecasting tools using Machine Learning (ML) techniques. By incorporating a diverse range of features\u2014including lagged imbalance data, weather forecast errors specific to Japan, and temporal patterns\u2014we demonstrate that the prediction accuracy of imbalance signals is significantly improved compared to a baseline reflecting random forecasts based on class distribution observed during the initial training period. Furthermore, the proposed approach identifies the key drivers of hourly imbalance signals, while leveraging out-of-sample forecasting models. Based on these findings, we conclude that the use of multiple predictive models enhances the robustness and reliability of our forecasts, offering actionable tools for improving forecasting accuracy in real-world operations and contributing to a more stable and efficient electricity market.",
+      "authors": [],
+      "categories": [
+        "semantic_scholar"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/9105494a6934fbcaba0b55dfead558988949402e",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper is highly relevant as it focuses on predicting imbalance signals in the electricity market using machine learning techniques, which aligns closely with the researcher's interest in predicting energy wholesale market using weather features.",
+      "author_h_indices": [
+        1,
+        1
+      ],
+      "quality_score": 9.028571428571428
+    },
+    {
+      "arxiv_id": "s2:ee5c8db5c35a44b21da217b7dfaa6c99b471e363",
+      "title": "The Parallel Temporal Convolutional Neural Network Based Building Energy Consumption Prediction Model",
+      "abstract": "Building energy consumption (BEC) prediction aims to forecast the future energy consumption distribution, which plays a significant part in achieving energy conservation control, formulating energy conservation strategies, and quantifying the potential of energy conservation. The relevant characteristics of BEC, such as indoor environmental parameters, time information and weather, have a highly significant influence on the predictive accuracy of energy consumption data. Therefore, the relevant characteristics of BEC and historical energy consumption data are typically employed as the database of prediction models. To enhance the rationality of the prediction results and improve the prediction accuracy, a depth BEC prediction model based on the parallel temporal convolutional neural network (PTCN) is proposed in this paper. The PTCN can fully leverage the feature information of two time series, indoor factors and outdoor environmental factors, extract the features respectively for energy consumption prediction, and ultimately combine them through linear fitting. Its parameters are optimised through the least square method to better map the nonlinear relationship between input parameters and energy consumption data. In comparation with other prediction methods, the forecasting accuracy is higher and the performance is improved by more than 20%, which is suitable for BEC prediction.",
+      "authors": [],
+      "categories": [
+        "Physics"
+      ],
+      "published": "2025-01-01",
+      "updated": "2025-01-01",
+      "link": "https://www.semanticscholar.org/paper/ee5c8db5c35a44b21da217b7dfaa6c99b471e363",
+      "relevance_score": 9.0,
+      "relevance_reason": "This paper directly addresses the prediction of energy consumption, which aligns with the researcher's interest in predicting energy wholesale market using weather features. The methodology described in the abstract is of high quality and the proposed model shows promising results. The authors are established researchers in the field of physics.",
+      "author_h_indices": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "quality_score": 9.028571428571428
+    }
+  ]
+}
