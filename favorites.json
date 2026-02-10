@@ -1,3 +1,13 @@
 {
-  "papers": []
+  "papers": [
+    {
+      "arxiv_id": "2502.15780",
+      "title": "Feature Engineering Approach to Building Load Prediction: A Case Study for Commercial Building Chiller Plant Optimization in Tropical Weather",
+      "link": "https://www.semanticscholar.org/paper/47da9f4478cf8371496906f577490e36d328c4d4",
+      "authors": [],
+      "relevance_score": 9,
+      "user_note": "Could be useful for feature extraction and clustering",
+      "saved_at": "2026-02-10T13:39:27.758Z"
+    }
+  ]
 }
